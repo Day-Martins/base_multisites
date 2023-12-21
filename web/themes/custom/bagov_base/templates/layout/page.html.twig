@@ -62,7 +62,6 @@ set footer_classes = ' ' ~
             {{ page.header }}
         </div>
     </div>
-    {# {{ devel_breakpoint(page.header) }} #}
 
     {% if page.nav_branding or page.nav_main or page.nav_additional %}
     <nav class="{{ nav_classes }} navbar-region">
@@ -70,14 +69,8 @@ set footer_classes = ' ' ~
             {{ page.nav_branding }}
 
             {% if page.nav_additional %}
-            {# <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> #}
 
             <div class="justify-content-md-end" id="aditional-nav">
-                {# {{ page.nav_main }} #}
                 {{ page.nav_additional }}
             </div>
             {% endif %}
@@ -102,14 +95,9 @@ set footer_classes = ' ' ~
             </div>
         </nav>
     </div>
-
-
 </header>
 
 <main role="main" id="page-main">
-
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
     {%
         set sidebar_first_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-sm-6 col-lg-3' : 'col-12 col-lg-3'
     %}
@@ -166,7 +154,6 @@ set footer_classes = ' ' ~
 %}
 
 {% if page.footer_bottom or page.footer_left or page.footer_middle or page.footer_right or page.footer_info %}
-{# <footer class="mt-auto {{ footer_classes }}"> #}
 <footer class="mt-auto footer">
     <div class="{{ b5_top_container }}">
         <div class="row justify-content-center">

@@ -34,7 +34,7 @@ class CreativeCommonsBlock extends BlockBase
             return [
                 '#theme' => 'creative_commons_block',
                 '#attached' => [
-                    'library' => ['bagov_base_blocks/bagov_base_select_creative_commons_block'],
+                    'library' => ['bagov_base_blocks/block_creative_commons'],
                 ],
             ];
         }

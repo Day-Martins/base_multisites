@@ -34,7 +34,7 @@ class AcessoInformacaoBlock extends BlockBase
             return [
                 '#theme' => 'acesso_informacao_block',
                 '#attached' => [
-                    'library' => ['bagov_base_blocks/bagov_base_acesso_informacao_block'],
+                    'library' => ['bagov_base_blocks/block_acesso_informacao'],
                 ],
             ];
         }

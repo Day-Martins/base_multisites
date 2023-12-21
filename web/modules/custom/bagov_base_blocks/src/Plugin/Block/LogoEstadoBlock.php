@@ -34,7 +34,7 @@ class LogoEstadoBlock extends BlockBase
             return [
                 '#theme' => 'logo_estado_block',
                 '#attached' => [
-                    'library' => ['bagov_base_blocks/bagov_base_logo_estado_block'],
+                    'library' => ['bagov_base_blocks/block_logo_estado'],
                 ],
             ];
         }

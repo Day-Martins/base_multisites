@@ -5,12 +5,31 @@ dependencies: {  }
 id: default_split
 label: 'Default Split'
 description: 'Todas as configurações comuns entre os sites'
-weight: 0
+weight: -1
 stackable: false
 no_patching: false
 storage: folder
 folder: ../config/default
-module: {  }
+module:
+  admin_toolbar: 0
+  admin_toolbar_tools: 0
+  bootstrap_layouts: 0
+  config_filter: 0
+  config_split: 0
+  datetime_range: 0
+  fontawesome: 0
+  layout_builder: 0
+  layout_discovery: 0
+  media: 0
+  media_library: 0
+  mysql: 0
+  search: 0
+  simple_block: 0
+  text_resize: 0
+  twig_tweak: 0
+  views_bootstrap: 0
+  ds: 1
+  pathauto: 1
 theme: {  }
 complete_list:
   - block.block.bootstrap5_account_menu
@@ -36,9 +55,6 @@ complete_list:
   - block.block.claro_secondary_local_tasks
   - bootstrap5.settings
   - claro.settings
-  - config_split.config_split.bagov_base_split
-  - config_split.config_split.bagov_development_split
-  - config_split.config_split.default_split
   - core.entity_form_display.comment.comment.default
   - core.entity_form_display.media.audio.default
   - core.entity_form_display.media.audio.media_library
@@ -160,7 +176,6 @@ complete_list:
   - node.type.noticia
   - node.type.page
   - node.type.publicacao
-  - olivero.settings
   - pathauto.settings
   - system.maintenance
   - system.theme

@@ -1,0 +1,9 @@
+adding:
+  dependencies:
+    module:
+      - media
+      - search
+  permissions:
+    - 'search content'
+    - 'view media'
+removing: {  }
