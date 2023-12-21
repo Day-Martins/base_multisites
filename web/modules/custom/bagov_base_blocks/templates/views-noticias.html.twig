@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Default theme implementation for displaying a view as a bootstrap carousel.
+ *
+ * Available variables:
+ * - view: The view object.
+ * - rows: A list of the view's row items.
+ * - id: A valid HTML ID and guaranteed to be unique.
+ * - interval: The amount of time to delay between automatically cycling a
+ *   slide item. If false, carousel will not automatically cycle.
+ * - pause: Pauses the cycling of the carousel on mouseenter and
+ *   resumes the cycling of the carousel on mouseleave.
+ * - wrap: Whether the carousel should cycle continuously or have
+ *   hard stops.
+ *
+ * @see template_preprocess_views_noticias()
+ *
+ * @ingroup themeable
+ */
+#}
+<div id="{{ id }}" class="noticias">
+    {# Noticia corpo. #}
+    <div class="row gy-4">
+        {% if view_title %}
+        <div class="col-xs-12">
+            <h2 class="noticias-titulo">{{ view_title }}</h2>
+        </div>
+        {% endif %}
+        {% for row in rows %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="noticias-container">
+                <div class="noticias-wrapper">
+                    {{ row . image }}
+                    {% if row.title or row.description %}
+                    {%  if use_caption %}
+                    <div class="noticias-caption">
+                        {% endif %}
+                        {% if row.title %}
+                        <h3>{{ row . title }}</h3>
+                        {% endif %}
+                        {% if row.description %}
+                        <p>{{ row . description }}</p>
+                        {% endif %}
+                        {%  if use_caption %}
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
