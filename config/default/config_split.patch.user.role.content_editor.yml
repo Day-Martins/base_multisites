@@ -1,0 +1,20 @@
+adding:
+  dependencies:
+    config:
+      - node.type.article
+      - node.type.page
+      - taxonomy.vocabulary.tags
+    module:
+      - taxonomy
+  permissions:
+    - 'create article content'
+    - 'create page content'
+    - 'create terms in tags'
+    - 'delete article revisions'
+    - 'delete own article content'
+    - 'delete own page content'
+    - 'delete page revisions'
+    - 'edit own article content'
+    - 'edit own page content'
+    - 'edit terms in tags'
+removing: {  }

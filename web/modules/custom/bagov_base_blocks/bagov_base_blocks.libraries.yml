@@ -1,5 +1,4 @@
-# Custom module library for general purposes.
-bagov_base_contrast_block:
+block_contrast:
   js:
     assets/js/contrast.js: {}
   css:
@@ -10,4 +9,18 @@ bagov_base_contrast_block:
     - core/once
     - core/drupal
     - core/drupalSettings
+views_noticias_home:
+  css:
+    theme:
+      assets/css/noticias-home.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+views_noticias:
+  css:
+    theme:
+      assets/css/noticias.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
 

@@ -142,10 +142,6 @@ color: var(--turquesa);
 text-decoration: none;
 }
 
-header{
-border-bottom: 2px solid var(--turquesa);
-}
-
 .flex-float-right{
 margin-left: auto;
 }
