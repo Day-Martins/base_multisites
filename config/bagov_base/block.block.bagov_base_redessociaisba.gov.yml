@@ -9,7 +9,7 @@ dependencies:
 id: bagov_base_redessociaisba.gov
 theme: bagov_base
 region: header
-weight: 0
+weight: -4
 provider: null
 plugin: block_socialnetwork_bagov
 settings:

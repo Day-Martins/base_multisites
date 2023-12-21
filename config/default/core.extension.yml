@@ -57,6 +57,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_bootstrap: 0
@@ -70,5 +71,4 @@ theme:
   stable9: 0
   bootstrap5: 0
   bagov_base: 0
-  olivero: 0
 profile: standard
