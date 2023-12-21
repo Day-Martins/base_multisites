@@ -1,0 +1,15 @@
+adding:
+  dependencies:
+    config:
+      - field.field.node.webform.body
+    module:
+      - text
+  content:
+    body:
+      type: text_default
+      label: hidden
+      settings: {  }
+      third_party_settings: {  }
+      weight: 101
+      region: content
+removing: {  }
