@@ -1,19 +1,17 @@
-uuid: 7fa5eb14-a615-421b-99c9-48e6258d9cef
+uuid: 3c6cbe37-a3c3-43b2-9a46-a800c48bf50a
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.webform_demo_event
+    - node.type.eventos
   module:
     - text
-_core:
-  default_config_hash: kqYTgBpvsfapOwVjk0TOZdH9Szj2Zg3leAQEZRVWqfs
-id: node.webform_demo_event.body
+id: node.eventos.body
 field_name: body
 entity_type: node
-bundle: webform_demo_event
-label: Corpo
+bundle: eventos
+label: Body
 description: ''
 required: false
 translatable: true

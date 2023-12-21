@@ -1,7 +1,7 @@
 adding:
   dependencies:
     config:
-      - field.field.node.webform_demo_event.body
+      - field.field.node.eventos.body
     module:
       - text
   content:
@@ -10,6 +10,6 @@ adding:
       label: hidden
       settings: {  }
       third_party_settings: {  }
-      weight: 1
+      weight: 101
       region: content
 removing: {  }
