@@ -125,16 +125,16 @@
           }
 
           .we-mega-menu-submenu.container-width-full {
-            &:after,
-            &:before {
-              content: '';
-            }
-
+            display: block;
             border-radius: 0 0 4px 4px !important;
             margin: 8px 0px 0 0px !important;
             min-width: 235px !important;
             width: max-content;
-            padding: 15px;
+
+            &:after,
+            &:before {
+              content: '';
+            }
             
             * {
               font-weight: normal !important;
@@ -147,21 +147,24 @@
             }
 
             .we-mega-menu-submenu-inner {
+              display: block;
 
               [class='type-of-block'] {
-                display: flex;
-                justify-content: space-between;
+                display: contents;
 
                 .block-inner {
-                  border: 1px solid $white-light;
-                  border-radius: 4px;
+                  display: block;
+                  width: max-content;
+                  margin: 10px auto;
 
                   h2 {
                     font-size: inherit;
                     font-weight: $font-weight-bold !important;
                     color: $white-light;
-                    border-bottom: 1px solid;
-                    padding: 4px 8px;
+                    border: 1px solid;
+                    border-radius: 30px;
+                    padding: 8px;
+                    text-align: center;
                   }
 
                   .block {
@@ -182,7 +185,6 @@
 
               .we-mega-menu-col  { 
                 float: left;
-                width: min-content;
 
                 &:not(:nth-child(1)) {
                   &:not([data-width='12']) {
@@ -193,7 +195,6 @@
                 .nav.nav-tabs.subul {
                   display: block;
                   padding: 0 15px;
-                  min-width: 200px;
 
                   li.we-mega-menu-li {
                     display: contents;
@@ -203,9 +204,12 @@
             } 
 
             .we-mega-menu-submenu-inner {
+              display:contents;
               min-height: auto !important;
               
               .we-mega-menu-row  {
+                margin: 0 !important;
+                clear: both;
 
                 .we-mega-menu-col {
   
@@ -225,7 +229,7 @@
                         padding: 8px 0 8px 0;
                         
                         &:hover {
-                          opacity: 0.7;
+                          opacity: 0.5;
 
                           > span {
                             opacity: 1 !important;
