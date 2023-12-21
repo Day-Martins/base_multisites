@@ -1,10 +1,11 @@
 # Custom module library for general purposes.
 bagov_base_contrast_block:
   js:
-    js/contrast.js: {}
+    assets/js/contrast.js: {}
   css:
     theme:
-      css/contrast.css: {}
+      assets/css/contrast.css: {}
+      assets/css/socialnetwork.css: {}
   dependencies:
     - core/once
     - core/drupal

@@ -1,0 +1,146 @@
+// ====================
+// Skin Ba.Gov: Estilo 00
+// ---
+
+body[data-we-megamenu-bagov=bagov00] span.btn-close {
+  background-color: $ba-gov00;
+}
+
+body[data-we-megamenu-bagov=bagov00] .region-we-mega-menu-bagov a.navbar-toggle {
+  background-color: $white;
+  color: $ba-gov00-icon;
+  border-color: $ba-gov00-light;
+}
+
+nav[data-style=bagov00] {
+  $body-color: $ba-gov00;
+  $border-color: darken($link-color, 10%);
+  $bg-color: $link-color;
+}
+
+@media (min-width: $tablet-ht) {
+
+  body[data-we-megamenu-bagov=bagov00] {
+    &:not(.we-mega-menu-backend) {
+      li.we-mega-menu-li:not(:first-child) {
+        &:hover {
+          border-bottom: 8px solid $ba-gov00-light !important;
+        }
+      }
+    }
+  }
+
+  body[data-we-megamenu-bagov=bagov00] {
+    .navbar-we-mega-menu.navbar {
+
+      ul.we-mega-menu-ul {
+
+        li.we-mega-menu-li:first-child a {
+          color: $ba-gov00 !important;
+        }
+
+        li.we-mega-menu-li:not(:first-child) {
+          a.we-mega-menu-li,
+          a.we-megamenu-nolink {
+            &:first-child {
+              color: $ba-gov00;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  body[data-we-megamenu-bagov=bagov00] {
+    &:not(.we-mega-menu-backend) {
+      .navbar-we-mega-menu.navbar {
+
+        ul.we-mega-menu-ul {
+
+          li.we-mega-menu-li:first-child a {
+            color: $ba-gov00 !important;
+          }
+          li.we-mega-menu-li:not(:first-child) {
+
+            a.we-mega-menu-li,
+            a.we-megamenu-nolink {
+              &:first-child {
+                color: $ba-gov00;
+              }
+            }
+            > div.we-mega-menu-submenu.container-width-full {
+              background-color: $ba-gov00-dark !important;
+              
+              * {
+                background-color: $ba-gov00-dark !important;
+              }
+            }
+
+            &:hover {
+              background-color: $ba-gov00-dark !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-ht - 1) {
+  body[data-we-megamenu-bagov=bagov00] {
+    .navbar-we-mega-menu.navbar {
+
+      ul {
+        li {
+          li ul.subul {
+              li {
+                a {
+                  color: $ba-gov00-icon !important;
+                }
+              }
+          }
+        }
+      }
+
+      .nav {
+        .open {
+          > a,
+          > a:hover, 
+          > a:focus {
+            &:first-child {
+              color: $ba-gov00 !important;
+              border-bottom: 1px solid #ccc !important;
+            }
+          }
+        }
+      }
+
+      .nav-tabs {
+        &:not(.subul) {
+          > li.active.active-trail { 
+            > a,
+            > a:focus,
+            > a:hover {
+              &:first-child {
+                color: $ba-gov00 !important;
+                border-bottom: 1px solid #ccc !important; 
+              }
+            }
+          }
+        }
+      }
+
+      .we-mega-menu-ul { 
+        > li {
+          > .we-megamenu-nolink,
+          > a {
+            &:first-child {
+              color: $ba-gov00 !important;
+              border-bottom: 1px solid #ccc !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

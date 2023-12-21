@@ -149,11 +149,3 @@ border-bottom: 2px solid var(--turquesa);
 .flex-float-right{
 margin-left: auto;
 }
-
-.block-social-network{
-display: flex;
-}
-
-.block-social-network ul li{
-display: inline-flex;
-}
