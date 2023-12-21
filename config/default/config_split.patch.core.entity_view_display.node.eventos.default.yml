@@ -1,8 +1,17 @@
 adding:
   dependencies:
     config:
+      - core.entity_view_display.comment.comment.default
       - field.field.node.eventos.body
+      - field.field.node.eventos.comment
+      - field.field.node.eventos.field_datas
+      - field.field.node.eventos.field_image
+      - field.field.node.eventos.field_imagem_do_banner
+      - field.field.node.eventos.field_tags
     module:
+      - comment
+      - datetime_range
+      - image
       - text
   content:
     body:
@@ -11,5 +20,53 @@ adding:
       settings: {  }
       third_party_settings: {  }
       weight: 101
+      region: content
+    comment:
+      type: comment_default
+      label: above
+      settings:
+        view_mode: default
+        pager_id: 0
+      third_party_settings: {  }
+      weight: 110
+      region: content
+    field_datas:
+      type: daterange_default
+      label: above
+      settings:
+        timezone_override: ''
+        format_type: medium
+        separator: '-'
+      weight: 111
+      region: content
+    field_image:
+      type: image
+      label: hidden
+      settings:
+        image_link: ''
+        image_style: wide
+        image_loading:
+          attribute: lazy
+      third_party_settings: {  }
+      weight: -1
+      region: content
+    field_imagem_do_banner:
+      type: image
+      label: above
+      settings:
+        image_link: ''
+        image_style: ''
+        image_loading:
+          attribute: lazy
+      third_party_settings: {  }
+      weight: 102
+      region: content
+    field_tags:
+      type: entity_reference_label
+      label: above
+      settings:
+        link: true
+      third_party_settings: {  }
+      weight: 10
       region: content
 removing: {  }

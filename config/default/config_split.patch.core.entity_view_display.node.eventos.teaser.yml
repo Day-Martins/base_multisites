@@ -2,7 +2,14 @@ adding:
   dependencies:
     config:
       - field.field.node.eventos.body
+      - field.field.node.eventos.comment
+      - field.field.node.eventos.field_datas
+      - field.field.node.eventos.field_image
+      - field.field.node.eventos.field_imagem_do_banner
+      - field.field.node.eventos.field_tags
+      - image.style.medium
     module:
+      - image
       - text
   content:
     body:
@@ -13,4 +20,27 @@ adding:
       third_party_settings: {  }
       weight: 101
       region: content
+    field_image:
+      type: image
+      label: hidden
+      settings:
+        image_link: content
+        image_style: medium
+        image_loading:
+          attribute: lazy
+      third_party_settings: {  }
+      weight: -1
+      region: content
+    field_tags:
+      type: entity_reference_label
+      label: above
+      settings:
+        link: true
+      third_party_settings: {  }
+      weight: 10
+      region: content
+  hidden:
+    comment: true
+    field_datas: true
+    field_imagem_do_banner: true
 removing: {  }
