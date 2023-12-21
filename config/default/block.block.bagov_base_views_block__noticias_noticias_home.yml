@@ -1,0 +1,24 @@
+uuid: 85f48476-7b08-4621-a6c0-cd32715990bd
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.noticias
+  module:
+    - views
+  theme:
+    - bagov_base
+id: bagov_base_views_block__noticias_noticias_home
+theme: bagov_base
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:noticias-noticias_home'
+settings:
+  id: 'views_block:noticias-noticias_home'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,11 @@
+adding:
+  dependencies:
+    module:
+      - fontawesome
+      - media
+      - search
+  permissions:
+    - 'access fontawesome additional settings'
+    - 'search content'
+    - 'view media'
+removing: {  }

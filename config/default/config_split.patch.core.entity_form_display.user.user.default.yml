@@ -1,0 +1,17 @@
+adding:
+  dependencies:
+    config:
+      - field.field.user.user.user_picture
+      - image.style.thumbnail
+    module:
+      - image
+  content:
+    user_picture:
+      type: image_image
+      weight: -1
+      region: content
+      settings:
+        progress_indicator: throbber
+        preview_image_style: thumbnail
+      third_party_settings: {  }
+removing: {  }

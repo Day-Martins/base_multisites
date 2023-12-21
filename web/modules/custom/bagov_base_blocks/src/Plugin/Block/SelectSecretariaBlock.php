@@ -34,7 +34,7 @@ class SelectSecretariaBlock extends BlockBase
             return [
                 '#theme' => 'select_secretaria_block',
                 '#attached' => [
-                    'library' => ['bagov_base_blocks/bagov_base_select_secretaria_block'],
+                    'library' => ['bagov_base_blocks/block_select_secretaria'],
                 ],
             ];
         }

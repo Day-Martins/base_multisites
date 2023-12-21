@@ -1,0 +1,124 @@
+<?php
+/**
+ * @file
+ * Drupal 8 Mega Menu - Ba.Gov Module.
+ */
+use Drupal\we_megamenu\WeMegaMenuBuilder;
+
+/**
+ * Implements hook_theme().
+ */
+function we_megamenu_bagov_theme($existing, $type, $theme, $path) {
+  $templates = ['we_megamenu_backend' => 'we-megamenu-bagov-backend',
+                'we_megamenu_frontend' => 'we-megamenu-bagov-frontend',
+                'we_megamenu_submenu' => 'we-megamenu-bagov-submenu'
+              ];
+
+  if($type == 'module' && $theme = 'we_megamenu_bagov') {
+    $path_module = \Drupal::service('extension.path.resolver')->getPath('module', 'we_megamenu_bagov');
+
+    foreach($templates as $key => $template) {
+      $existing[$key] = [
+        'theme path' => $path_module,
+        'template' => $template,
+        'path' => $path_module . '/templates'
+      ];
+    }
+
+  }
+  return $existing;
+}
+
+/**
+ * Implements HOOK_library_info_alter().
+ *
+ * @param $$libraries, $extension
+ */
+function we_megamenu_bagov_library_info_alter(&$libraries, $extension) {
+  $is_front = \Drupal::service('path.matcher')->isFrontPage();
+  if(!$is_front) {
+    return;
+  }
+
+  $files_js = [ "assets/includes/bootstrap/js/bootstrap.min.js",
+                "assets/js/jquery-ui.js",
+                "assets/includes/bootstrap-notify/bootstrap-notify.min.js",
+                "assets/includes/chosen/chosen.jquery.js"
+        ];
+
+  $files_css = [ "assets/includes/bootstrap/css/bootstrap.min.css",
+                "assets/includes/jquery-ui.css",
+                "assets/includes/animate.css",
+                "assets/includes/chosen/chosen.css"
+      ];
+
+  if($extension == 'we_megamenu') {
+    foreach($libraries as $key => $values) {
+      if($key == 'form.we-mega-menu-backend') {
+        foreach($files_js as $js) {
+          unset($libraries[$key]['js'][$js]);
+        }
+        foreach($files_css as $css) { 
+          unset($libraries[$key]['css']['theme'][$css]);
+        }
+      }
+    }
+  }
+}
+
+function we_megamenu_bagov_preprocess_html(&$variables) {
+  $is_front = \Drupal::service('path.matcher')->isFrontPage();
+
+  //--- Recupera ID da folha de estilo que será aplicada ao menu
+  $style = _getStyle($variables);
+
+  if($is_front) {
+    $variables['attributes']['class'][] = 'main-we-mega-menu-bagov';
+  }
+
+  if(!is_null($style)) {
+    $variables['attributes']['data-we-megamenu-bagov'] = $style;
+  }
+  return $variables;
+}
+
+function _getStyle(&$variables) {
+  //--- Procura nome do menu que está relacionado ao we_megamenu
+  if(!isset($variables['page']['nav_main'])) {
+    return;
+  }
+
+  $menu_name = '';
+  $nav_section = $variables['page']['nav_main'];
+  if(is_null($nav_section)) {
+    return;
+  }
+
+  $nav_section = array_values($nav_section);
+  $tags = $nav_section[0]['#cache']['tags'];
+  if($tags) {
+    foreach ($tags as $key => $value) {
+      $status = strpos($value,"we_mega_menu");
+      if($status !== false) {
+        $menu_name = explode('.', $value);
+        $menu_name = end($menu_name);
+      }
+    }
+  }
+
+  if(empty($menu_name)) {
+    return;
+  }
+
+   //--- Recupera ID da folha de estilo que será aplicada ao menu
+   $theme = Drupal::config('system.theme')->get('default');
+   $style = WeMegaMenuBuilder::loadConfig($menu_name, $theme);
+   $style = $style->block_config->style;
+ 
+  return $style;
+}
+
+function we_megamenu_bagov_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'we_megamenu_bagov/custom_key';
+  return $attachments;
+}

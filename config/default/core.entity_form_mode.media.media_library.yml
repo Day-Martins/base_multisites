@@ -1,0 +1,15 @@
+uuid: b51f4a62-71bd-420e-a94f-de4f1a7ac5bc
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - media
+  enforced:
+    module:
+      - media_library
+_core:
+  default_config_hash: Tdhz-aDHfDoV1Ul9umtItxGTrjkFzoNAkDw8FWXjYA0
+id: media.media_library
+label: 'Biblioteca de mídia'
+targetEntityType: media
+cache: true

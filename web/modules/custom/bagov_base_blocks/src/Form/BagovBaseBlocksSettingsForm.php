@@ -40,10 +40,10 @@ class BagovBaseBlocksSettingsForm extends ConfigFormBase
             '#default_value' => $config->get('acesso_informacao_enable'),
             '#description' => $this->t('Habilitar botão de acesso a informaçao?'),
         ];
-        $form['constrast_enable'] = [
+        $form['contrast_enable'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('Contraste'),
-            '#default_value' => $config->get('constrast_enable'),
+            '#default_value' => $config->get('contrast_enable'),
             '#description' => $this->t('Habilitar botão de contraste?'),
         ];
         $form['creative_commons_enable'] = [
@@ -80,7 +80,7 @@ class BagovBaseBlocksSettingsForm extends ConfigFormBase
     {
         parent::submitForm($form, $form_state);
         $this->config('bagov_base_blocks.settings')
-            ->set('constrast_enable', $form_state->getValue('constrast_enable'))
+            ->set('contrast_enable', $form_state->getValue('contrast_enable'))
             ->save();
         $this->config('bagov_base_blocks.settings')
             ->set('acesso_informacao_enable', $form_state->getValue('acesso_informacao_enable'))
