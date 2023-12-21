@@ -1,0 +1,6 @@
+custom_key:
+  css:
+    theme:
+      css/we_megamenu_bagov_backend.css: {weight: 1000}
+  js:
+    js/we_megamenu_bagov.js: {}

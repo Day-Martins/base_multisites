@@ -1,7 +1,4 @@
-console.log('carregou custom.js');
-
 window.addEventListener('load', addDarkmodeWidget);
-
 
 function addDarkmodeWidget() {
   // const options = {

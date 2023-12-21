@@ -1,0 +1,17 @@
+.block-social-network ul {
+  display: flex;
+  margin: 0;
+}
+.block-social-network .position-h ul {
+  flex-direction: row;
+}
+.block-social-network .position-v ul {
+  flex-direction: column;
+}
+.block-social-network .icon-social-network {
+  border: 1px solid;
+  width: 18px;
+  height: 18px;
+  padding: 3px;
+  border-radius: 4px;
+}/*# sourceMappingURL=socialnetwork.css.map */

@@ -1,4 +1,10 @@
 block_contrast:
+  js:
+    assets/js/contrast.js: {}
+  css:
+    theme:
+      assets/css/contrast.css: {}
+      assets/css/socialnetwork.css: {}
   dependencies:
     - core/once
     - core/drupal
