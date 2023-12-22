@@ -1,0 +1,19 @@
+.pagination .page-item.disabled .page-link, .pagination .page-item.disabled .page-link:focus, .pagination
+.page-item.disabled .page-link:hover, .pagination>.disabled>span,
+.pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+color: #777;
+cursor: not-allowed;
+background-color: var(--bs-white);
+border-color: var(--bs-gray-200);
+}
+
+.pagination .page-item .page-link {
+color: var(--turquesa);
+}
+
+.pagination .page-item.active .page-link {
+z-index: 1;
+color: var(--bs-white);
+background-color: var(--turquesa)!important;
+border-color: var(--turquesa);
+}

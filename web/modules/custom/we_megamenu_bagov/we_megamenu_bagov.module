@@ -113,9 +113,28 @@ function _getStyle(&$variables) {
    //--- Recupera ID da folha de estilo que será aplicada ao menu
    $theme = Drupal::config('system.theme')->get('default');
    $style = WeMegaMenuBuilder::loadConfig($menu_name, $theme);
-   $style = $style->block_config->style;
+   
+   //Se a folha de estilo vier sem estilo configurado, seta o estilo inicial do Ba.Gov
+   if(!$style->block_config->style == 'Default'){
+    $megamenu_config = new \stdClass();
+    $megamenu_config->menu_update_flag = 0;
+    $megamenu_config->menu_config = new \stdClass();
+    $megamenu_config->block_config = [
+      'style' => 'bagov00',
+      'animation' => 'None',
+      'delay' => '',
+      'duration' => '',
+      'auto-arrow' => '',
+      'always-show-submenu' => 1,
+      'action' => 'hover',
+      'auto-mobile-collapse' => 1,
+    ];
+    $menu_items = WeMegaMenuBuilder::getMenuTreeOrder($menu_name, FALSE);
+    WeMegaMenuBuilder::updateMegamenuFromDrupalMenu($megamenu_config, $menu_items, 0);
+    $style = WeMegaMenuBuilder::saveConfig($menu_name, $theme, json_encode($megamenu_config));
+   }
  
-  return $style;
+  return $style->block_config->style;
 }
 
 function we_megamenu_bagov_page_attachments(array &$attachments) {

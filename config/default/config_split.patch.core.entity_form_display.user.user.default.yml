@@ -14,4 +14,14 @@ adding:
         progress_indicator: throbber
         preview_image_style: thumbnail
       third_party_settings: {  }
-removing: {  }
+removing:
+  dependencies:
+    module:
+      - path
+  content:
+    path:
+      type: path
+      weight: 30
+      region: content
+      settings: {  }
+      third_party_settings: {  }
