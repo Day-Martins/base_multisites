@@ -30,7 +30,8 @@ module:
   views_bootstrap: 0
   ds: 1
   pathauto: 1
-theme: {  }
+theme: 
+  gin: 0
 complete_list:
   - block.block.bootstrap5_account_menu
   - block.block.bootstrap5_branding
@@ -53,8 +54,19 @@ complete_list:
   - block.block.claro_page_title
   - block.block.claro_primary_local_tasks
   - block.block.claro_secondary_local_tasks
+  - block.block.gin_breadcrumbs
+  - block.block.gin_content
+  - block.block.gin_help
+  - block.block.gin_local_actions
+  - block.block.gin_messages
+  - block.block.gin_page_title
+  - block.block.gin_primary_local_tasks
+  - block.block.gin_secondary_local_tasks
   - bootstrap5.settings
   - claro.settings
+  - config_split.config_split.bagov_base_split
+  - config_split.config_split.bagov_development_split
+  - config_split.config_split.default_split
   - core.entity_form_display.comment.comment.default
   - core.entity_form_display.media.audio.default
   - core.entity_form_display.media.audio.media_library
@@ -155,6 +167,7 @@ complete_list:
   - field.storage.node.field_tags
   - field.storage.user.user_picture
   - fontawesome.settings
+  - gin.settings
   - language.content_settings.node.banner
   - language.content_settings.node.lista_migrada
   - language.content_settings.node.midia
