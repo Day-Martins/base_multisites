@@ -16,6 +16,12 @@ services:
     overrides:
       volumes:
         - /var/local/projects/multisites_govba/sites:/app/web/sites
+  node:
+    type: node:18
+    build_as_root:
+      - apt-get update -y
+      - apt-get install ruby-full -y
+      - gem install compass
   database:
     type: mysql:8.0
     portforward: true
@@ -35,21 +41,25 @@ tooling:
     service: appserver
     description: Run Drush commands
     cmd: drush
-  site-create <brand>:
+  ruby:
+    service: node
+  compass:
+    service: node
+  site-create <site>:
     service: appserver
     description: Configure a new Drupal site
     cmd: lando/scripts/site-create
-  sc <brand>:
+  sc <site>:
     service: appserver
     description: Configure a new Drupal site
     cmd: lando/scripts/site-create
-  site-update <brand>:
+  site-update <site>:
     service: appserver
-    description: Update a Drupal site with splitted configs
+    description: Update a Drupal site with new splitted configs
     cmd: lando/scripts/site-update
-  su <brand>:
+  su <site>:
     service: appserver
-    description: Update a Drupal site with splitted configs
+    description: Update a Drupal site with new splitted configs
     cmd: lando/scripts/site-update
 proxy:
   appserver:
