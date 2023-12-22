@@ -40,6 +40,7 @@ module:
   pathauto: 1
 theme: {  }
 complete_list:
+  - block.block.bagov_base_views_block__carrousel_de_eventos_block_1
   - block.block.bootstrap5_account_menu
   - block.block.bootstrap5_branding
   - block.block.bootstrap5_breadcrumbs
@@ -227,6 +228,7 @@ complete_list:
   - text_resize.settings
   - update.settings
   - views.view.calendario_de_eventos
+  - views.view.carrousel_de_eventos
   - views.view.eventos
   - webform.webform.demo_event_registration
 partial_list: {  }

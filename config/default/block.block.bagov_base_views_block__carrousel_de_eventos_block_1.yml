@@ -1,0 +1,29 @@
+uuid: f3c57fa7-9291-4413-8850-df0ff3c31c3d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.carrousel_de_eventos
+  module:
+    - system
+    - views
+  theme:
+    - bagov_base
+id: bagov_base_views_block__carrousel_de_eventos_block_1
+theme: bagov_base
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:carrousel_de_eventos-block_1'
+settings:
+  id: 'views_block:carrousel_de_eventos-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /
