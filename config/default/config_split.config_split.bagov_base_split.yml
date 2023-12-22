@@ -12,6 +12,7 @@ storage: folder
 folder: ../config/bagov_base
 module:
   bagov_base_blocks: 0
+  we_megamenu_bagov: 0
 theme: {  }
 complete_list:
   - bagov_base.settings
@@ -24,7 +25,7 @@ complete_list:
   - block.block.bagov_base_definicaodemarcadosite
   - block.block.bagov_base_endereco
   - block.block.bagov_base_logodoestado
-  - block.block.bagov_base_main_menu
+  - block.block.bagov_base_navegacaoprincipal
   - block.block.bagov_base_redessociaisba.gov
   - block.block.bagov_base_rodape
   - block.block.bagov_base_search_form_wide
@@ -34,4 +35,5 @@ complete_list:
   - pathauto.pattern.noticia
   - simple_block.simple_block.endereco
   - views.view.noticias
+  - block.block.bagov_base_main_menu
 partial_list: {  }

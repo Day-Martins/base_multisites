@@ -73,6 +73,9 @@ module:
   webform_options_limit: 0
   webform_scheduled_email: 0
   webform_share: 0
+  we_megamenu: 0
+  we_megamenu_bagov: 0
+  ds: 1
   pathauto: 1
   views: 10
   standard: 1000
@@ -82,4 +85,5 @@ theme:
   bootstrap5: 0
   bagov_base: 0
   olivero: 0
+  gin: 0
 profile: standard
