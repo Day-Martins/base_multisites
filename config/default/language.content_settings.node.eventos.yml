@@ -1,0 +1,11 @@
+uuid: 4cb811ab-e9fb-4504-8b6c-e1f76a875ae5
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.eventos
+id: node.eventos
+target_entity_type_id: node
+target_bundle: eventos
+default_langcode: site_default
+language_alterable: false

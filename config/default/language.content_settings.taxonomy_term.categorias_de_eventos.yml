@@ -1,0 +1,11 @@
+uuid: 936e5569-7153-426a-a211-b5a0e6694af9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categorias_de_eventos
+id: taxonomy_term.categorias_de_eventos
+target_entity_type_id: taxonomy_term
+target_bundle: categorias_de_eventos
+default_langcode: site_default
+language_alterable: false

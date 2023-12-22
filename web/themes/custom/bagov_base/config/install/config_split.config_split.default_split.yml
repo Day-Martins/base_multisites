@@ -1,10 +1,10 @@
 uuid: 87e5abb5-e2f3-470d-b724-27599a39cdaa
 langcode: pt-br
 status: true
-dependencies: {  }
+dependencies: {}
 id: default_split
-label: 'Default Split'
-description: 'Todas as configurações comuns entre os sites'
+label: "Default Split"
+description: "Todas as configurações comuns entre os sites"
 weight: -1
 stackable: false
 no_patching: false
@@ -14,10 +14,12 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   bootstrap_layouts: 0
+  calendar_view: 0
   config_filter: 0
   config_split: 0
   datetime_range: 0
   fontawesome: 0
+  fullcalendar_view: 0
   layout_builder: 0
   layout_discovery: 0
   media: 0
@@ -28,9 +30,15 @@ module:
   text_resize: 0
   twig_tweak: 0
   views_bootstrap: 0
+  webform: 0
+  webform_demo_event_registration: 0
+  webform_node: 0
+  webform_options_limit: 0
+  webform_scheduled_email: 0
+  webform_share: 0
   ds: 1
   pathauto: 1
-theme: {  }
+theme: {}
 complete_list:
   - block.block.bootstrap5_account_menu
   - block.block.bootstrap5_branding
@@ -55,6 +63,7 @@ complete_list:
   - block.block.claro_secondary_local_tasks
   - bootstrap5.settings
   - claro.settings
+  - core.base_field_override.node.eventos.title
   - core.entity_form_display.comment.comment.default
   - core.entity_form_display.media.audio.default
   - core.entity_form_display.media.audio.media_library
@@ -68,11 +77,13 @@ complete_list:
   - core.entity_form_display.media.video.media_library
   - core.entity_form_display.node.article.default
   - core.entity_form_display.node.banner.default
+  - core.entity_form_display.node.eventos.default
   - core.entity_form_display.node.lista_migrada.default
   - core.entity_form_display.node.midia.default
   - core.entity_form_display.node.noticia.default
   - core.entity_form_display.node.page.default
   - core.entity_form_display.node.publicacao.default
+  - core.entity_form_display.node.webform.default
   - core.entity_view_display.comment.comment.default
   - core.entity_view_display.media.audio.default
   - core.entity_view_display.media.audio.media_library
@@ -90,6 +101,8 @@ complete_list:
   - core.entity_view_display.node.article.teaser
   - core.entity_view_display.node.banner.default
   - core.entity_view_display.node.banner.teaser
+  - core.entity_view_display.node.eventos.default
+  - core.entity_view_display.node.eventos.teaser
   - core.entity_view_display.node.lista_migrada.default
   - core.entity_view_display.node.lista_migrada.teaser
   - core.entity_view_display.node.midia.default
@@ -100,6 +113,8 @@ complete_list:
   - core.entity_view_display.node.page.teaser
   - core.entity_view_display.node.publicacao.default
   - core.entity_view_display.node.publicacao.teaser
+  - core.entity_view_display.node.webform.default
+  - core.entity_view_display.node.webform.teaser
   - core.extension
   - dblog.settings
   - ds.settings
@@ -118,6 +133,18 @@ complete_list:
   - field.field.node.banner.body
   - field.field.node.banner.field_imagem_do_banner
   - field.field.node.banner.field_link_do_banner
+  - field.field.node.eventos.body
+  - field.field.node.eventos.comment
+  - field.field.node.eventos.field_categorias
+  - field.field.node.eventos.field_datas
+  - field.field.node.eventos.field_emails
+  - field.field.node.eventos.field_image
+  - field.field.node.eventos.field_imagem_do_banner
+  - field.field.node.eventos.field_pdfs
+  - field.field.node.eventos.field_sites
+  - field.field.node.eventos.field_tags
+  - field.field.node.eventos.field_webform_entity_limit_total
+  - field.field.node.eventos.webform
   - field.field.node.lista_migrada.body
   - field.field.node.lista_migrada.field_categorias_lista_migrada
   - field.field.node.midia.body
@@ -130,6 +157,8 @@ complete_list:
   - field.field.node.publicacao.body
   - field.field.node.publicacao.field_categorias_publicacao
   - field.field.node.publicacao.field_midias_publicacao
+  - field.field.node.webform.body
+  - field.field.node.webform.webform
   - field.field.user.user.user_picture
   - field.settings
   - field.storage.block_content.body
@@ -143,24 +172,32 @@ complete_list:
   - field.storage.node.body
   - field.storage.node.comment
   - field.storage.node.field_anexo_noticia
+  - field.storage.node.field_categorias
   - field.storage.node.field_categorias_lista_migrada
   - field.storage.node.field_categorias_noticia
   - field.storage.node.field_categorias_publicacao
+  - field.storage.node.field_datas
+  - field.storage.node.field_emails
   - field.storage.node.field_fonte_noticia
   - field.storage.node.field_image
   - field.storage.node.field_imagem_destaque_noticia
   - field.storage.node.field_imagem_do_banner
   - field.storage.node.field_link_do_banner
   - field.storage.node.field_midias_publicacao
+  - field.storage.node.field_pdfs
+  - field.storage.node.field_sites
   - field.storage.node.field_tags
+  - field.storage.node.field_webform_entity_limit_total
   - field.storage.user.user_picture
   - fontawesome.settings
   - language.content_settings.node.banner
+  - language.content_settings.node.eventos
   - language.content_settings.node.lista_migrada
   - language.content_settings.node.midia
   - language.content_settings.node.noticia
   - language.content_settings.node.publicacao
   - language.content_settings.path_alias.path_alias
+  - language.content_settings.taxonomy_term.categorias_de_eventos
   - language.content_settings.taxonomy_term.categoria_de_noticia
   - language.content_settings.taxonomy_term.categoria_lista_migrada
   - language.content_settings.taxonomy_term.categoria_publicacao
@@ -171,19 +208,25 @@ complete_list:
   - media.type.remote_video
   - node.type.article
   - node.type.banner
+  - node.type.eventos
   - node.type.lista_migrada
   - node.type.midia
   - node.type.noticia
   - node.type.page
   - node.type.publicacao
+  - node.type.webform
   - pathauto.settings
   - system.maintenance
   - system.theme
   - system.theme.global
+  - taxonomy.vocabulary.categorias_de_eventos
   - taxonomy.vocabulary.categoria_de_noticia
   - taxonomy.vocabulary.categoria_lista_migrada
   - taxonomy.vocabulary.categoria_publicacao
   - taxonomy.vocabulary.tags
   - text_resize.settings
   - update.settings
-partial_list: {  }
+  - views.view.calendario_de_eventos
+  - views.view.eventos
+  - webform.webform.demo_event_registration
+partial_list: {}
