@@ -20,3 +20,9 @@ slick:
 darkmode:
     js:
       libraries/darkmode/darkmode-js.min.js: {}
+noticias:
+  css:
+    theme:
+      assets/css/noticias/noticia.css: {}
+      assets/css/noticias/noticia-anexos.css: {}
+      assets/css/noticias/noticia-paginacao.css: {}
