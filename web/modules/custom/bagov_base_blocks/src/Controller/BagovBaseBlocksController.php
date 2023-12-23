@@ -14,7 +14,7 @@ class BagovBaseBlocksController extends ControllerBase {
    */
   public function home() {
     $build = [
-      '#markup' => $this->t('Hello World!'),
+      '#markup' =>'',
     ];
     return $build;
   }
