@@ -32,15 +32,7 @@ install_with_configs() {
 
     #install contrib modules
     printf "${CYAN}Instalando módulos contrib${NC}\n"
-    drush -y -l http://$SITE_NAME.multisite.local pm:install text_resize, simple_block, admin_toolbar, admin_toolbar_tools, fontawesome, config_filter, config_split, bootstrap_layouts, pathauto, ds, views_bootstrap
-
-    # #Install events modules
-    # printf "${CYAN}Instalando módulos events${NC}\n"
-    # drush -y -l http://$SITE_NAME.multisite.local pm:install calendar_view, webform
-    # printf "${CYAN}Instalando extensão de calendário${NC}\n"
-    # drush -y -l http://$SITE_NAME.multisite.local pm:install fullcalendar_view
-    # printf "${CYAN}Ativando módulos webform auxiliares${NC}\n"
-    # drush -y -l http://$SITE_NAME.multisite.local pm:enable webform_node, webform_options_limit, webform_scheduled_email, webform_share, webform_demo_event_registration
+    drush -y -l http://$SITE_NAME.multisite.local pm:install text_resize, simple_block, admin_toolbar, admin_toolbar_tools, fontawesome, config_filter, config_split, config_ignore, bootstrap_layouts, pathauto, views_bootstrap
 
     #install custom modules
     printf "${CYAN}Instalando módulos custom${NC}\n"
