@@ -22,3 +22,9 @@ function bagov_base_blocks_update_10001()
         }
     }
 }
+
+function bagov_base_blocks_install() {
+    // Cria uma frontpage vazia.
+    Drupal::configFactory()->getEditable('system.site')->set('page.front', '/home')->save();
+}
+  

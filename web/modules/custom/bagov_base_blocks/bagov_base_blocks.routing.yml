@@ -10,3 +10,10 @@ bagov_base_blocks.social_network.settings:
     _form: 'Drupal\bagov_base_blocks\Form\BagovBaseBlocksSettingsForm'
   requirements:
     _permission: 'administer bagov_base'
+bagov_base_blocks.content:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\bagov_base_blocks\Controller\BagovBaseBlocksController::home'
+    _title: ''
+  requirements:
+    _permission: 'access content'
