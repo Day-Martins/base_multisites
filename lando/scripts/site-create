@@ -32,7 +32,7 @@ install_with_configs() {
 
     #install contrib modules
     printf "${CYAN}Instalando módulos contrib${NC}\n"
-    drush -y -l http://$SITE_NAME.multisite.local pm:install text_resize, simple_block, admin_toolbar, admin_toolbar_tools, fontawesome, config_filter, config_split, config_ignore, bootstrap_layouts, pathauto, views_bootstrap, ds
+    drush -y -l http://$SITE_NAME.multisite.local pm:install text_resize, simple_block, admin_toolbar, admin_toolbar_tools, fontawesome, config_filter, config_split, config_ignore, bootstrap_layouts, pathauto, views_bootstrap
 
     #install custom modules
     printf "${CYAN}Instalando módulos custom${NC}\n"

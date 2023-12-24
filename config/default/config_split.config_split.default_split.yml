@@ -37,7 +37,6 @@ module:
   webform_options_limit: 0
   webform_scheduled_email: 0
   webform_share: 0
-  ds: 1
   pathauto: 1
 theme: {}
 complete_list:
@@ -120,7 +119,6 @@ complete_list:
   - core.entity_view_display.node.webform.teaser
   - core.extension
   - dblog.settings
-  - ds.settings
   - field.field.block_content.basic.body
   - field.field.comment.comment.comment_body
   - field.field.media.audio.field_media_audio_file
