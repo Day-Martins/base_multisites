@@ -10,8 +10,8 @@ dependencies:
     - bagov_base
 id: bagov_base_account_menu
 theme: bagov_base
-region: nav_branding
-weight: -7
+region: desatived
+weight: -6
 provider: null
 plugin: 'system_menu_block:account'
 settings:
