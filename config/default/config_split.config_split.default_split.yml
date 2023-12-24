@@ -15,6 +15,7 @@ module:
   admin_toolbar_tools: 0
   bootstrap_layouts: 0
   config_filter: 0
+  config_ignore: 0
   config_split: 0
   datetime_range: 0
   fontawesome: 0
@@ -55,6 +56,7 @@ complete_list:
   - block.block.claro_secondary_local_tasks
   - bootstrap5.settings
   - claro.settings
+  - config_ignore.settings
   - core.entity_form_display.comment.comment.default
   - core.entity_form_display.media.audio.default
   - core.entity_form_display.media.audio.media_library
