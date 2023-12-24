@@ -1,4 +1,4 @@
-uuid: 2b06e9bf-de52-4fb1-9680-cf16fb3d6863
+uuid: 463e644e-6cc9-492e-8e8a-796d252332b0
 langcode: pt-br
 status: true
 dependencies:
@@ -16,8 +16,8 @@ provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: 'Formulário de busca (largo)'
-  label_display: '0'
+  label: "Formulário de busca (largo)"
+  label_display: "0"
   provider: search
-  page_id: ''
-visibility: {  }
+  page_id: ""
+visibility: {}

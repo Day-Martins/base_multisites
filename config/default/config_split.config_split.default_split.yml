@@ -1,10 +1,10 @@
 uuid: 87e5abb5-e2f3-470d-b724-27599a39cdaa
 langcode: pt-br
 status: true
-dependencies: {  }
+dependencies: {}
 id: default_split
-label: 'Default Split'
-description: 'Todas as configurações comuns entre os sites'
+label: "Default Split"
+description: "Todas as configurações comuns entre os sites"
 weight: -1
 stackable: false
 no_patching: false
@@ -16,6 +16,7 @@ module:
   bootstrap_layouts: 0
   calendar_view: 0
   config_filter: 0
+  config_ignore: 0
   config_split: 0
   datetime_range: 0
   fontawesome: 0
@@ -38,7 +39,7 @@ module:
   webform_share: 0
   ds: 1
   pathauto: 1
-theme: {  }
+theme: {}
 complete_list:
   - block.block.bagov_base_views_block__carrousel_de_eventos_block_1
   - block.block.bootstrap5_account_menu
@@ -65,6 +66,7 @@ complete_list:
   - bootstrap5.settings
   - claro.settings
   - core.base_field_override.node.eventos.title
+  - config_ignore.settings
   - core.entity_form_display.comment.comment.default
   - core.entity_form_display.media.audio.default
   - core.entity_form_display.media.audio.media_library
@@ -231,4 +233,4 @@ complete_list:
   - views.view.carrousel_de_eventos
   - views.view.eventos
   - webform.webform.demo_event_registration
-partial_list: {  }
+partial_list: {}
