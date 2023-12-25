@@ -9,6 +9,20 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Symfony\Component\Validator\Constraints\Json;
 
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function bagov_base_blocks_theme_suggestions_views_view(array $variables) {
+    $suggestions = [];
+    $view = $variables['view'];
+  
+    $suggestions[] = 'views_view__' . $view->id();
+    $suggestions[] = 'views_view__' . $view->current_display;
+    $suggestions[] = 'views_view__' . $view->id() . '__' . $view->current_display;
+  
+    return $suggestions;
+}
 /**
  * Implements hook_theme().
  */
