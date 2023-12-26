@@ -12,7 +12,6 @@ storage: folder
 folder: ../config/bagov_base
 module:
   bagov_base_blocks: 0
-  we_megamenu: 0
   we_megamenu_bagov: 0
 theme: {  }
 complete_list:

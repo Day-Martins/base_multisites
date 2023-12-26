@@ -26,7 +26,7 @@ install_with_configs() {
 
     #install splitter module
     printf "${CYAN}Instalando config split${NC}\n"
-    drush -y -l http://$SITE_NAME.multisite.local pm:install config_filter, config_split
+    drush -y -l http://$SITE_NAME.multisite.local pm:install config_filter, config_split, config_ignore
 
     printf "${GREEN}Splitter instalado com sucesso${NC}\n"
 
@@ -67,6 +67,8 @@ if [ ! -f "$MS_FILE" ]; then
     touch ./web/sites/sites.php
     printf '<?php' > $MS_FILE
 fi
+
+composer install
 
 #Add a site to multisite file
 printf '\n$sites["'$SITE_NAME'.multisite.local"] = "'$SITE_NAME'";' >> $MS_FILE
