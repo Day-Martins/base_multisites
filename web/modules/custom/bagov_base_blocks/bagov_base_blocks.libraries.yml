@@ -9,6 +9,16 @@ block_contrast:
     - core/once
     - core/drupal
     - core/drupalSettings
+slick:
+  version: 1.8.1
+  js:
+    assets/slick/slick.min.js: {}
+  css:
+    theme:
+      assets/slick/slick.css: {}
+      assets/slick/slick-theme.css: {}
+  dependencies:
+    - core/jquery
 views_noticias_home:
   css:
     theme:
@@ -23,10 +33,9 @@ views_noticias:
   dependencies:
     - core/drupal
     - core/jquery
-views_eventos:
+views_teste:
   css:
     theme:
-      assets/css/eventos.css: {}
-  dependencies:
-    - core/drupal
-    - core/jquery
+      assets/css/teste.css: {}
+  js:
+    assets/js/teste.js: {}
