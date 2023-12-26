@@ -29,47 +29,16 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-
-<style>
-	#block-bagov-base-views-block-carrousel-de-eventos-block-1 h2 {
-		font-weight: bolder;
-		font-size: 2rem;
-		white-space: normal;
-		text-transform: capitalize;
-		color: #36b0b4; /* Mudar para cor primária do template */
-		width: 6rem;
-		margin-bottom: 4rem;
-	}
-
-	.custom-card {
-		height: 360px !important; /* Define a altura fixa do card */
-	}
-
-	.custom-card img {
-		height: 350px;
-		width: 100%;
-		object-fit: fill; /* Garante que a imagem preencha todo o card */
-		border-radius: 12px;
-	}
-
-	.custom-card:hover {
-		opacity: 0.8;
-	}
-
-	.custom-card .card-title {
-		background-color: #36b0b4; /* Mudar para cor primária do template */
-		height: 120px;
-	}
-</style>
+{{ attach_library('bagov_base_blocks/views_eventos') }}
 
 <div class="position-relative text-white border-0 custom-card rounded-4">
 	{{ fields.field_imagem_do_banner.content }}
 
 	<section class="
-																																																																																																						      card-title position-absolute w-100 text-white d-flex
-																																																																																																						      flex-column justify-content-center align-items-center
-																																																																																																						      bottom-0 text-center fw-bold text-capitalize rounded-4
-																																																																																																						    ">
+			            card-title position-absolute w-100 text-white d-flex
+			            flex-column justify-content-center align-items-center
+			            bottom-0 text-center fw-bold text-capitalize rounded-4
+			        ">
 		{% set iso_date = fields.field_data_inicio %}
 		{% set dia_da_semana = iso_date|date("l") %}
 		{% set data_formatada = iso_date|date("d/m") %}

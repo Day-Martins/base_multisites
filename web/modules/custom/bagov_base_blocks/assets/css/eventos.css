@@ -1,0 +1,38 @@
+#block-bagov-base-views-block-carrousel-de-eventos-block-1 h2 {
+  font-weight: bolder;
+  font-size: 2rem;
+  white-space: normal;
+  text-transform: capitalize;
+  color: #36b0b4;
+  width: 6rem;
+  margin-bottom: 4rem;
+}
+
+.custom-card {
+  height: 360px !important;
+  margin-inline: 1rem;
+  /* Define a altura fixa do card */
+}
+
+.custom-card img {
+  height: 350px;
+  width: 100%;
+  object-fit: fill;
+  /* Garante que a imagem preencha todo o card */
+  border-radius: 12px;
+}
+
+.custom-card:hover {
+  opacity: 0.8;
+}
+
+.custom-card .card-title {
+  background-color: #36b0b4;
+  /* Mudar para cor primária do template */
+  height: 120px;
+}
+
+.carrousel-eventos .slick-prev:before,
+.carrousel-eventos .slick-next:before {
+  color: #36b0b4;
+}

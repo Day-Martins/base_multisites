@@ -39,3 +39,12 @@ views_teste:
       assets/css/teste.css: {}
   js:
     assets/js/teste.js: {}
+views_eventos:
+  css:
+    theme:
+      assets/css/eventos.css: {}
+  js:
+    assets/js/carrousel-eventos.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
