@@ -23,4 +23,10 @@ views_noticias:
   dependencies:
     - core/drupal
     - core/jquery
-
+views_eventos:
+  css:
+    theme:
+      assets/css/eventos.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

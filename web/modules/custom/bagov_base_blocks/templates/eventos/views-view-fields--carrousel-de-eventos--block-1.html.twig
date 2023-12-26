@@ -1,0 +1,96 @@
+{#
+/**
+ * @file
+ * Theme override to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ */
+#}
+
+<style>
+	#block-bagov-base-views-block-carrousel-de-eventos-block-1 h2 {
+		font-weight: bolder;
+		font-size: 2rem;
+		white-space: normal;
+		text-transform: capitalize;
+		color: #36b0b4; /* Mudar para cor primária do template */
+		width: 6rem;
+		margin-bottom: 4rem;
+	}
+
+	.custom-card {
+		height: 360px !important; /* Define a altura fixa do card */
+	}
+
+	.custom-card img {
+		height: 350px;
+		width: 100%;
+		object-fit: fill; /* Garante que a imagem preencha todo o card */
+		border-radius: 12px;
+	}
+
+	.custom-card:hover {
+		opacity: 0.8;
+	}
+
+	.custom-card .card-title {
+		background-color: #36b0b4; /* Mudar para cor primária do template */
+		height: 120px;
+	}
+</style>
+
+<div class="position-relative text-white border-0 custom-card rounded-4">
+	{{ fields.field_imagem_do_banner.content }}
+
+	<section class="
+																																																																																																									      card-title position-absolute w-100 text-white d-flex
+																																																																																																									      flex-column justify-content-center align-items-center
+																																																																																																									      bottom-0 text-center fw-bold text-capitalize rounded-4
+																																																																																																								    ">
+		{% set iso_date = fields.field_data_inicio %}
+		{% set dia_da_semana = iso_date|date("l") %}
+		{% set data_formatada = iso_date|date("d/m") %}
+
+		{% set mapping_dates = {
+        'Monday': 'Segunda',
+        'Tuesday': 'Terça',
+        'Wednesday': 'Quarta',
+        'Thursday': 'Quinta',
+        'Friday': 'Sexta',
+        'Saturday': 'Sábado',
+        'Sunday': 'Domingo',
+      }
+    %}
+		{% set dia_da_semana = dia_da_semana|replace(mapping_dates) %}
+
+		<h5 class="capitalize fw-bold">{{ dia_da_semana }}</h5>
+		<h3 class="fw-bold text-white">{{ data_formatada }}</h3>
+
+	</section>
+	<div class="visually-hidden">
+		<h6>{{ node.fields.title.content }}</h6>
+	</div>
+</div>
