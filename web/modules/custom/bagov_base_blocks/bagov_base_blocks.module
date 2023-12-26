@@ -9,50 +9,34 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Symfony\Component\Validator\Constraints\Json;
 
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function bagov_base_blocks_theme_suggestions_views_view(array $variables) {
+    $suggestions = [];
+    $view = $variables['view'];
+  
+    $suggestions[] = 'views_view__' . $view->id();
+    $suggestions[] = 'views_view__' . $view->current_display;
+    $suggestions[] = 'views_view__' . $view->id() . '__' . $view->current_display;
+  
+    return $suggestions;
+}
+
 /**
  * Implements hook_theme().
  */
 function bagov_base_blocks_theme()
 {
+    require 'bagov_base__blocks_theme_config.php';
+
     $modulePath = \Drupal::service('extension.list.module')->getPath('bagov_base_blocks');
     $themePath = \Drupal::service('extension.list.theme')->getPath('bagov_base');
 
     $secretarias = file_get_contents($modulePath . '/assets/constants/secretarias.json');
 
-    return [
-        'contrast_block' => [
-            'render element' => 'content',
-        ],
-        'acesso_informacao_block' => [
-            'render element' => 'content',
-        ],
-        'logo_estado_block' => [
-            'render element' => 'content',
-            'variables' => [
-                'img' => '/sites/default/files/images/logo-governo-rodape.png',
-            ],
-        ],
-        'select_secretaria_block' => [
-            'render element' => 'content',
-            'variables' => [
-                'options' => json_decode($secretarias),
-            ],
-        ],
-        'creative_commons_block' => [
-            'render element' => 'content',
-            'variables' => [
-                'img' => '/sites/default/files/images/creative-commons-nd.png',
-            ],
-        ],
-        'views_noticias' => [
-            'preprocess functions' => ['template_preprocess_views_noticias'],
-            'file' => 'bagov_base_blocks.theme.inc',
-        ],
-        'views_noticias_home' => [
-            'preprocess functions' => ['template_preprocess_views_noticias_home'],
-            'file' => 'bagov_base_blocks.theme.inc',
-        ],
-    ];
+    return theme_template_map();
 }
 
 /**

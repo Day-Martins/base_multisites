@@ -1,0 +1,4 @@
+langcode: pt-br
+mode: simple
+ignored_config_entities:
+  - system.site

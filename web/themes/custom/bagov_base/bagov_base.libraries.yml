@@ -5,18 +5,7 @@ global-styling:
       css/style_custom.css: {}      
 global-scripts:
   js:
-    js/custom_script.js: {}
-    
-slick:
-  version: 1.8.1
-  js:
-    libraries/slick/slick.min.js: {}
-  css:
-    theme:      
-      libraries/slick/slick.css: {}
-      libraries/slick/slick-theme.css: {}
-  dependencies:
-    - core/jquery
+    js/custom_script.js: {}    
 darkmode:
     js:
       libraries/darkmode/darkmode-js.min.js: {}

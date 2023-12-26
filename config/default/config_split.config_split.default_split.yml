@@ -15,6 +15,7 @@ module:
   admin_toolbar_tools: 0
   bootstrap_layouts: 0
   config_filter: 0
+  config_ignore: 0
   config_split: 0
   datetime_range: 0
   fontawesome: 0
@@ -29,7 +30,6 @@ module:
   twig_tweak: 0
   views_bootstrap: 0
   we_megamenu: 0
-  ds: 1
   pathauto: 1
 theme: {  }
 complete_list:
@@ -64,6 +64,7 @@ complete_list:
   - block.block.gin_secondary_local_tasks
   - bootstrap5.settings
   - claro.settings
+  - config_ignore.settings
   - config_split.config_split.bagov_base_split
   - config_split.config_split.bagov_development_split
   - config_split.config_split.default_split
@@ -114,7 +115,6 @@ complete_list:
   - core.entity_view_display.node.publicacao.teaser
   - core.extension
   - dblog.settings
-  - ds.settings
   - field.field.block_content.basic.body
   - field.field.comment.comment.comment_body
   - field.field.media.audio.field_media_audio_file
