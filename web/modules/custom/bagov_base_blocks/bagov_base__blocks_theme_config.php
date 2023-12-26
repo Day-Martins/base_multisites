@@ -34,10 +34,10 @@ function theme_template_map(){
             'preprocess functions' => ['template_preprocess_views_noticias_home'],
             'file' => 'bagov_base_blocks.theme.inc',
         ],
-        // 'views_view__view_artigos__block_1' => [
-        //     'base hook' => 'view',
-        //     'template' => 'artigos--bloco1',            
-        // ],
+        'views_view__teste__block_1' => [
+            'base hook' => 'view',
+            'template' => 'template-teste',            
+        ],
         
     ];
 }
