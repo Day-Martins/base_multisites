@@ -26,9 +26,12 @@
 *PRONTO, AMBIENTE OK*
 
 **CRIANDO UM NOVO SITE**
+
 4. CREATE SITE (PROJECT ROOT)
     ```
     lando site-create <nome do site>
+    ou
+    lando sc <nome do site>
     ```
 *SIGA AS ORIENTAÇÕES DO PROMPT, CONFIRA O ARQUIVO lando.yml, CASO O SITE NÃO ESTEJA NO PROXY, SIGA O PASSO A SEGUIR*
 
