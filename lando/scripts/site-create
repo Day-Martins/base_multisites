@@ -23,22 +23,12 @@ install_with_db() {
 }
 
 install_with_configs() {
+    
+    #install splitter module
+    printf "${CYAN}Instalando config split${NC}\n"
+    drush -y -l http://$SITE_NAME.multisite.local pm:install config_filter, config_split
 
-    printf "${YELLOW}Instalando dependencias dos temas no site $SITE_NAME${NC}\n"
-    
-    #Install core modules
-    printf "${CYAN}Instalando módulos core${NC}\n"
-    drush -y -l http://$SITE_NAME.multisite.local pm:install search, layout_builder, layout_discovery, media, media_library, datetime_range
-    
-    #install contrib modules
-    printf "${CYAN}Instalando módulos contrib${NC}\n"
-    drush -y -l http://$SITE_NAME.multisite.local pm:install text_resize, simple_block, admin_toolbar, admin_toolbar_tools, fontawesome, config_filter, config_split, config_ignore, bootstrap_layouts, pathauto, views_bootstrap
-    
-    #install custom modules
-    printf "${CYAN}Instalando módulos custom${NC}\n"
-    drush -y -l http://$SITE_NAME.multisite.local pm:install bagov_base_blocks
-
-    printf "${GREEN}Dependencias instaladas com sucesso${NC}\n"
+    printf "${GREEN}Splitter instalado com sucesso${NC}\n"
     
     #Add config ignore do modulo 'config_ignore' para reconhecer o ignore na primeira exportação
     printf "${CYAN}\nAplicando ignore em algumas configs antes de exportar ${NC}\n"
@@ -47,6 +37,9 @@ install_with_configs() {
     #Export site configs
     printf "${CYAN}Exportando configurações de $SITE_NAME${NC}\n"
     drush -y -l http://$SITE_NAME.multisite.local cex
+
+    printf "${YELLOW}Instalando tema gin no site $SITE_NAME${NC}\n"
+    drush -y -l http://$SITE_NAME.multisite.local theme:install gin  
 
     printf "${YELLOW}Instalando tema bagov_base no site $SITE_NAME${NC}\n"
     drush -y -l http://$SITE_NAME.multisite.local theme:install bagov_base 
@@ -62,12 +55,15 @@ install_with_configs() {
     drush -y -l http://$SITE_NAME.multisite.local config-set system.theme default bagov_base
     printf "${GREEN}Tema padrão em $SITE_NAME: bagov_base${NC}\n" 
 
+    printf "${YELLOW}Definindo tema gin como tema admin padrão${NC}\n"
+    drush -y -l http://$SITE_NAME.multisite.local config-set system.theme admin gin
+    printf "${GREEN}Tema admin padrão em $SITE_NAME: gin${NC}\n"
+
     #Export site splited configs
     printf "${CYAN}Importando configurações de $SITE_NAME após instalação do Split${NC}\n"
     drush -y -l http://$SITE_NAME.multisite.local cim  
 }
 
-    
 #Create a multisite file if dont exists
 MS_FILE=./web/sites/sites.php
 if [ ! -f "$MS_FILE" ]; then
