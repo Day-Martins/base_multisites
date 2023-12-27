@@ -681,12 +681,22 @@ display:
         options: {  }
       defaults:
         title: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
         style: false
         row: false
         fields: false
         sorts: false
         filters: false
         filter_groups: false
+      use_more: true
+      use_more_always: true
+      use_more_text: 'Mais Eventos'
+      link_display: page_1
+      link_url: ''
       display_extenders: {  }
       block_category: Bloco
     cache_metadata:
