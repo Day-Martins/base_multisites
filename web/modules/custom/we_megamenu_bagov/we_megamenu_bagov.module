@@ -69,7 +69,7 @@ function we_megamenu_bagov_library_info_alter(&$libraries, $extension) {
 }
 
 function we_megamenu_bagov_preprocess_html(&$variables) {
-  $is_admin = \Drupal::service('router.admin_context')->isAdminRoute($route);
+  $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
   if(!$is_admin) {
     $variables['attributes']['class'][] = 'main-we-mega-menu-bagov';
   }
