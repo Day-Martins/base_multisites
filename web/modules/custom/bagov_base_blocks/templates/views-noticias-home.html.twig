@@ -1,29 +1,9 @@
-{#
-/**
- * @file
- * Default theme implementation for displaying a view as a bootstrap carousel.
- *
- * Available variables:
- * - view: The view object.
- * - rows: A list of the view's row items.
- * - id: A valid HTML ID and guaranteed to be unique.
- * - interval: The amount of time to delay between automatically cycling a
- *   slide item. If false, carousel will not automatically cycle.
- * - pause: Pauses the cycling of the carousel on mouseenter and
- *   resumes the cycling of the carousel on mouseleave.
- * - wrap: Whether the carousel should cycle continuously or have
- *   hard stops.
- *
- * @see template_preprocess_views_noticias_home()
- *
- * @ingroup themeable
- */
-#}
+
 <div id="{{ id }}" class="noticias-home">
     {# Noticia corpo. #}
     <div class="row gy-4">
         {% for row in rows %}
-        {% set col_classes = ['col-12', row . noticia_principal ? '' : 'col-md-6'] %}
+        {% set col_classes = ['col-xs-12', row . noticia_principal ? '' : 'col-md-6'] %}
         <div class="{{ col_classes | join(' ') }}">
             <div class="noticias-container">
                 <div class="noticias-wrapper">
@@ -47,8 +27,8 @@
         </div>
         {% endfor %}
     </div>
-    <div class="noticias-home-footer">
+    <div class="noticias-home-footer d-flex flex-row-reverse py-4">
         <br>
-        {{ link('Últimas notícias', 'internal:/noticias') }}
+        {{ link('Mais notícias', 'internal:/noticias') }}
     </div>
 </div>
