@@ -39,24 +39,11 @@
 			            flex-column justify-content-center align-items-center
 			            bottom-0 text-center fw-bold text-capitalize rounded-4
 			        ">
-		{% set iso_date = fields.field_data_inicio %}
-		{% set dia_da_semana = iso_date|date("l") %}
-		{% set data_formatada = iso_date|date("d/m") %}
 
-		{% set mapping_dates = {
-        'Monday': 'Segunda',
-        'Tuesday': 'Terça',
-        'Wednesday': 'Quarta',
-        'Thursday': 'Quinta',
-        'Friday': 'Sexta',
-        'Saturday': 'Sábado',
-        'Sunday': 'Domingo',
-      }
-    %}
-		{% set dia_da_semana = dia_da_semana|replace(mapping_dates) %}
-
-		<h5 class="capitalize fw-bold fs-4">{{ dia_da_semana }}</h5>
-		<h3 class="text-white fs-1" ><strong>{{ data_formatada }}</strong></h3>
+		<h5 class="capitalize fw-bold fs-4">{{
+      fields.field_datas_1.content
+     }}</h5>
+		<h3 class="text-white fs-1" ><strong>{{ fields.field_datas.content }}</strong></h3>
 
 	</section>
 	<div class="visually-hidden">

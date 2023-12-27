@@ -39,7 +39,6 @@ function theme_template_map(){
             'template' => 'template-teste',
         ],
         'views_view_fields__carrousel_de_eventos' => [
-            'preprocess functions' => ['bagov_base_preprocess_views_view_fields__carrousel_de_eventos'],
             'base hook' => 'views_view_fields',
             'template' => 'card-carrousel-eventos',
         ],

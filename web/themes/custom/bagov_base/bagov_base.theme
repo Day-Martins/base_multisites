@@ -72,13 +72,3 @@ function bagov_base_preprocess_page__noticia(array &$vars)
         }
     }
 }
-
-/**
- * Implements hook_preprocess_HOOK() for views-view-fields--carrousel-de-eventos--block-1.html.twig.
- */
-function bagov_base_preprocess_views_view_fields__carrousel_de_eventos(&$variables) {
-  $date_regex = "/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}/";
-  $content = $variables['fields']['field_datas']->content;
-  preg_match_all($date_regex, $content, $matches);
-  $variables['fields']['field_data_inicio'] = $matches[0][0];
-}
