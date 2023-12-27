@@ -1,0 +1,29 @@
+uuid: 0311351c-bff7-44ff-996f-cb6905c22f6d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_termo_relacionado
+    - taxonomy.vocabulary.categoria_de_noticia
+    - taxonomy.vocabulary.tags
+id: taxonomy_term.categoria_de_noticia.field_termo_relacionado
+field_name: field_termo_relacionado
+entity_type: taxonomy_term
+bundle: categoria_de_noticia
+label: 'Termo Relacionado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

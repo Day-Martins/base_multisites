@@ -1,22 +1,17 @@
-.noticia{
-border-top: 2px solid var(--turquesa);
-}
-
 .noticia .noticia-titulo {
-margin: 0 0 20px;
-color: var(--turquesa);
-font-size: 2.5em;
+    margin: 0 0 20px;
+    color: var(--turquesa);
+    font-size: 2.5em;
 }
 
-.noticia .noticia-data{
-padding-bottom: 13px;
-color: var(--turquesa);
-font-size: .65em;
-margin-top: -7px;
+.noticia .noticia-data {
+    padding-bottom: 13px;
+    color: var(--turquesa);
+    font-size: .65em;
+    margin-top: -7px;
 }
 
-.noticia .noticia-corpo{
-color: var(--bs-gray-800);
-font-size: .65em;
+.noticia .noticia-corpo {
+    color: var(--bs-gray-800);
+    font-size: .65em;
 }
-

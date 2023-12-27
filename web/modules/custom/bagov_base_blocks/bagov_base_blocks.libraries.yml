@@ -33,9 +33,22 @@ views_noticias:
   dependencies:
     - core/drupal
     - core/jquery
+views_noticias_relacionadas:
+  css:
+    theme:
+      assets/css/noticias-relacionadas.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
 views_teste:
   css:
     theme:
       assets/css/teste.css: {}
   js:
     assets/js/teste.js: {}
+pages_noticias:
+  css:
+    theme:
+      assets/css/noticias/noticia.css: {}
+      assets/css/noticias/noticia-anexos.css: {}
+      assets/css/noticias/noticia-paginacao.css: {}

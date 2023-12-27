@@ -1,0 +1,31 @@
+uuid: 61fc772c-29d0-4b0d-812c-0495c7fb0aca
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.categoria_de_noticia.field_termo_relacionado
+    - taxonomy.vocabulary.categoria_de_noticia
+  module:
+    - text
+id: taxonomy_term.categoria_de_noticia.default
+targetEntityType: taxonomy_term
+bundle: categoria_de_noticia
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_termo_relacionado:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

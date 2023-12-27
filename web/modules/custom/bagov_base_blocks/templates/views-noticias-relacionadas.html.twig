@@ -1,19 +1,19 @@
-<div id="{{ id }}" class="noticias">
+<div id="{{ id }}" class="noticias-relacionadas">
     {# Noticia corpo. #}
     <div class="row gy-4">
         {% if view_title %}
         <div class="col-xs-12">
-            <h2 class="noticias-titulo">{{ view_title }}</h2>
+            <h2 class="noticias-relacionadas-titulo">{{ view_title }}</h2>
         </div>
         {% endif %}
         {% for row in rows %}
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="noticias-container">
-                <div class="noticias-wrapper">
+            <div class="noticias-relacionadas-container">
+                <div class="noticias-relacionadas-wrapper">
                     {{ row . image }}
                     {% if row.title or row.description %}
                     {%  if use_caption %}
-                    <div class="noticias-caption">
+                    <div class="noticias-relacionadas-caption">
                         {% endif %}
                         {% if row.title %}
                         <h3>{{ row . title }}</h3>
@@ -29,5 +29,9 @@
             </div>
         </div>
         {% endfor %}
+    </div>
+    <div class="noticias-relacionadas-footer d-flex py-4 justify-content-center">
+        <br>
+        {{ link('Voltar para notícias', 'internal:/noticias') }}
     </div>
 </div>
