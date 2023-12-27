@@ -1,4 +1,4 @@
-uuid: 520e218b-b2dc-4b83-a49e-1f28afe1d805
+uuid: 11d373f7-fe87-42dc-b15c-597fd6c12b1b
 langcode: pt-br
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
 id: bagov_base_botaodeconstrasteba.gov
 theme: bagov_base
 region: header
-weight: -6
+weight: -5
 provider: null
 plugin: contrast_block
 settings:

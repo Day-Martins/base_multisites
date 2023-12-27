@@ -9,7 +9,7 @@ dependencies:
 id: bagov_base_acessoainformacao
 theme: bagov_base
 region: header
-weight: -5
+weight: -6
 provider: null
 plugin: acesso_informacao_block
 settings:

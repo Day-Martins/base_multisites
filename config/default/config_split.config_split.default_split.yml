@@ -27,7 +27,9 @@ module:
   search: 0
   simple_block: 0
   text_resize: 0
+  token: 0
   twig_tweak: 0
+  views_argument_token: 0
   views_bootstrap: 0
   we_megamenu: 0
   pathauto: 1
@@ -138,10 +140,12 @@ complete_list:
   - field.field.node.noticia.field_categorias_noticia
   - field.field.node.noticia.field_fonte_noticia
   - field.field.node.noticia.field_imagem_destaque_noticia
+  - field.field.node.noticia.field_tags
   - field.field.node.page.body
   - field.field.node.publicacao.body
   - field.field.node.publicacao.field_categorias_publicacao
   - field.field.node.publicacao.field_midias_publicacao
+  - field.field.taxonomy_term.categoria_de_noticia.field_termo_relacionado
   - field.field.user.user.user_picture
   - field.settings
   - field.storage.block_content.body
@@ -165,6 +169,7 @@ complete_list:
   - field.storage.node.field_link_do_banner
   - field.storage.node.field_midias_publicacao
   - field.storage.node.field_tags
+  - field.storage.taxonomy_term.field_termo_relacionado
   - field.storage.user.user_picture
   - fontawesome.settings
   - gin.settings

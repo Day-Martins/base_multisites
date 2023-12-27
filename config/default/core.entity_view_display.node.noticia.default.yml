@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.noticia.field_categorias_noticia
     - field.field.node.noticia.field_fonte_noticia
     - field.field.node.noticia.field_imagem_destaque_noticia
+    - field.field.node.noticia.field_tags
     - node.type.noticia
   module:
     - text
@@ -48,6 +49,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
     region: content
   links:
     settings: {  }
