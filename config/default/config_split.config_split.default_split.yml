@@ -205,6 +205,7 @@ complete_list:
   - field.storage.user.user_picture
   - fontawesome.settings
   - gin.settings
+  - image.style.eventos_thumbnail_350x180
   - language.content_settings.node.banner
   - language.content_settings.node.eventos
   - language.content_settings.node.lista_migrada

@@ -1,0 +1,15 @@
+uuid: d5120b17-5316-4157-a619-b85fb1d5004f
+langcode: pt-br
+status: true
+dependencies: {  }
+name: eventos_thumbnail_350x180
+label: 'Eventos Thumbnail (180x350)'
+effects:
+  a91778f3-1d3d-4e1d-9f53-3fa888ff1e5a:
+    uuid: a91778f3-1d3d-4e1d-9f53-3fa888ff1e5a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 180
+      height: 350
+      anchor: center-center

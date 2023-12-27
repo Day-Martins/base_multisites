@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_categorias
     - field.storage.node.field_datas
     - field.storage.node.field_imagem_do_banner
+    - image.style.eventos_thumbnail_350x180
     - node.type.eventos
     - system.menu.main
   module:
@@ -575,7 +576,7 @@ display:
           type: image
           settings:
             image_link: content
-            image_style: ''
+            image_style: eventos_thumbnail_350x180
             image_loading:
               attribute: lazy
           group_column: ''
