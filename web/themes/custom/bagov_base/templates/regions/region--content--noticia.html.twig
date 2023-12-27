@@ -1,0 +1,37 @@
+<div class="container noticia">
+	<div class="row">
+		{% if page.breadcrumb %}
+			{{ page . breadcrumb }}
+		{% endif %}
+		<h1 class="noticia-titulo">
+			{{ noticia . titulo }}
+		</h1>
+		<span class="noticia-data">
+			{{ (noticia . criado_em) | date('d/m/Y') }}
+		</span>
+		<article class="noticia-corpo">
+			{{ (noticia . corpo) | raw }}
+		</article>
+	</div>
+	{% if noticia.anexos %}
+	<fieldset class="noticia-anexos">
+		<div class="row gy-4 d-flex flex-wrap align-items-center">
+			<h5>
+				<i class="fa-solid fa-paperclip"></i>
+				Anexos:
+			</h5>
+			{% for anexo in noticia.anexos %}
+				<div class="col-2">
+					<a href="{{ anexo . url }}" title="Clique para baixar anexo" download>
+						<div class="noticia-item-anexo">
+							<img class="img-fluid noticia-anexos-thumbnail" src="{{ anexo . thumbnail }}" alt="Arquivo anexado">
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</fieldset>
+	<br>
+	{% endif %}
+</div>
+{{ drupal_view('noticias', 'noticias_relacionadas') }}

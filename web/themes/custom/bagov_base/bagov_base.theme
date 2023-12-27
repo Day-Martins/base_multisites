@@ -4,6 +4,7 @@ use Drupal\file\Entity\File;
 use Drupal\core\Url;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\media\Entity\Media;
+use Drupal\views\Views;
 
 /**
  * @file
@@ -11,26 +12,31 @@ use Drupal\media\Entity\Media;
  */
 
 /**
- * Implements hook_theme_suggestions_page_alter().
- */
-function bagov_base_theme_suggestions_page_alter(array &$suggestions, array $variables)
-{
-    if ($node = \Drupal::routeMatch()->getParameter('node')) {
-        $suggestions[] = 'page__' . $node->bundle();
-    }
-}
-
-/**
- * Prepares variables for page noticia.
- *
- * Default template: page--noticia.html.twig.
+ * Preprocess page content noticias.
  *
  * @param array $vars
  *   An associative array containing:
  *   - node: A Node object.
  */
-function bagov_base_preprocess_page__noticia(array &$vars)
+function bagov_base_preprocess_page__noticias(array &$vars)
 {
+    $vars['#attached']['library'][] = 'bagov_base/noticias';
+    $view = Views::getView('noticias');
+    $vars['page']['content'] = $view->render('page_noticias');  
+}
+
+ /**
+ * Prepares variables for region content noticia.
+ *
+ * Default template: region--content--noticia.html.twig.
+ *
+ * @param array $vars
+ *   An associative array containing:
+ *   - node: A Node object.
+ */
+function bagov_base_preprocess_region__content__noticia(array &$vars)
+{
+    $vars['#attached']['library'][] = 'bagov_base/noticias';
     if (($node = \Drupal::routeMatch()->getParameter('node')) && $node instanceof \Drupal\node\NodeInterface) {
         $vars['noticia']['titulo'] = $node->title->value;
         $vars['noticia']['corpo'] = $node->body->value;
