@@ -1,15 +1,25 @@
 // ====================
-// Skin Ba.Gov: Estilo 00
+// Skin Ba.Gov: Estilo 02
 // ---
 
-body[data-we-megamenu-bagov=bagov02] span.btn-close {
-  background-color: $ba-gov02;
-}
+body[data-we-megamenu-bagov=bagov02] {
 
-body[data-we-megamenu-bagov=bagov02] .region-we-mega-menu-bagov a.navbar-toggle {
-  background-color: $white;
-  color: $ba-gov02-icon;
-  border-color: $ba-gov02-light;
+  span.btn-close {
+    background-color: $ba-gov02;
+  }
+
+  .nav-main-region-full { 
+    border-bottom-color: $ba-gov02 !important;
+  }
+
+  .region-we-mega-menu-bagov {
+    a {
+      &.navbar-toggle {
+        color: $ba-gov02-icon;
+        border-color: $ba-gov02-light;
+      }
+    }
+  } 
 }
 
 nav[data-style=bagov02] {
@@ -21,10 +31,16 @@ nav[data-style=bagov02] {
 @media (min-width: $tablet-ht) {
 
   body[data-we-megamenu-bagov=bagov02] {
+
     &:not(.we-mega-menu-backend) {
-      li.we-mega-menu-li:not(:first-child) {
-        &:hover {
-          border-bottom: 8px solid $ba-gov02-light !important;
+
+      .we-mega-menu-ul {
+
+        > li.we-mega-menu-li {
+
+          &:hover {
+            border-bottom-color: $ba-gov02-light !important;
+          }
         }
       }
     }
@@ -39,7 +55,7 @@ nav[data-style=bagov02] {
           color: $ba-gov02 !important;
         }
 
-        li.we-mega-menu-li:not(:first-child) {
+        li.we-mega-menu-li {
           a.we-mega-menu-li,
           a.we-megamenu-nolink {
             &:first-child {
@@ -57,10 +73,11 @@ nav[data-style=bagov02] {
 
         ul.we-mega-menu-ul {
 
-          li.we-mega-menu-li:first-child a {
+          li.we-mega-menu-li a {
             color: $ba-gov02 !important;
           }
-          li.we-mega-menu-li:not(:first-child) {
+
+          li.we-mega-menu-li {
 
             a.we-mega-menu-li,
             a.we-megamenu-nolink {
@@ -68,7 +85,7 @@ nav[data-style=bagov02] {
                 color: $ba-gov02;
               }
             }
-            > div.we-mega-menu-submenu.container-width-full {
+            div.we-mega-menu-submenu.container-width-full {
               background-color: $ba-gov02-dark !important;
               
               * {

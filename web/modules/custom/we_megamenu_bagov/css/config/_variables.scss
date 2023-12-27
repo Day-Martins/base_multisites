@@ -1,15 +1,15 @@
 // ====================
 // TYPOGRAPHY
 // ---
-$font-body:             'Poppins', sans-serif;
-$font-bold:          	'Poppins', sans-serif;
-$font-semibold:	        'Poppins', sans-serif;
-$font-light:	   		'Poppins', sans-serif;
+$font-light     : 'Poppins', sans-serif;
+$font-body      : 'Poppins', sans-serif;
+$font-semibold  : 'Poppins', sans-serif;
+$font-bold      : 'Poppins', sans-serif;
 
-$font-weight-body:		400;
-$font-weight-bold:		600;
-$font-weight-semibold:	500;
 $font-weight-light:		300;			
+$font-weight-body:		400;
+$font-weight-semibold:	500;
+$font-weight-bold:		700;
 
 // ====================
 // Colors hex values
@@ -20,6 +20,12 @@ $white-light    : #ffffff70 !default;
 $shadow         : rgba(0, 0, 0, 0.6) !default;
 $lightgray      : #f2f2f2 !default;
 $darkgray       : #666 !default;
+
+// --- Core Modo - darkmode
+$darkmode       : #da4843 !default;  
+$darkmode-light : lighten($darkmode, 10%) !default;
+$darkmode-icon  : darken($darkmode, 10%) !default;
+$darkmode-dark  : darken($darkmode, 5%) !default;
 
 // --- Cores Padrão
 $ba-default       : #999 !default;
@@ -52,10 +58,6 @@ $ba-gov04-light : lighten($ba-gov04, 10%) !default;
 $ba-gov04-icon  : darken($ba-gov04, 10%) !default;
 $ba-gov04-dark  : darken($ba-gov04, 5%) !default;
 
-
-// ====================
-// Colors scheme for Themes
-// ---
 $link-color:			$white !default;
 $body-color:			$darkgray !default;	
 $title-color:			$darkgray !default;		

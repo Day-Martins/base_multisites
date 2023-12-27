@@ -1,0 +1,169 @@
+// ====================
+// Skin Ba.Gov: Estilo Darkmode
+// ---
+
+body[class*=darkmode--activated] {
+
+    span.btn-close {
+      background-color: $darkmode;
+    }
+  
+    .nav-main-region-full { 
+      //border-bottom-color: $darkmode !important;
+    }
+  
+    .region-we-mega-menu-bagov {
+      a {
+        &.navbar-toggle {
+          color: $darkmode-icon;
+          border-color: $darkmode-light;
+        }
+      }
+    } 
+  }
+  
+  nav[data-style=default] {
+    $body-color: $darkmode;
+    $border-color: darken($link-color, 10%);
+    $bg-color: $link-color;
+  }
+  
+  @media (min-width: $tablet-ht) {
+  
+    body[class*=darkmode--activated] {
+  
+      &:not(.we-mega-menu-backend) {
+  
+        .we-mega-menu-ul {
+  
+          > li.we-mega-menu-li {
+  
+            &:hover {
+              border-bottom-color: $darkmode-light !important;
+            }
+          }
+        }
+      }
+    }
+  
+    body[class*=darkmode--activated] {
+      .navbar-we-mega-menu.navbar {
+  
+        ul.we-mega-menu-ul {
+  
+          li.we-mega-menu-li:first-child a {
+            color: $darkmode !important;
+          }
+  
+          li.we-mega-menu-li {
+            a.we-mega-menu-li,
+            a.we-megamenu-nolink {
+              &:first-child {
+                color: $darkmode;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    body[class*=darkmode--activated] {
+      &:not(.we-mega-menu-backend) {
+        .navbar-we-mega-menu.navbar {
+  
+          ul.we-mega-menu-ul {
+  
+            li.we-mega-menu-li a {
+              color: $darkmode !important;
+            }
+  
+            li.we-mega-menu-li {
+  
+              a.we-mega-menu-li,
+              a.we-megamenu-nolink {
+                &:first-child {
+                  color: $darkmode;
+                }
+              }
+              div.we-mega-menu-submenu.container-width-full {
+                background-color: $darkmode-dark !important;
+                
+                * {
+                  background-color: $darkmode-dark !important;
+                }
+              }
+  
+              &:hover {
+                background-color: $darkmode-dark !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: $tablet-ht - 1) {
+    body[class*=darkmode--activated] {
+
+
+      .navbar-we-mega-menu.navbar {
+
+        .we-mobile-megamenu-active {
+          background-color: $darkmode-dark !important;
+        }
+
+        ul {
+          li {
+            li ul.subul {
+                li {
+                  a {
+                    color: $darkmode-icon !important;
+                  }
+                }
+            }
+          }
+        }
+  
+        .nav {
+          .open {
+            > a,
+            > a:hover, 
+            > a:focus {
+              &:first-child {
+                color: $darkmode !important;
+                border-bottom: 1px solid #ccc !important;
+              }
+            }
+          }
+        }
+  
+        .nav-tabs {
+          &:not(.subul) {
+            > li.active.active-trail { 
+              > a,
+              > a:focus,
+              > a:hover {
+                &:first-child {
+                  color: $darkmode !important;
+                  border-bottom: 1px solid #ccc !important; 
+                }
+              }
+            }
+          }
+        }
+  
+        .we-mega-menu-ul { 
+          > li {
+            > .we-megamenu-nolink,
+            > a {
+              &:first-child {
+                color: $darkmode !important;
+                border-bottom: 1px solid #ccc !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
