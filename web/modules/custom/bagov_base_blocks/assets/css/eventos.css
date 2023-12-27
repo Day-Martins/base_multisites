@@ -32,7 +32,43 @@
   height: 120px;
 }
 
-.carrousel-eventos .slick-prev:before,
-.carrousel-eventos .slick-next:before {
+/* Estilo para centralizar as setas abaixo dos dots */
+.custom-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Ajuste conforme necessário para espaçamento entre os dots e as setas */
+}
+
+/* Estilo para as setas */
+.custom-arrows .slick-prev,
+.custom-arrows .slick-next {
+  position: relative;
+  font-size: 24px; /* Tamanho das setas (ajuste conforme necessário) */
+  color: #36b0b4 !important; /* Cor das setas */
+  cursor: pointer;
+}
+
+.custom-arrows .slick-prev:hover,
+.custom-arrows .slick-next:hover {
+  opacity: 0.8;
+}
+
+.more-link a {
+  display: inline-block;
+  padding: 4px 20px;
+  border: 2px solid #36b0b4;
+  background-color: white;
   color: #36b0b4;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.more-link a:hover {
+  background-color: #36b0b4;
+  color: #fff;
+  border-color: #36b0b4;
+  text-decoration: none;
 }

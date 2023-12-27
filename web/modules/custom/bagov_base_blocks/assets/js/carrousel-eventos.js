@@ -1,8 +1,12 @@
 jQuery(document).ready(function ($) {
   $('.carrousel-eventos').slick({
     dots: true,
+    lazyLoad: 'ondemand',
+    appendArrows: $('.custom-arrows'), // Especifica o elemento para as setas
     infinite: false,
     speed: 300,
+    prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
     slidesToShow: 6,
     slidesToScroll: 6,
     responsive: [
