@@ -6,7 +6,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\views\Plugin\views\style\StylePluginBase;
 
 /**
- * Style plugin to render each item as a row in a Notícia Principal.
+ * Style plugin to render each item as a row in a Notícias Relacionadas.
  *
  * @ingroup views_style_plugins
  *
