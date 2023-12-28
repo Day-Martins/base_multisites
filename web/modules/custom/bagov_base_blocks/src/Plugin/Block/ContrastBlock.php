@@ -10,7 +10,7 @@ use Drupal\Core\Session\AccountInterface;
  *
  * @Block(
  *   id = "contrast_block",
- *   admin_label = @Translation("Botão de Constraste - Ba.Gov"),
+ *   admin_label = @Translation("Ba.Gov - Botão de Constraste"),
  * )
  */
 class ContrastBlock extends BlockBase

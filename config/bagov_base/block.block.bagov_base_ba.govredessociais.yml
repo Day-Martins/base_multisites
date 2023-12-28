@@ -1,4 +1,4 @@
-uuid: 49857165-5b53-4a96-92ae-6f1407c66fb5
+uuid: d42510bf-29d4-462b-906d-31a934b485d5
 langcode: pt-br
 status: true
 dependencies:
@@ -6,31 +6,30 @@ dependencies:
     - bagov_base_blocks
   theme:
     - bagov_base
-id: bagov_base_redessociaisba.gov
+id: bagov_base_ba.govredessociais
 theme: bagov_base
 region: header
-weight: -4
+weight: 0
 provider: null
 plugin: block_socialnetwork_bagov
 settings:
   id: block_socialnetwork_bagov
-  label: 'Redes Sociais - Ba.Gov'
+  label: 'Ba.Gov - Redes Sociais'
   label_display: '0'
   provider: bagov_base_blocks
   sn_instagram: 'https://www.instagram.com/saebgovba/'
-  si_instagram: 'fa-brands fa-square-instagram'
+  si_instagram: 'fa-brands fa-instagram'
   sn_youtube: 'https://www.youtube.com/saebgovba'
-  si_youtube: 'fa-brands fa-square-youtube'
-  sn_facebook: 'https://www.facebook.com/saebgovba'
-  si_facebook: 'fa-brands fa-square-facebook'
+  si_youtube: 'fa-brands fa-youtube'
+  sn_facebook: 'https://www.facebook.com/saebgovba/'
+  si_facebook: 'fa-brands fa-facebook-f'
   sn_flickr: ''
   si_flickr: ''
   sn_twitter: 'https://twitter.com/saebgovba'
-  si_twitter: 'fa-brands fa-square-twitter'
+  si_twitter: 'fa-brands fa-twitter'
   sn_whatsapp: ''
-  si_whatsapp: ''
+  si_whatsapp: 'fa-brands fa-whatsapp'
   sn_linkedin: ''
-  si_linkedin: ''
-  block_attributes:
-    row: row
+  si_linkedin: 'fa-brands fa-linkedin-in'
+  block_attributes: {  }
 visibility: {  }

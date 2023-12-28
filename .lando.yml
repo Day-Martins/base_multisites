@@ -18,10 +18,13 @@ services:
         - /var/local/projects/multisites_govba/sites:/app/web/sites
   node:
     type: node:18
-    build_as_root:
-      - apt-get update -y
-      - apt-get install ruby-full -y
-      - gem install compass
+    build:
+      - npm install
+      - gulp
+    globals:
+      gulp-cli: "latest"
+    build:
+      - cd themes/custom/bagov_base && npm install && gulp css
   database:
     type: mysql:8.0
     portforward: true
@@ -41,9 +44,13 @@ tooling:
     service: appserver
     description: Run Drush commands
     cmd: drush
-  ruby:
+  npm:
     service: node
-  compass:
+  node:
+    service: node
+  gulp:
+    service: node
+  yarn:
     service: node
   site-create <site>:
     service: appserver
