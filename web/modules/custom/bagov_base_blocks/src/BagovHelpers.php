@@ -64,12 +64,19 @@ class BagovHelpers {
           'template_preprocess_views_noticias_relacionadas'
         ],
         'file' => 'bagov_base_blocks.theme.inc',
-    ],
+      ],
       'views_view__teste__block_1' => [
           'base hook' => 'view',
           'template' => 'template-teste',            
+      ],      
+      'views_view_fields__carrousel_de_eventos' => [
+        'base hook' => 'views_view_fields',
+        'template' => 'card-carrousel-eventos',
       ],
-      
+      'views_view_unformatted__carrousel_de_eventos' => [
+          'base hook' => 'view',
+          'template' => 'carrousel-eventos',
+      ],
   ];
 
     return $hooks;
