@@ -8,6 +8,7 @@ libraries:
   - bagov_base/darkmode
   - bagov_base/global-styling
   - bagov_base/global-scripts
+  - bagov_base/noticias
 ckeditor_stylesheets:
   - css/style.css
 ckeditor5-stylesheets:

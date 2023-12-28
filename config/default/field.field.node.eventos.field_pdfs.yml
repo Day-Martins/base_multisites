@@ -1,0 +1,27 @@
+uuid: 75d47347-0157-4ea1-8668-74a398b9e820
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdfs
+    - node.type.eventos
+  module:
+    - file
+id: node.eventos.field_pdfs
+field_name: field_pdfs
+entity_type: node
+bundle: eventos
+label: Arquivos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: 10MB
+  description_field: false
+field_type: file

@@ -1,0 +1,23 @@
+uuid: 192f63d9-8c02-4910-9481-b549d640f09d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sites
+    - node.type.eventos
+  module:
+    - link
+id: node.eventos.field_sites
+field_name: field_sites
+entity_type: node
+bundle: eventos
+label: Sites
+description: 'Sites associados ao evento'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

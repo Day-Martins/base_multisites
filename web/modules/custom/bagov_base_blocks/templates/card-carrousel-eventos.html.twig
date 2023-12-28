@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme override to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ */
+#}
+{{ attach_library('bagov_base_blocks/views_eventos') }}
+
+<div class="position-relative text-white border-0 custom-card rounded-4">
+	{{ fields.field_imagem_do_banner.content }}
+
+	<section class="
+			            card-title position-absolute w-100 text-white d-flex
+			            flex-column justify-content-center align-items-center
+			            bottom-0 text-center fw-bold text-capitalize rounded-4
+			        ">
+
+		<h5 class="capitalize fw-bold fs-4">{{
+      fields.field_datas_1.content
+     }}</h5>
+		<h3 class="text-white fs-1" ><strong>{{ fields.field_datas.content }}</strong></h3>
+
+	</section>
+	<div class="visually-hidden">
+		<h6>{{ node.fields.title.content }}</h6>
+	</div>
+</div>

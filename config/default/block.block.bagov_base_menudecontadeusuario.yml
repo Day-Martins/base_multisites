@@ -1,0 +1,20 @@
+uuid: aff85606-65b7-4270-b741-684005424572
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - we_megamenu
+  theme:
+    - bagov_base
+id: bagov_base_menudecontadeusuario
+theme: bagov_base
+region: nav_branding
+weight: 0
+provider: null
+plugin: 'we_megamenu_block:account'
+settings:
+  id: 'we_megamenu_block:account'
+  label: 'Menu de conta de usuário'
+  label_display: '0'
+  provider: we_megamenu
+visibility: {  }
