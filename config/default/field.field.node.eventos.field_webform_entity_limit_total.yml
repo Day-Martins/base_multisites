@@ -1,0 +1,25 @@
+uuid: eb0603d2-2094-4ee4-8508-bb9fc8446e6e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_webform_entity_limit_total
+    - node.type.eventos
+id: node.eventos.field_webform_entity_limit_total
+field_name: field_webform_entity_limit_total
+entity_type: node
+bundle: eventos
+label: 'Número máximo de Inscrições'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: Vagas
+field_type: integer

@@ -12,7 +12,6 @@ use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
 
 
-
 /**
  * Implements hook_theme().
  */

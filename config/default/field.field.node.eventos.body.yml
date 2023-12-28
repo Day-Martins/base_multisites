@@ -1,0 +1,24 @@
+uuid: 3c6cbe37-a3c3-43b2-9a46-a800c48bf50a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.eventos
+  module:
+    - text
+id: node.eventos.body
+field_name: body
+entity_type: node
+bundle: eventos
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary
