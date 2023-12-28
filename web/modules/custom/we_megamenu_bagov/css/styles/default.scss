@@ -1,15 +1,25 @@
 // ====================
-// Skin Ba.Gov: Estilo 00
+// Skin Ba.Gov: Estilo Default
 // ---
 
-body[data-we-megamenu-bagov=default] span.btn-close {
-  background-color: $ba-default;
-}
+body[data-we-megamenu-bagov=default] {
 
-body[data-we-megamenu-bagov=default] .region-we-mega-menu-bagov a.navbar-toggle {
-  background-color: $white;
-  color: $ba-default-icon;
-  border-color: $ba-default-light;
+  span.btn-close {
+    background-color: $ba-default;
+  }
+
+  .nav-main-region-full { 
+    border-bottom-color: $ba-default !important;
+  }
+
+  .region-we-mega-menu-bagov {
+    a {
+      &.navbar-toggle {
+        color: $ba-default-icon;
+        border-color: $ba-default-light;
+      }
+    }
+  } 
 }
 
 nav[data-style=default] {
@@ -21,10 +31,16 @@ nav[data-style=default] {
 @media (min-width: $tablet-ht) {
 
   body[data-we-megamenu-bagov=default] {
+
     &:not(.we-mega-menu-backend) {
-      li.we-mega-menu-li:not(:first-child) {
-        &:hover {
-          border-bottom: 8px solid $ba-default-light !important;
+
+      .we-mega-menu-ul {
+
+        > li.we-mega-menu-li {
+
+          &:hover {
+            border-bottom-color: $ba-default-light !important;
+          }
         }
       }
     }
@@ -39,7 +55,7 @@ nav[data-style=default] {
           color: $ba-default !important;
         }
 
-        li.we-mega-menu-li:not(:first-child) {
+        li.we-mega-menu-li {
           a.we-mega-menu-li,
           a.we-megamenu-nolink {
             &:first-child {
@@ -57,10 +73,11 @@ nav[data-style=default] {
 
         ul.we-mega-menu-ul {
 
-          li.we-mega-menu-li:first-child a {
+          li.we-mega-menu-li a {
             color: $ba-default !important;
           }
-          li.we-mega-menu-li:not(:first-child) {
+
+          li.we-mega-menu-li {
 
             a.we-mega-menu-li,
             a.we-megamenu-nolink {
@@ -68,7 +85,7 @@ nav[data-style=default] {
                 color: $ba-default;
               }
             }
-            > div.we-mega-menu-submenu.container-width-full {
+            div.we-mega-menu-submenu.container-width-full {
               background-color: $ba-default-dark !important;
               
               * {

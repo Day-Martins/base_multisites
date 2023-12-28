@@ -1,58 +1,80 @@
 // Core variables and mixins
 @import "./config/variables";
 
-.main-we-mega-menu-bagov span.btn-close {
-  padding: 10px;
-  top: 2px;
-  border-radius: 50%;
-  right: 90.5%;
-  border: 1px solid $white;
-  height: 16px;
-  width: 16px;
-  z-index: 1100;
+body[class*=main-we-mega-menu-bagov] {
+  .overlay {
+    background-color: $shadow !important;
+  }
+
+  span.btn-close {
+    padding: 10px;
+    top: 2px;
+    border-radius: 50%;
+    right: 90.5%;
+    border: 1px solid $white;
+    height: 16px;
+    width: 16px;
+    z-index: 1100;
+  }
+
+  .nav-main-region-full {
+    margin: 15px 0 15px 0;
+    padding: 0;
+    border-bottom: 2px solid $transparent;
+  }
+
+  .region-we-mega-menu-bagov {
+    background-color: $transparent;
+
+    a {
+      text-decoration: none !important;
+
+      &.navbar-toggle {
+        position: absolute;
+        padding: 0px 8px;
+        font-size: 22px;
+        border: 1px solid;
+        right: 5px;
+        top: 0;
+        margin-top: 14%;
+        border-radius: 4px;
+        background-color: $white;
+      }
+    }
+  }  
+} 
+
+body[class*=user-logged-in] {
+  .region-we-mega-menu-bagov {
+    a {
+      &.navbar-toggle {
+        margin-top: 23%;
+      }
+    }  
+  }
 }
 
-.main-we-mega-menu-bagov nav.navbar-region {
-  margin: 15px 0 0 0;
-  padding: 0;
-}
-
-.region-we-mega-menu-bagov {
-  background-color: $transparent;
-}
-
-.main-we-mega-menu-bagov .overlay {
-  background-color: $shadow !important;
-}
-
-.region-we-mega-menu-bagov a.navbar-toggle {
-  position: fixed;
-  padding: 0px 8px;
-  font-size: 22px;
-  border: 1px solid;
-  right: 2px;
-  top: 0;
-  margin-top: 13%;
-}
-
-.user-logged-in .region-we-mega-menu-bagov a.navbar-toggle {
-  margin-top: 24%;
-}
-
-.region-we-mega-menu-bagov a {
-  text-decoration: none !important;
-}
-
-// Styles
+//--- Styles
 @import "./styles/default";
 @import "./styles/bagov_estilos_00";
 @import "./styles/bagov_estilos_01";
 @import "./styles/bagov_estilos_02";
 @import "./styles/bagov_estilos_03";
 @import "./styles/bagov_estilos_04";
+@import "./styles/darkmode";
 
 @media (min-width: $tablet-ht) {
   body:not(.we-mega-menu-backend) {
+
+    .region-we-mega-menu-bagov {
+      a {
+        &.navbar-toggle {
+          &.collapsed {
+            display: none;
+          }    
+        }
+      }
+    }
 
     .navbar-we-mega-menu .we-mega-menu-row > * {
       margin: 0;
@@ -71,33 +93,34 @@
         border: 0;
 
         * {
-          font-size: 16px;
+          font-family: $font-body !important;
+          font-size: 16px !important;
+          text-decoration: none !important;
         }
 
         > li.we-mega-menu-li {
           display: flex;
+          font-weight: $font-weight-bold;
           align-content: center;
           text-align: center;
-          max-width: 235px;
-          padding: 0 10px;
+          max-width: 200px;
+          padding: 8px 16px;
           line-height: 115% !important;
           border: 0;
           border-bottom: 8px solid $transparent;
 
-          &:not(:nth-child(1)) {
-            &:hover {
-              border-radius: 4px 4px 0 0;
-                        
-              a  {
-                color: $white !important;
-                border: 0 !important;
-                box-shadow: none !important;
-              }
+          &:hover {
+            border-radius: 4px 4px 0 0;
+                      
+            a  {
+              color: $white !important;
+              border: 0 !important;
+              box-shadow: none !important;
             }
           }
         }
 
-        li.we-mega-menu-li:not(:nth-child(1)) {
+        li.we-mega-menu-li {
 
           span.we-mega-menu-caption {
             font-size: 85%;
@@ -120,7 +143,7 @@
           a.we-megamenu-nolink {
             &:after,
             &:before {
-              display: none;
+              display: none !important;
             }
           }
 
@@ -128,7 +151,6 @@
             display: block;
             border-radius: 0 0 4px 4px !important;
             margin: 8px 0px 0 0px !important;
-            min-width: 235px !important;
             width: max-content;
 
             &:after,
@@ -197,7 +219,7 @@
                   padding: 0 15px;
 
                   li.we-mega-menu-li {
-                    display: contents;
+                    display: block;
                   }
                 }
               }
@@ -223,10 +245,9 @@
                   .nav.nav-tabs.subul {
       
                     li.we-mega-menu-li {
-                      padding: 0 !important;
+                      padding: 8px 0 8px 0 !important;
                       
                       a {
-                        padding: 8px 0 8px 0;
                         
                         &:hover {
                           opacity: 0.5;
@@ -241,15 +262,17 @@
                     > li.dropdown-menu {
                         > a {
                           &:after {
-                            content: '';
-                            display: block;
+                            display: none;
                           }
                         }
 
-                         > a {
+                        > a {
                         &:first-child {
+                          display: block;
                           font-weight: $font-weight-bold !important;
                           padding: 0;
+                          border-bottom: 1px solid $white-light !important;
+                          text-shadow: 1px 1px $darkgray;
                         }
                         &:hover {
                           opacity: 1;
@@ -268,6 +291,27 @@
 }
 
 @media (max-width: $tablet-ht - 1) {
+
+  body[class*=main-we-mega-menu-bagov] {
+    .nav-main-region-full {
+      margin: 0 0 15px 0;
+      height: 0;
+
+      .block-we-megamenu {
+        display: contents !important;
+      }
+    }
+  }
+
+  .region-we-mega-menu-bagov {
+    a {
+      &.navbar-toggle {
+        &.collapsed {
+          display: block;
+        }    
+      }
+    }
+  }
 
   .navbar-we-mega-menu.navbar {
     right: -90%;
@@ -371,9 +415,10 @@
       > .we-megamenu-nolink,
       > a  {
         &:after {
+          display: block !important;
           content: "\f13a" !important;
           font-size: 100%;
-          right: 0;
+          right: 10px;
         }
       }
     }

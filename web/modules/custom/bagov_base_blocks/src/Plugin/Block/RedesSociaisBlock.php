@@ -149,11 +149,6 @@ class RedesSociaisBlock extends BlockBase
                 '#size' => 4,
                 '#description' => 'Selecione ícone que será visualizado para o <b>' . $key . '</b>.',
                 '#prefix' => '<p id="wrapper-result-' . strtolower($key) . '">' . $imagem . '</p>',
-                /*'#ajax' => [
-                'wrapper' => 'wrapper-result-' . strtolower($key),
-                'callback' => 'Drupal\rules_prodeb\Controller\ValidaRulesController::validaHabilitarSubsistema',
-                'event' => 'change',
-                ],*/
                 '#group' => 'social_networks',
             ];
         }
@@ -214,16 +209,16 @@ class RedesSociaisBlock extends BlockBase
                 'col-lg-12' => 'Large: 12',
             ],
             'Hidden' => [
-                'hidden-xs' => 'Extra Small',
-                'hidden-sm' => 'Small',
-                'hidden-md' => 'Medium',
-                'hidden-lg' => 'Large',
+                'd-none d-sm-block' => 'Extra Small',
+                'd-sm-none d-md-block' => 'Small',
+                'd-md-none d-lg-block' => 'Medium',
+                'd-lg-none d-xl-block' => 'Large',
             ],
             'Visible' => [
-                'visible-xs' => 'Extra Small',
-                'visible-sm' => 'Small',
-                'visible-md' => 'Medium',
-                'visible-lg' => 'Large',
+                'd-block d-sm-none' => 'Extra Small',
+                'd-none d-sm-block d-md-none' => 'Small',
+                'd-none d-md-block d-lg-none' => 'Medium',
+                'd-none d-lg-block' => 'Large',
             ],
             'Text alignment' => [
                 'float-start' => 'Left',

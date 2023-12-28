@@ -47,6 +47,8 @@ function we_megamenu_bagov_library_info_alter(&$libraries, $extension) {
         ];
 
   $files_css = [ "assets/includes/bootstrap/css/bootstrap.min.css",
+                "assets/includes/bootstrap/css/bootstrap.css",
+                "assets/includes/bootstrap/css/dist/css/bootstrap.css",
                 "assets/includes/jquery-ui.css",
                 "assets/includes/animate.css",
                 "assets/includes/chosen/chosen.css"
@@ -54,7 +56,7 @@ function we_megamenu_bagov_library_info_alter(&$libraries, $extension) {
 
   if($extension == 'we_megamenu') {
     foreach($libraries as $key => $values) {
-      if($key == 'form.we-mega-menu-backend') {
+      if($key == 'form.we-mega-menu-frontend') {
         foreach($files_js as $js) {
           unset($libraries[$key]['js'][$js]);
         }
@@ -67,15 +69,13 @@ function we_megamenu_bagov_library_info_alter(&$libraries, $extension) {
 }
 
 function we_megamenu_bagov_preprocess_html(&$variables) {
-  $is_front = \Drupal::service('path.matcher')->isFrontPage();
-
-  //--- Recupera ID da folha de estilo que será aplicada ao menu
-  $style = _getStyle($variables);
-
-  if($is_front) {
+  $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
+  if(!$is_admin) {
     $variables['attributes']['class'][] = 'main-we-mega-menu-bagov';
   }
 
+  //--- Recupera ID da folha de estilo que será aplicada ao menu
+  $style = _getStyle($variables);
   if(!is_null($style)) {
     $variables['attributes']['data-we-megamenu-bagov'] = $style;
   }
