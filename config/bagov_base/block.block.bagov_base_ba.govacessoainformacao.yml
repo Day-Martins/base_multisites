@@ -1,4 +1,4 @@
-uuid: 11d373f7-fe87-42dc-b15c-597fd6c12b1b
+uuid: 6db628ae-32cd-40b5-a20c-4e283601aeec
 langcode: pt-br
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - bagov_base_blocks
   theme:
     - bagov_base
-id: bagov_base_botaodeconstrasteba.gov
+id: bagov_base_ba.govacessoainformacao
 theme: bagov_base
 region: header
-weight: -5
+weight: -3
 provider: null
-plugin: contrast_block
+plugin: acesso_informacao_block
 settings:
-  id: contrast_block
-  label: 'Botão de Constraste - Ba.Gov'
+  id: acesso_informacao_block
+  label: 'Ba.Gov - Acesso a Informação'
   label_display: '0'
   provider: bagov_base_blocks
 visibility: {  }

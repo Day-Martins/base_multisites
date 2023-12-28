@@ -17,7 +17,7 @@ use Drupal\image\Entity\ImageStyle;
  */
 function bagov_base_blocks_theme()
 {
-    BagovHelpers::getThemeHooks();
+    return BagovHelpers::getThemeHooks();
 }
 
 /**

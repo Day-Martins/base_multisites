@@ -1,4 +1,4 @@
-uuid: 28e6926f-37eb-47b2-8d21-5115d8406573
+uuid: 4fe27f96-e35e-4046-af2c-e21d5111d29d
 langcode: pt-br
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - bagov_base_blocks
   theme:
     - bagov_base
-id: bagov_base_logodoestado
+id: bagov_base_ba.govbotaodeconstraste
 theme: bagov_base
-region: footer_left
-weight: -11
+region: header
+weight: -4
 provider: null
-plugin: logo_estado_block
+plugin: contrast_block
 settings:
-  id: logo_estado_block
-  label: 'Logo do Estado - Ba.Gov'
+  id: contrast_block
+  label: 'Ba.Gov - Botão de Constraste'
   label_display: '0'
   provider: bagov_base_blocks
 visibility: {  }

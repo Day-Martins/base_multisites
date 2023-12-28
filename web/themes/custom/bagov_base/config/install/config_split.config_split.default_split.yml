@@ -1,10 +1,10 @@
 uuid: 87e5abb5-e2f3-470d-b724-27599a39cdaa
 langcode: pt-br
 status: true
-dependencies: {}
+dependencies: {  }
 id: default_split
-label: "Default Split"
-description: "Todas as configurações comuns entre os sites"
+label: 'Default Split'
+description: 'Todas as configurações comuns entre os sites'
 weight: -1
 stackable: false
 no_patching: false
@@ -29,7 +29,9 @@ module:
   search: 0
   simple_block: 0
   text_resize: 0
+  token: 0
   twig_tweak: 0
+  views_argument_token: 0
   views_bootstrap: 0
   we_megamenu: 0
   webform: 0
@@ -39,9 +41,9 @@ module:
   webform_scheduled_email: 0
   webform_share: 0
   pathauto: 1
-  we_megamenu: 0
-theme: {}
+theme: {  }
 complete_list:
+  - block.block.bagov_base_views_block__carrousel_de_eventos
   - block.block.bootstrap5_account_menu
   - block.block.bootstrap5_branding
   - block.block.bootstrap5_breadcrumbs
@@ -73,11 +75,11 @@ complete_list:
   - block.block.gin_secondary_local_tasks
   - bootstrap5.settings
   - claro.settings
-  - core.base_field_override.node.eventos.title
   - config_ignore.settings
   - config_split.config_split.bagov_base_split
   - config_split.config_split.bagov_development_split
   - config_split.config_split.default_split
+  - core.base_field_override.node.eventos.title
   - core.entity_form_display.comment.comment.default
   - core.entity_form_display.media.audio.default
   - core.entity_form_display.media.audio.media_library
@@ -166,10 +168,12 @@ complete_list:
   - field.field.node.noticia.field_categorias_noticia
   - field.field.node.noticia.field_fonte_noticia
   - field.field.node.noticia.field_imagem_destaque_noticia
+  - field.field.node.noticia.field_tags
   - field.field.node.page.body
   - field.field.node.publicacao.body
   - field.field.node.publicacao.field_categorias_publicacao
   - field.field.node.publicacao.field_midias_publicacao
+  - field.field.taxonomy_term.categoria_de_noticia.field_termo_relacionado
   - field.field.node.webform.body
   - field.field.node.webform.webform
   - field.field.user.user.user_picture
@@ -201,9 +205,11 @@ complete_list:
   - field.storage.node.field_sites
   - field.storage.node.field_tags
   - field.storage.node.field_webform_entity_limit_total
+  - field.storage.taxonomy_term.field_termo_relacionado
   - field.storage.user.user_picture
   - fontawesome.settings
   - gin.settings
+  - image.style.eventos_thumbnail_350x180
   - language.content_settings.node.banner
   - language.content_settings.node.eventos
   - language.content_settings.node.lista_migrada
@@ -242,5 +248,7 @@ complete_list:
   - update.settings
   - views.view.calendario_de_eventos
   - views.view.eventos
-  - webform.webform.demo_event_registration
-partial_list: {}
+  - webform.webform.eventos
+  - block.block.bagov_base_views_block__carrousel_de_eventos_block_1
+  - views.view.carrousel_de_eventos
+partial_list: {  }

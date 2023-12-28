@@ -10,7 +10,7 @@ use Drupal\Core\Session\AccountInterface;
  *
  * @Block(
  *   id = "acesso_informacao_block",
- *   admin_label = @Translation("Acesso a Informação - Ba.Gov"),
+ *   admin_label = @Translation("Ba.Gov - Acesso a Informação"),
  * )
  */
 class AcessoInformacaoBlock extends BlockBase

@@ -13,7 +13,7 @@ use Drupal\Core\Url;
  *
  * @Block(
  *   id = "block_socialnetwork_bagov",
- *   admin_label = @Translation("Redes Sociais - Ba.Gov"),
+ *   admin_label = @Translation("Ba.Gov - Redes Sociais"),
  * )
  */
 class RedesSociaisBlock extends BlockBase

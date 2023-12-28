@@ -9,7 +9,7 @@ dependencies:
 id: bagov_base_textresize
 theme: bagov_base
 region: header
-weight: -7
+weight: -5
 provider: null
 plugin: text_resize_block
 settings:
