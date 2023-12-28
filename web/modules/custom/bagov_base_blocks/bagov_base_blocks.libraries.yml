@@ -52,3 +52,12 @@ pages_noticias:
       assets/css/noticias/noticia.css: {}
       assets/css/noticias/noticia-anexos.css: {}
       assets/css/noticias/noticia-paginacao.css: {}
+views_eventos:
+  css:
+    theme:
+      assets/css/eventos.css: {}
+  js:
+    assets/js/carrousel-eventos.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

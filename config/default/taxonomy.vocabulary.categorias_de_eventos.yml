@@ -1,0 +1,8 @@
+uuid: 8dca71fc-aa67-4fb9-bbdf-0cfbf3918cf1
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Categoria Eventos'
+vid: categorias_de_eventos
+description: ''
+weight: 0

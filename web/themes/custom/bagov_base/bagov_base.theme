@@ -3,7 +3,6 @@
 use Drupal\file\Entity\File;
 use Drupal\core\Url;
 use Drupal\image\Entity\ImageStyle;
-use Drupal\media\Entity\Media;
 use Drupal\views\Views;
 
 /**
@@ -44,7 +43,7 @@ function bagov_base_preprocess_region__content__noticia(array &$vars)
 
         //Pega todos os arquivos anexados
         $referenced_entities = $node->get('field_anexo_noticia')->referencedEntities();
-        
+
         if (!empty($referenced_entities)) {
             //Percorre os arquivos anexados
             foreach ($referenced_entities as $id => $entity) {
