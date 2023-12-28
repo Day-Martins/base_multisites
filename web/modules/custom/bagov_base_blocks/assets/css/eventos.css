@@ -40,6 +40,12 @@
   margin-top: 10px; /* Ajuste conforme necessário para espaçamento entre os dots e as setas */
 }
 
+/* Esconda a seta padrão do Slick Carousel */
+.custom-arrows .slick-prev:before,
+.custom-arrows .slick-next:before {
+  display: none;
+}
+
 /* Estilo para as setas */
 .custom-arrows .slick-prev,
 .custom-arrows .slick-next {
