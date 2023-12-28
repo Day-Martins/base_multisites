@@ -51,7 +51,7 @@ function text_resize_theme() {
 function template_preprocess_text_resize_block(array &$variables) {
   $config = \Drupal::config('text_resize.settings');
 
-  $label = t('ACCESSIBILITY');
+  $label = t('ACESSIBILIDADE');
 
   if ($config->get('text_resize_reset_button')) {
     $variables['content'] = [

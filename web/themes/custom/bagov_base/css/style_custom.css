@@ -69,10 +69,6 @@ div[class*="top-link-"] a {
     text-decoration: none;
 }
 
-.nav-main-region-full .container {
-    border-bottom: 2px solid var(--turquesa);
-}
-
 .block-icon-text {
     position: relative;
     font-family: Poppins !important;
