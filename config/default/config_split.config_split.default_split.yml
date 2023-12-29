@@ -173,9 +173,9 @@ complete_list:
   - field.field.node.publicacao.body
   - field.field.node.publicacao.field_categorias_publicacao
   - field.field.node.publicacao.field_midias_publicacao
-  - field.field.taxonomy_term.categoria_de_noticia.field_termo_relacionado
   - field.field.node.webform.body
   - field.field.node.webform.webform
+  - field.field.taxonomy_term.categoria_de_noticia.field_termo_relacionado
   - field.field.user.user.user_picture
   - field.settings
   - field.storage.block_content.body
@@ -221,6 +221,7 @@ complete_list:
   - language.content_settings.taxonomy_term.categoria_de_noticia
   - language.content_settings.taxonomy_term.categoria_lista_migrada
   - language.content_settings.taxonomy_term.categoria_publicacao
+  - language.content_settings.taxonomy_term.referecias_de_documentos
   - media.settings
   - media.type.audio
   - media.type.document
@@ -243,12 +244,14 @@ complete_list:
   - taxonomy.vocabulary.categoria_de_noticia
   - taxonomy.vocabulary.categoria_lista_migrada
   - taxonomy.vocabulary.categoria_publicacao
+  - taxonomy.vocabulary.referecias_de_documentos
   - taxonomy.vocabulary.tags
   - text_resize.settings
   - update.settings
   - views.view.calendario_de_eventos
-  - views.view.eventos
+  - views.view.contador
   - webform.webform.eventos
+  - views.view.eventos
   - block.block.bagov_base_views_block__carrousel_de_eventos_block_1
   - views.view.carrousel_de_eventos
 partial_list: {  }
