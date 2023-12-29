@@ -6,6 +6,7 @@
  */
 
 use Drupal\bagov_base_blocks\BagovHelpers;
+use Drupal\bagov_base_blocks\Utils\PublicacaoUtils;
 
 /**
  * Prepares variables for constrast templates.
@@ -236,6 +237,7 @@ function template_preprocess_views_noticias_relacionadas(array &$vars)
 }
 
 function template_preprocess_node__publicacao(array &$vars){
+
   $node = $vars['elements']['#node'];
   $vars['node'] = $node;
 
@@ -245,21 +247,25 @@ function template_preprocess_node__publicacao(array &$vars){
   }
 
   $filesByTaxonomy = [];
-  $mediaItems = $node->get('field_midias_publicacao')->referencedEntities();
+  $midiaItems = $node->get('field_midias_publicacao')->referencedEntities();
 
-  foreach ($mediaItems as $media) {
+  foreach ($midiaItems as $midia) {
     // Verifique se a mídia tem o campo de referência de termo.
-    $has_categoria = $media->hasField('field_referencial_de_documento');
+    $has_categoria = $midia->hasField('field_referencial_de_documento');
+    $midia->tipo_arquivo = PublicacaoUtils::determine_midia_file_type($midia);
+    $midia->color = PublicacaoUtils::determine_cor_do_arquivo($midia->tipo_arquivo);
+    $midia->icon = PublicacaoUtils::determine_icon_do_arquivo($midia->tipo_arquivo);
+    $midia->url = PublicacaoUtils::determine_url_do_arquivo($midia->field_media_document->entity);
 
-    if ($has_categoria && !$media->field_referencial_de_documento->isEmpty()) {
-        $term = $media->field_referencial_de_documento->entity;
+    if ($has_categoria && !$midia->field_referencial_de_documento->isEmpty()) {
+        $term = $midia->field_referencial_de_documento->entity;
         $termName = $term ? $term->getName() : "Sem referência";
 
         if (!isset($filesByTaxonomy[$termName])) {
             $filesByTaxonomy[$termName] = [];
         }
 
-        $filesByTaxonomy[$termName][] = $media;
+        $filesByTaxonomy[$termName][] = $midia;
     } else {
         // Se o campo de referência do documento não existir ou estiver vazio, adicione-o ao grupo "Sem referência".
         $termName = "Sem referência";
@@ -268,12 +274,12 @@ function template_preprocess_node__publicacao(array &$vars){
             $filesByTaxonomy[$termName] = [];
         }
 
-        $filesByTaxonomy[$termName][] = $media;
+        $filesByTaxonomy[$termName][] = $midia;
     }
 }
 
 
   // Passar os dados agrupados para o template.
-  $vars['files_by_taxonomy'] = $filesByTaxonomy;
+  $vars['arquivos_por_referencial'] = $filesByTaxonomy;
 
 }
