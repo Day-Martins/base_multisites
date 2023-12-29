@@ -2,8 +2,6 @@ article h1 {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1rem;
-  margin-top: 0;
   color: #36b0b4;
 }
 
@@ -48,7 +46,7 @@ article h1 {
   line-height: 1.2;
   padding: 0.5rem 1rem;
   width: fit-content;
-  border-radius: 0.25rem;
+  border-radius: 8px;
 }
 
 
