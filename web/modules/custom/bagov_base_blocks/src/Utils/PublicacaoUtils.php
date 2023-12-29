@@ -108,22 +108,27 @@ class PublicacaoUtils {
       case 'pdf':
         $icon = 'fa-file-pdf';
         break;
+      case 'document':
       case 'doc':
       case 'docx':
         $icon = 'fa-file-word';
         break;
+      case 'spreadsheet':
       case 'xls':
       case 'xlsx':
         $icon = 'fa-file-excel';
         break;
+      case 'presentation':
       case 'ppt':
       case 'pptx':
         $icon = 'fa-file-powerpoint';
         break;
+      case 'archive':
       case 'zip':
       case 'rar':
         $icon = 'fa-file-archive';
         break;
+      case 'audio':
       case 'mp3':
       case 'wav':
       case 'ogg':
