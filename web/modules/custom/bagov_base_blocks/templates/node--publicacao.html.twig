@@ -95,14 +95,11 @@
 		<h1 class="fw-bold fs-1">{{ node.title.value }}</h1>
 	{% endif %}
 
-	{# Traço horizontal separando título de conteúdo #}
-	<hr
-	class="my-4">
 
 	{# Renderizar Categorias #}
 	{% if node.field_categorias_publicacao is not empty %}
-		<div class="mb-3">
-			<span class="fw-bold visually-hidden ">Categorias:</span>
+		<div>
+			<span class="fw-bold visually-hidden">Categorias:</span>
 			<ul class="list-inline">
 				{% for categoria in node.field_categorias_publicacao %}
 					<li class="list-inline-item badge bg-secondary">{{ categoria.entity.label }}</li>
@@ -110,10 +107,12 @@
 			</ul>
 		</div>
 	{% endif %}
+	{# Traço horizontal separando título de conteúdo #}
+	<hr>
 
 	{# Renderizar o Corpo do Texto #}
 	{% if node.body is not empty %}
-		<div class="mb-4 p-3">
+		<div class="mb-4 py-3">
 			<div class="text-wrap text-break">
 				{{ node.body.value|raw }}
 			</div>
@@ -121,40 +120,37 @@
 	{% endif %}
 
 	{% if arquivos_por_referencial is not empty %}
-		{% for term, files in arquivos_por_referencial %}
-			<div class="mb-4">
-				<h3 class="mb-2 badge bg-secondary fs-6 ">{{ term }}:</h3>
-				<span>
-					Clique no ícone/card para baixar o arquivo.</span>
-				{# Renderizar Mídias #}
-				<div class="mb-3">
-					{% for media in files %}
-						<div class="card mb-2">
-							<div class="card-body d-flex" style="border-color: {{ media.color }}; border-style: solid; border-width: 2px; border-radius: 5px;">
-								<div class="d-flex align-items-center  justify-content-center">
-									<i class="far {{ media.icon }} fa-5x" style="color: {{ media.color }}"></i>
-								</div>
-								<div class="ms-3">
-									<h5 class="card-title text-muted fw-bold">{{ media.label }}</h5>
-									<p class="card-text">{{ media.description|default('Nenhuma Descrição Associada') }}</p>
-									<a href="{{ media.url }}" class="stretched-link" download="{{ media.field_media_document.filename }}">
-									</a>
-								</div>
-							</div>
-						</div>
-					{% endfor %}
-				</div>
-			</div>
-		{% endfor %}
-	{% endif %}
-
-
-	{# Renderizar Data de Criação #}
-	{% if node.created is not empty %}
-		<div class="text-muted d-flex justify-content-end mb-2">
-			Criado em:
-			{{ node.created.value|date('d/m/Y') }}
-		</div>
-	{% endif %}
+    {% for term, files in arquivos_por_referencial %}
+        <div class="my-5">
+            <div class="mb-2">
+                <h3 class="bg-warning text-dark badge-custom">{{ term }}:</h3>
+                <span>Clique no ícone/card para baixar o arquivo.</span>
+                <div class="border-top border-1 border-dark mt-2 d-flex justify-content-end">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}" aria-expanded="true" aria-controls="collapse{{ loop.index }}">
+                        <i class="fas fa-chevron-up closed"></i>
+                        <i class="fas fa-chevron-down open"></i>
+                    </button>
+                </div>
+            </div>
+            {# Renderizar Mídias #}
+            <div class="collapse show" id="collapse{{ loop.index }}">
+                {% for media in files %}
+                    <div class="card mb-2">
+                        <div class="card-body d-flex border-1 border {{ media.color }}">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="far {{ media.icon }} fa-5x {{ media.color }}"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h5 class="card-title text-muted fw-bold">{{ media.label }}</h5>
+                                <p class="card-text">{{ media.description|default('Nenhuma Descrição Associada') }}</p>
+                                <a href="{{ media.url }}" class="stretched-link" download="{{ media.field_media_document.filename }}"></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
 
 </article>

@@ -61,44 +61,44 @@ class PublicacaoUtils {
   }
 
   static function determine_cor_do_arquivo($ext) {
-    $color = '#000';
+    $color_class = 'file-class';
 
     switch ($ext) {
       case 'pdf':
-        $color = '#D32F2F'; // Vermelho escuro opaco
+        $color_class = 'pdf-class'; // Vermelho escuro opaco
         break;
       case 'document':
       case 'doc':
       case 'docx':
-        $color = '#1976D2'; // Azul escuro opaco
+        $color_class = 'doc-class'; // Azul escuro opaco
         break;
       case 'spreadsheet':
       case 'xls':
       case 'xlsx':
-        $color = '#388E3C'; // Verde escuro opaco
+        $color_class = 'spreadsheet-class'; // Verde escuro opaco
         break;
       case 'presentation':
       case 'ppt':
       case 'pptx':
-        $color = '#F57C00'; // Laranja escuro opaco
+        $color_class = 'presentation-class'; // Laranja escuro opaco
         break;
       case 'archive':
       case 'zip':
       case 'rar':
-        $color = '#FBC02D'; // Amarelo mostarda opaco
+        $color_class = 'archive-class'; // Amarelo mostarda opaco
         break;
       case 'audio':
       case 'mp3':
       case 'wav':
       case 'ogg':
-        $color = '#C2185B'; // Rosa escuro opaco
+        $color_class = 'audio-class'; // Rosa escuro opaco
         break;
 
       // Adicione mais casos conforme necessário.
   }
 
 
-    return $color;
+    return $color_class;
   }
 
   static function determine_icon_do_arquivo($ext) {
