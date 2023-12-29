@@ -5,13 +5,13 @@ global-styling:
       css/style_custom.css: {}      
 global-scripts:
   js:
-    js/custom_script.js: {}    
+    assets/js/custom_script.js: {}
 darkmode:
     js:
-      libraries/darkmode/darkmode-js.min.js: {}
+      assets/js/libraries/darkmode/darkmode-js.min.js: {}
 noticias:
   css:
     theme:
-      assets/css/noticias/noticia.css: {}
-      assets/css/noticias/noticia-anexos.css: {}
-      assets/css/noticias/noticia-paginacao.css: {}
+      assets/css/noticias/noticia.min.css: {}
+      assets/css/noticias/noticia-anexos.min.css: {}
+      assets/css/noticias/noticia-paginacao.min.css: {}
