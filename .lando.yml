@@ -10,6 +10,7 @@ config:
   xdebug: false
 services:
   appserver:
+    xdebug: true
     scanner: false
     build:
       - composer install
@@ -20,8 +21,6 @@ services:
     type: node:18
     build:
       - npm install
-    globals:
-      gulp-cli: "latest"
   database:
     type: mysql:8.0
     portforward: true
