@@ -14,7 +14,7 @@ slick:
   js:
     assets/slick/slick.min.js: {}
   css:
-    theme:      
+    theme:
       assets/slick/slick.css: {}
       assets/slick/slick-theme.css: {}
   dependencies:
@@ -61,3 +61,11 @@ views_eventos:
   dependencies:
     - core/drupal
     - core/jquery
+views_publicacao:
+  css:
+    theme:
+      assets/css/publicacao.css: {}
+  js:
+    assets/js/publicacao.js: {}
+  dependencies:
+    - core/drupal
