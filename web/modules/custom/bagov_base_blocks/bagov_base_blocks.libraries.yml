@@ -65,7 +65,9 @@ views_publicacao:
   css:
     theme:
       assets/css/publicacao.css: {}
+      assets/css/collapse.css: {}
   js:
     assets/js/publicacao.js: {}
+    assets/js/collapse.js: {}
   dependencies:
     - core/drupal
