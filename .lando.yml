@@ -20,11 +20,8 @@ services:
     type: node:18
     build:
       - npm install
-      - gulp
     globals:
       gulp-cli: "latest"
-    build:
-      - cd themes/custom/bagov_base && npm install && gulp css
   database:
     type: mysql:8.0
     portforward: true
