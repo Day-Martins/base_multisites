@@ -234,3 +234,46 @@ function template_preprocess_views_noticias_relacionadas(array &$vars)
         }
     }
 }
+
+function template_preprocess_node__publicacao(array &$vars){
+  $node = $vars['elements']['#node'];
+  $vars['node'] = $node;
+
+  // Verifique se o campo de mídia e o campo de taxonomia existem.
+  if (!$node->hasField('field_midias_publicacao')) {
+      return;
+  }
+
+  $filesByTaxonomy = [];
+  $mediaItems = $node->get('field_midias_publicacao')->referencedEntities();
+
+  foreach ($mediaItems as $media) {
+    // Verifique se a mídia tem o campo de referência de termo.
+    $has_categoria = $media->hasField('field_referencial_de_documento');
+
+    if ($has_categoria && !$media->field_referencial_de_documento->isEmpty()) {
+        $term = $media->field_referencial_de_documento->entity;
+        $termName = $term ? $term->getName() : "Sem referência";
+
+        if (!isset($filesByTaxonomy[$termName])) {
+            $filesByTaxonomy[$termName] = [];
+        }
+
+        $filesByTaxonomy[$termName][] = $media;
+    } else {
+        // Se o campo de referência do documento não existir ou estiver vazio, adicione-o ao grupo "Sem referência".
+        $termName = "Sem referência";
+
+        if (!isset($filesByTaxonomy[$termName])) {
+            $filesByTaxonomy[$termName] = [];
+        }
+
+        $filesByTaxonomy[$termName][] = $media;
+    }
+}
+
+
+  // Passar os dados agrupados para o template.
+  $vars['files_by_taxonomy'] = $filesByTaxonomy;
+
+}
