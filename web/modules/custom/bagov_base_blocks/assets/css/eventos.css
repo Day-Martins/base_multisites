@@ -9,13 +9,11 @@
 }
 
 .custom-card {
-  height: 360px !important;
   margin-inline: 1rem;
   /* Define a altura fixa do card */
 }
 
 .custom-card img {
-  height: 350px;
   width: 100%;
   object-fit: fill;
   /* Garante que a imagem preencha todo o card */
