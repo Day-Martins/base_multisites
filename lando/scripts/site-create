@@ -76,7 +76,11 @@ if [ ! -f "$MS_FILE" ]; then
     printf '<?php' > $MS_FILE
 fi
 
+printf "${NC}cmd: ${CYAN}composer install${NC}\n"
 composer install
+
+printf "${NC}cmd: ${CYAN}npm install${NC}\n"
+npm install
 
 #Add a site to multisite file
 printf '\n$sites["'$SITE_NAME'.multisite.local"] = "'$SITE_NAME'";' >> $MS_FILE

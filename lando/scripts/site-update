@@ -7,7 +7,11 @@ NC='\033[0m' # No Color
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
 
+printf "${NC}cmd: ${CYAN}composer install${NC}\n"
 composer install
+
+printf "${NC}cmd: ${CYAN}npm install${NC}\n"
+npm install
 
 #Export site splited configs
 printf "${CYAN}Importando configurações dos splits configurados para $SITE_NAME${NC}\n"
