@@ -34,7 +34,7 @@ class ContrastBlock extends BlockBase
             return [
                 '#theme' => 'contrast_block',
                 '#attached' => [
-                    'library' => ['bagov_base_blocks/block_contrast'],
+                    'library' => ['bagov_base_blocks/contraste'],
                 ],
             ];
         }
