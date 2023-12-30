@@ -1,19 +1,17 @@
-uuid: 920a43c5-4ba6-4844-90b6-118aede29e8c
+uuid: 710d013a-a863-453c-a9b5-4afc28b30303
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.webform
+    - node.type.licitacao
   module:
     - text
-_core:
-  default_config_hash: '-Qu0UyzQ0jD4TDYq8fOasS-D-vGd3gSwzi15PzRJUD4'
-id: node.webform.body
+id: node.licitacao.body
 field_name: body
 entity_type: node
-bundle: webform
-label: Corpo
+bundle: licitacao
+label: Body
 description: ''
 required: false
 translatable: true

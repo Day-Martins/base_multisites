@@ -1,0 +1,19 @@
+adding:
+  dependencies:
+    config:
+      - field.field.node.edital.body
+      - field.field.node.edital.field_midias_editais
+    module:
+      - text
+  content:
+    body:
+      type: text_summary_or_trimmed
+      label: hidden
+      settings:
+        trim_length: 600
+      third_party_settings: {  }
+      weight: 101
+      region: content
+  hidden:
+    field_midias_editais: true
+removing: {  }
