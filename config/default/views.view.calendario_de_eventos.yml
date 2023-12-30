@@ -226,7 +226,12 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          plugin_id: text
       sorts:
         created:
           id: created
@@ -653,6 +658,20 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: '<strong>Sem Eventos Cadastrados</strong>'
+            format: basic_html
+          tokenize: false
       sorts:
         created:
           id: created
@@ -744,6 +763,7 @@ display:
         type: fields
         options: {  }
       defaults:
+        empty: false
         title: false
         use_more: false
         use_more_always: false

@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.eventos.field_pdfs
     - field.field.node.eventos.field_sites
     - field.field.node.eventos.field_tags
-    - field.field.node.eventos.field_webform_entity_limit_total
     - field.field.node.eventos.webform
     - node.type.eventos
   module:
@@ -56,23 +55,6 @@ third_party_settings:
                     attribute: lazy
                 third_party_settings: {  }
             weight: 0
-            additional: {  }
-          2db4870a-d952-48ff-9e55-5ce4f72d51a6:
-            uuid: 2db4870a-d952-48ff-9e55-5ce4f72d51a6
-            region: content
-            configuration:
-              id: 'field_block:node:eventos:field_webform_entity_limit_total'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: number_integer
-                label: above
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-            weight: 1
             additional: {  }
           6085adbb-72c2-4fde-8592-1d42e4151ff0:
             uuid: 6085adbb-72c2-4fde-8592-1d42e4151ff0
@@ -352,15 +334,6 @@ content:
       link: true
     third_party_settings: {  }
     weight: 10
-    region: content
-  field_webform_entity_limit_total:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 2
     region: content
   links:
     settings: {  }

@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.eventos.field_pdfs
     - field.field.node.eventos.field_sites
     - field.field.node.eventos.field_tags
-    - field.field.node.eventos.field_webform_entity_limit_total
     - field.field.node.eventos.webform
     - image.style.thumbnail
     - node.type.eventos
@@ -112,13 +111,6 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_webform_entity_limit_total:
-    type: number
-    weight: 4
-    region: content
-    settings:
       placeholder: ''
     third_party_settings: {  }
   langcode:

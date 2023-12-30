@@ -1,23 +1,20 @@
-uuid: b23a1eae-ec37-4caf-897d-cef331b7418a
+uuid: 299a9d87-94a9-4a1b-94ed-c6bed397112e
 langcode: pt-br
 status: open
 dependencies:
   module:
     - webform_options_limit
     - webform_scheduled_email
-  enforced:
-    module:
-      - webform_demo_event_registration
 _core:
   default_config_hash: UzZzmlM8_zW57tbf91qkfiTCpvdUKAW_zOXutYP0YPI
 weight: 0
 open: null
 close: null
-uid: null
+uid: 1
 template: false
 archive: false
-id: demo_event_registration
-title: 'Registro em Evento'
+id: formulario_basico_de_inscricao
+title: 'Formulário Básico de Inscrição'
 description: ''
 categories: {  }
 elements: |-

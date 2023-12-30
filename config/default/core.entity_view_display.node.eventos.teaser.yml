@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.eventos.field_pdfs
     - field.field.node.eventos.field_sites
     - field.field.node.eventos.field_tags
-    - field.field.node.eventos.field_webform_entity_limit_total
     - field.field.node.eventos.webform
     - image.style.medium
     - node.type.eventos
@@ -67,6 +66,5 @@ hidden:
   field_imagem_do_banner: true
   field_pdfs: true
   field_sites: true
-  field_webform_entity_limit_total: true
   langcode: true
   webform: true
