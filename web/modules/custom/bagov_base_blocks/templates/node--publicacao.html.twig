@@ -81,6 +81,8 @@
 {{ attach_library('bootstrap5/node') }}
 {{ attach_library('bagov_base_blocks/views_publicacao') }}
 
+
+
 <article{{attributes.addClass(classes)}}>
 
 	{{ title_prefix }}
@@ -91,11 +93,11 @@
 	{% endif %}
 	{{ title_suffix }}
 	{# Renderizar Categorias #}
-	{% if node.field_categorias_publicacao is not empty %}
+	{% if node.field_categorias is not empty %}
 		<div>
 			<span class="fw-bold visually-hidden">Categorias:</span>
 			<ul class="list-inline">
-				{% for categoria in node.field_categorias_publicacao %}
+				{% for categoria in node.field_categorias %}
 					<li class="list-inline-item badge bg-secondary">{{ categoria.entity.label }}</li>
 				{% endfor %}
 			</ul>

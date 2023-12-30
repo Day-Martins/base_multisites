@@ -77,15 +77,35 @@ class BagovHelpers {
           'base hook' => 'view',
           'template' => 'carrousel-eventos',
       ],
-      // 'node__publicacao__teaser' => [
-      //     'base hook' => 'node',
-      //     'template' => 'node--publicacao--teaser',
-      // ],
       'node__publicacao' => [
           'preprocess functions' => [
             'template_preprocess_node__publicacao'
           ],
           'file' => 'bagov_base_blocks.theme.inc',
+      ],
+      'node__edital' => [
+          'preprocess functions' => [
+            'template_preprocess_node__publicacao'
+          ],
+          'file' => 'bagov_base_blocks.theme.inc',
+          'base hook' => 'node',
+          'template' => 'node--publicacao',
+      ],
+      'node__licitacao' => [
+          'preprocess functions' => [
+            'template_preprocess_node__publicacao'
+          ],
+          'file' => 'bagov_base_blocks.theme.inc',
+          'base hook' => 'node',
+          'template' => 'node--publicacao',
+      ],
+      'node__legislacao' => [
+          'preprocess functions' => [
+            'template_preprocess_node__publicacao'
+          ],
+          'file' => 'bagov_base_blocks.theme.inc',
+          'base hook' => 'node',
+          'template' => 'node--publicacao',
       ],
   ];
 

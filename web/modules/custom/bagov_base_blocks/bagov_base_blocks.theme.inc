@@ -6,7 +6,9 @@
  */
 
 use Drupal\bagov_base_blocks\BagovHelpers;
+use Drupal\bagov_base_blocks\Utils\EstrategiaDePublicacao;
 use Drupal\bagov_base_blocks\Utils\PublicacaoUtils;
+
 
 /**
  * Prepares variables for constrast templates.
@@ -241,13 +243,18 @@ function template_preprocess_node__publicacao(array &$vars){
   $node = $vars['elements']['#node'];
   $vars['node'] = $node;
 
+  $node = EstrategiaDePublicacao::definirEstrategia($node);
   // Verifique se o campo de mídia e o campo de taxonomia existem.
-  if (!$node->hasField('field_midias_publicacao')) {
-      return;
+
+  // verifica se existe e se não está vazio
+  $existem_midias = $node->field_midias && !$node->field_midias->isEmpty();
+
+  if (!$existem_midias) {
+    return;
   }
 
   $filesByTaxonomy = [];
-  $midiaItems = $node->get('field_midias_publicacao')->referencedEntities();
+  $midiaItems = $node->field_midias->referencedEntities();
 
   foreach ($midiaItems as $midia) {
     // Verifique se a mídia tem o campo de referência de termo.
@@ -277,7 +284,6 @@ function template_preprocess_node__publicacao(array &$vars){
         $filesByTaxonomy[$termName][] = $midia;
     }
 }
-
 
   // Passar os dados agrupados para o template.
   $vars['arquivos_por_referencial'] = $filesByTaxonomy;
