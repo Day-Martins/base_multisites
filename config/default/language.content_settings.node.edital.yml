@@ -1,0 +1,11 @@
+uuid: 46403de6-db46-45b5-af16-55acd5b37a3b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.edital
+id: node.edital
+target_entity_type_id: node
+target_bundle: edital
+default_langcode: site_default
+language_alterable: false

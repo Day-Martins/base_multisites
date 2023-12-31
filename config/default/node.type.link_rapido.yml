@@ -1,0 +1,17 @@
+uuid: 3a47c2e6-fc9a-4c9e-b75e-2243af1bbd1a
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Link Rápido'
+type: link_rapido
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

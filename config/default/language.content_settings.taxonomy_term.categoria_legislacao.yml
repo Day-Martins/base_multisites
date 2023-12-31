@@ -1,0 +1,11 @@
+uuid: a6889ab1-62d1-4e0e-9aaa-64439c5dd289
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categoria_legislacao
+id: taxonomy_term.categoria_legislacao
+target_entity_type_id: taxonomy_term
+target_bundle: categoria_legislacao
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,22 @@
+uuid: e6851a5b-a5f9-42fd-b010-eedbe51a1bb6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.edital
+id: node.edital.promote
+field_name: promote
+entity_type: node
+bundle: edital
+label: 'Promovido para a página inicial'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean

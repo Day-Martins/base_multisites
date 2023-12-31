@@ -1,0 +1,11 @@
+uuid: d2ce3675-0202-4ed5-a7d4-6058caef6f2f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categoria_edital
+id: taxonomy_term.categoria_edital
+target_entity_type_id: taxonomy_term
+target_bundle: categoria_edital
+default_langcode: site_default
+language_alterable: false

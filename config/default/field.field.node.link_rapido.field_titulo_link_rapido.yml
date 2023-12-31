@@ -1,0 +1,19 @@
+uuid: ab91f131-ee83-41eb-9866-2e7393610a6f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo_link_rapido
+    - node.type.link_rapido
+id: node.link_rapido.field_titulo_link_rapido
+field_name: field_titulo_link_rapido
+entity_type: node
+bundle: link_rapido
+label: Título
+description: 'Título que será visualizado no botão'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

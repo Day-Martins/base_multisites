@@ -1,7 +1,0 @@
-adding:
-  dependencies:
-    config:
-      - field.field.node.link_rapido.field_icone_link_rapido
-  hidden:
-    field_icone_link_rapido: true
-removing: {  }

@@ -1,0 +1,35 @@
+uuid: b2b0e52a-02f6-4a41-bed4-f67d02580484
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.edital.body
+    - field.field.node.edital.field_categorias_editais
+    - field.field.node.edital.field_midias_editais
+    - node.type.edital
+  module:
+    - text
+    - user
+id: node.edital.teaser
+targetEntityType: node
+bundle: edital
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_categorias_editais: true
+  field_midias_editais: true
+  langcode: true

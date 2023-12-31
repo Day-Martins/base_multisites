@@ -1,0 +1,35 @@
+uuid: a9dbf890-05d5-4e72-9d67-42461fa74b71
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.legislacao.body
+    - field.field.node.legislacao.field_categorias_legislacao
+    - field.field.node.legislacao.field_midias_legislacao
+    - node.type.legislacao
+  module:
+    - text
+    - user
+id: node.legislacao.teaser
+targetEntityType: node
+bundle: legislacao
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_categorias_legislacao: true
+  field_midias_legislacao: true
+  langcode: true
