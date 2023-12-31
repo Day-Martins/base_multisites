@@ -1,0 +1,16 @@
+#block-bagov-base-views-block-links-rapidos-block h2 {
+  font-weight: bolder;
+  font-size: 2rem;
+  white-space: normal;
+  text-transform: capitalize;
+  color: #fff !important;
+  width: 6rem;
+  margin-bottom: 4rem;
+}
+
+#block-bagov-base-views-block-links-rapidos-block {
+  margin-top: 2px;
+  background-color: #f07d00 !important;
+  padding: 48px 0px 24px 24px;
+}
+

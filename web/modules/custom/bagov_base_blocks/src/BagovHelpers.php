@@ -107,6 +107,14 @@ class BagovHelpers {
           'base hook' => 'node',
           'template' => 'node--publicacao',
       ],
+      'views_view_unformatted__links_rapidos' => [
+          'base hook' => 'view',
+          'template' => 'carrousel-links-rapidos',
+      ],
+      'views_view_fields__links_rapidos' => [
+        'base hook' => 'views_view_fields',
+        'template' => 'card-links-rapidos',
+      ],
   ];
 
     return $hooks;
