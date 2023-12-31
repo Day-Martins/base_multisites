@@ -44,6 +44,7 @@ module:
 theme: {  }
 complete_list:
   - block.block.bagov_base_views_block__carrousel_de_eventos
+  - block.block.bagov_base_views_block__links_rapidos
   - block.block.bootstrap5_account_menu
   - block.block.bootstrap5_branding
   - block.block.bootstrap5_breadcrumbs
@@ -294,6 +295,7 @@ complete_list:
   - text_resize.settings
   - update.settings
   - views.view.calendario_de_eventos
+  - views.view.links_rapidos
   - core.entity_form_display.node.webform.default
   - core.entity_view_display.node.webform.default
   - core.entity_view_display.node.webform.teaser
