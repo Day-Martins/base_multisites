@@ -1,0 +1,16 @@
+adding:
+  dependencies:
+    config:
+      - field.field.node.link_rapido.field_icone_link_rapido
+    module:
+      - fontawesome
+  content:
+    field_icone_link_rapido:
+      type: fontawesome_icon_formatter
+      label: above
+      settings:
+        layers: false
+      third_party_settings: {  }
+      weight: 101
+      region: content
+removing: {  }
