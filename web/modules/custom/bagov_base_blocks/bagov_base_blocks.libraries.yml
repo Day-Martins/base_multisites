@@ -56,8 +56,9 @@ views_eventos:
   css:
     theme:
       assets/css/eventos.css: {}
+      assets/css/carrousel.css: {}
   js:
-    assets/js/carrousel-eventos.js: {}
+    assets/js/carrousel.js: {}
   dependencies:
     - core/drupal
     - core/jquery
@@ -71,3 +72,13 @@ views_publicacao:
     assets/js/collapse.js: {}
   dependencies:
     - core/drupal
+views_links_rapidos:
+  css:
+    theme:
+      assets/css/links_rapidos.css: {}
+      assets/css/carrousel.css: {}
+  js:
+    assets/js/carrousel.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

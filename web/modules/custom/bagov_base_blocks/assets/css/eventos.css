@@ -34,34 +34,6 @@
   height: 120px;
 }
 
-/* Estilo para centralizar as setas abaixo dos dots */
-.custom-arrows {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px; /* Ajuste conforme necessário para espaçamento entre os dots e as setas */
-}
-
-/* Esconda a seta padrão do Slick Carousel */
-.custom-arrows .slick-prev:before,
-.custom-arrows .slick-next:before {
-  display: none;
-}
-
-/* Estilo para as setas */
-.custom-arrows .slick-prev,
-.custom-arrows .slick-next {
-  position: relative;
-  font-size: 24px; /* Tamanho das setas (ajuste conforme necessário) */
-  color: #36b0b4 !important; /* Cor das setas */
-  cursor: pointer;
-}
-
-.custom-arrows .slick-prev:hover,
-.custom-arrows .slick-next:hover {
-  opacity: 0.8;
-}
-
 .more-link a {
   display: inline-block;
   padding: 4px 20px;

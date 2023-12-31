@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  $('.carrousel-eventos').slick({
+  $('.carrousel').slick({
     dots: false,
     lazyLoad: 'ondemand',
     appendArrows: $('.custom-arrows'), // Especifica o elemento para as setas
