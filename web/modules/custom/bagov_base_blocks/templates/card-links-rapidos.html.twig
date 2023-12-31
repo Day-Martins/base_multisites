@@ -31,12 +31,13 @@
 #}
 
 
-<pre>
-  {{ dump(row._entity) }}
-</pre>
-
-<div class="card m-2 p-2" >
-{{ row._entity.title.value }}
-{{ fields.field_icone_link_rapido.content }}
-{{ row._entity.field_link.uri }}
+<div class="card m-2 p-2 position-relative d-flex justify-content-center align-items-center rounded-4 ">
+	{{ fields.field_icone_link_rapido.content }}
+</br>
+<h4
+class="text-center fw-bold text-uppercase "
+>
+<strong>{{ row._entity.title.value }} </strong>
+</h4>
+<a href="{{ row._entity.field_link.uri }}" class="stretched-link" target="_blank"></a>
 </div>

@@ -14,3 +14,22 @@
   padding: 48px 0px 24px 24px;
 }
 
+#block-bagov-base-views-block-links-rapidos-block h4 {
+  color: #dc622b;
+}
+
+#block-bagov-base-views-block-links-rapidos-block .card {
+  background-color: #ffc78b;
+  width: 80%;
+  height: 200px;
+}
+
+#block-bagov-base-views-block-links-rapidos-block .fontawesome-icons {
+  font-size: 4rem;
+  color: #f07d00;
+  margin: 1rem;
+}
+
+#block-bagov-base-views-block-links-rapidos-block .carrousel {
+  background-color: antiquewhite;
+}
