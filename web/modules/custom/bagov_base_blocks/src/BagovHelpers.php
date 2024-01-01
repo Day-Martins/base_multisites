@@ -67,8 +67,8 @@ class BagovHelpers {
       ],
       'views_view__teste__block_1' => [
           'base hook' => 'view',
-          'template' => 'template-teste',            
-      ],      
+          'template' => 'template-teste',
+      ],
       'views_view_fields__carrousel_de_eventos' => [
         'base hook' => 'views_view_fields',
         'template' => 'card-carrousel-eventos',
@@ -76,6 +76,10 @@ class BagovHelpers {
       'views_view_unformatted__carrousel_de_eventos' => [
           'base hook' => 'view',
           'template' => 'carrousel-eventos',
+      ],
+      'views_view_unformatted__youtube_banner__block_1' => [
+        'base hook' => 'view',
+        'template' => 'template-youtube-banner',
       ],
   ];
 

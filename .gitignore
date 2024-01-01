@@ -59,3 +59,7 @@
 !/web/sites/development.services.yml
 !/web/sites/example.sites.php
 !/web/sites/README.txt
+
+/web/core
+
+/node_modules
