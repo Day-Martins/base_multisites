@@ -71,7 +71,6 @@ module:
   we_megamenu: 0
   we_megamenu_bagov: 0
   webform: 0
-  webform_demo_event_registration: 0
   webform_node: 0
   webform_options_limit: 0
   webform_scheduled_email: 0
