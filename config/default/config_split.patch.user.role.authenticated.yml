@@ -1,7 +1,5 @@
 adding:
   dependencies:
-    config:
-      - filter.format.webform_default
     module:
       - fontawesome
       - media
@@ -9,6 +7,5 @@ adding:
   permissions:
     - 'access fontawesome additional settings'
     - 'search content'
-    - 'use text format webform_default'
     - 'view media'
 removing: {  }

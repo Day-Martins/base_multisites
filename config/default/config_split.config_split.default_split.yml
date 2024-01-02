@@ -34,11 +34,6 @@ module:
   views_argument_token: 0
   views_bootstrap: 0
   we_megamenu: 0
-  webform: 0
-  webform_node: 0
-  webform_options_limit: 0
-  webform_scheduled_email: 0
-  webform_share: 0
   pathauto: 1
 theme: {  }
 complete_list:
@@ -242,6 +237,7 @@ complete_list:
   - image.style.eventos_thumbnail_350x180
   - language.content_settings.node.banner
   - language.content_settings.node.edital
+  - language.content_settings.node.evento
   - language.content_settings.node.legislacao
   - language.content_settings.node.licitacao
   - language.content_settings.node.link_rapido
@@ -266,6 +262,7 @@ complete_list:
   - node.type.article
   - node.type.banner
   - node.type.edital
+  - node.type.evento
   - node.type.legislacao
   - node.type.licitacao
   - node.type.link_rapido
