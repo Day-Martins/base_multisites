@@ -69,11 +69,11 @@ class BagovHelpers {
           'base hook' => 'view',
           'template' => 'template-teste',
       ],
-      'views_view_fields__carrousel_de_eventos' => [
+      'views_view_fields__eventos' => [
         'base hook' => 'views_view_fields',
         'template' => 'card-carrousel-eventos',
       ],
-      'views_view_unformatted__carrousel_de_eventos' => [
+      'views_view_unformatted__eventos' => [
           'base hook' => 'view',
           'template' => 'carrousel-eventos',
       ],
