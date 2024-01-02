@@ -40,12 +40,18 @@ views_noticias_relacionadas:
   dependencies:
     - core/drupal
     - core/jquery
-views_teste:
+youtube_carrousel:
+  js:
+    assets/js/youtube-carrousel.js: {}
+    assets/slick/slick.min.js: {}
   css:
     theme:
-      assets/css/teste.css: {}
-  js:
-    assets/js/teste.js: {}
+      assets/slick/slick.css: { }
+      assets/slick/slick-theme.css: { }
+      assets/css/youtube-carrousel.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
 pages_noticias:
   css:
     theme:

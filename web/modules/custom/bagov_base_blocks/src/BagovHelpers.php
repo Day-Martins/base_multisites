@@ -115,6 +115,10 @@ class BagovHelpers {
         'base hook' => 'views_view_fields',
         'template' => 'card-links-rapidos',
       ],
+      'views_view_unformatted__youtube_banner__block_1' => [
+        'base hook' => 'view',
+        'template' => 'template-youtube-banner',
+      ],
   ];
 
     return $hooks;
