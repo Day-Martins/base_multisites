@@ -77,10 +77,10 @@ class BagovHelpers {
           'base hook' => 'view',
           'template' => 'carrousel-eventos',
       ],
-      'views_view__youtube_banner__block_1' => [
+      'views_view_unformatted__youtube_banner__block_1' => [
         'base hook' => 'view',
         'template' => 'template-youtube-banner',
-      ]
+      ],
   ];
 
     return $hooks;
