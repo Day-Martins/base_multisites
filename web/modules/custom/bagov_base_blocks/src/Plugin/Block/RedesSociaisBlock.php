@@ -101,6 +101,9 @@ class RedesSociaisBlock extends BlockBase
             '#items' => $list_social_network,
             '#wrapper_attributes' => ['class' => $block_attributes],
             '#attributes' => ['class' => 'list-unstyled'],
+            '#attached' => [
+                'library' => ['bagov_base_blocks/redes_sociais'],
+            ],
         ];
 
         $config = \Drupal::config('bagov_base_blocks.settings');

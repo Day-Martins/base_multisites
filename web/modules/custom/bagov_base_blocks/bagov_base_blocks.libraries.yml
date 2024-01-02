@@ -1,10 +1,11 @@
-block_contrast:
-  js:
-    assets/js/contrast.js: {}
+contraste:
   css:
     theme:
-      assets/css/contrast.css: {}
-      assets/css/socialnetwork.css: {}
+      assets/css/contraste/contraste.min.css: {}
+redes_sociais:
+  css:
+    theme:
+      assets/css/redes_sociais/redes-sociais.min.css: {}
   dependencies:
     - core/once
     - core/drupal
@@ -22,21 +23,21 @@ slick:
 views_noticias_home:
   css:
     theme:
-      assets/css/noticias-home.css: {}
+      assets/css/noticias/noticias-home.min.css: {}
   dependencies:
     - core/drupal
     - core/jquery
 views_noticias:
   css:
     theme:
-      assets/css/noticias.css: {}
+      assets/css/noticias/noticias.min.css: {}
   dependencies:
     - core/drupal
     - core/jquery
 views_noticias_relacionadas:
   css:
     theme:
-      assets/css/noticias-relacionadas.css: {}
+      assets/css/noticias/noticias-relacionadas.min.css: {}
   dependencies:
     - core/drupal
     - core/jquery
@@ -61,8 +62,7 @@ pages_noticias:
 views_eventos:
   css:
     theme:
-      assets/css/eventos.css: {}
-      assets/css/carrousel.css: {}
+      assets/css/eventos/eventos.min.css: {}
   js:
     assets/js/carrousel.js: {}
   dependencies:
