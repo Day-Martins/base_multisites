@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  $('.carrousel').slick({
+  jQuery('.carrousel').slick({
     dots: false,
     lazyLoad: 'ondemand',
     appendArrows: $('.custom-arrows'), // Especifica o elemento para as setas
@@ -43,10 +43,10 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-  $('#carrousel-links-rapidos').slick({
+  jQuery('#carrousel-links-rapidos').slick({
     dots: false,
     lazyLoad: 'ondemand',
-    appendArrows: $('.custom-arrows'), // Especifica o elemento para as setas
+    appendArrows: $('.custom-arrows-links-rapidos'), // Especifica o elemento para as setas
     infinite: true,
     speed: 300,
     prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
