@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_imagem_de_destaque_evento
     - image.style.eventos_thumbnail_350x180
     - node.type.evento
-    - system.menu.main
   module:
     - datetime_range
     - fullcalendar_view
@@ -737,6 +736,7 @@ display:
         fields: false
       display_extenders: {  }
       block_category: Bloco
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -757,7 +757,7 @@ display:
       display_extenders: {  }
       path: eventos
       menu:
-        type: normal
+        type: none
         title: Eventos
         description: ''
         weight: 0
