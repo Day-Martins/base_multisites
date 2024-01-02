@@ -43,7 +43,7 @@ module:
   pathauto: 1
 theme: {  }
 complete_list:
-  - block.block.bagov_base_views_block__carrousel_de_eventos
+  - block.block.bagov_base_views_block__eventos
   - block.block.bagov_base_views_block__links_rapidos
   - block.block.bootstrap5_account_menu
   - block.block.bootstrap5_branding
@@ -82,7 +82,6 @@ complete_list:
   - config_split.config_split.default_split
   - core.base_field_override.node.edital.promote
   - core.base_field_override.node.edital.title
-  - core.base_field_override.node.eventos.title
   - core.base_field_override.node.link_rapido.promote
   - core.base_field_override.node.page.promote
   - core.entity_form_display.comment.comment.default
@@ -99,7 +98,7 @@ complete_list:
   - core.entity_form_display.node.article.default
   - core.entity_form_display.node.banner.default
   - core.entity_form_display.node.edital.default
-  - core.entity_form_display.node.eventos.default
+  - core.entity_form_display.node.evento.default
   - core.entity_form_display.node.legislacao.default
   - core.entity_form_display.node.licitacao.default
   - core.entity_form_display.node.link_rapido.default
@@ -127,8 +126,8 @@ complete_list:
   - core.entity_view_display.node.banner.teaser
   - core.entity_view_display.node.edital.default
   - core.entity_view_display.node.edital.teaser
-  - core.entity_view_display.node.eventos.default
-  - core.entity_view_display.node.eventos.teaser
+  - core.entity_view_display.node.evento.default
+  - core.entity_view_display.node.evento.teaser
   - core.entity_view_display.node.legislacao.default
   - core.entity_view_display.node.legislacao.teaser
   - core.entity_view_display.node.licitacao.default
@@ -165,17 +164,14 @@ complete_list:
   - field.field.node.edital.body
   - field.field.node.edital.field_categorias_editais
   - field.field.node.edital.field_midias_editais
-  - field.field.node.eventos.body
-  - field.field.node.eventos.comment
-  - field.field.node.eventos.field_categorias
-  - field.field.node.eventos.field_datas
-  - field.field.node.eventos.field_emails
-  - field.field.node.eventos.field_image
-  - field.field.node.eventos.field_imagem_do_banner
-  - field.field.node.eventos.field_pdfs
-  - field.field.node.eventos.field_sites
-  - field.field.node.eventos.field_tags
-  - field.field.node.eventos.webform
+  - field.field.node.evento.body
+  - field.field.node.evento.field_categoria_evento
+  - field.field.node.evento.field_contato_evento
+  - field.field.node.evento.field_datas_evento
+  - field.field.node.evento.field_email_evento
+  - field.field.node.evento.field_endereco_evento
+  - field.field.node.evento.field_imagem_de_destaque_evento
+  - field.field.node.evento.field_url_evento
   - field.field.node.legislacao.body
   - field.field.node.legislacao.field_categorias_legislacao
   - field.field.node.legislacao.field_midias_legislacao
@@ -214,19 +210,22 @@ complete_list:
   - field.storage.node.body
   - field.storage.node.comment
   - field.storage.node.field_anexo_noticia
-  - field.storage.node.field_categorias
   - field.storage.node.field_categorias_editais
   - field.storage.node.field_categorias_legislacao
   - field.storage.node.field_categorias_licitacoes
   - field.storage.node.field_categorias_lista_migrada
   - field.storage.node.field_categorias_noticia
   - field.storage.node.field_categorias_publicacao
-  - field.storage.node.field_datas
-  - field.storage.node.field_emails
+  - field.storage.node.field_categoria_evento
+  - field.storage.node.field_contato_evento
+  - field.storage.node.field_datas_evento
+  - field.storage.node.field_email_evento
+  - field.storage.node.field_endereco_evento
   - field.storage.node.field_fonte_noticia
   - field.storage.node.field_icone_link_rapido
   - field.storage.node.field_image
   - field.storage.node.field_imagem_destaque_noticia
+  - field.storage.node.field_imagem_de_destaque_evento
   - field.storage.node.field_imagem_do_banner
   - field.storage.node.field_link
   - field.storage.node.field_link_do_banner
@@ -234,10 +233,9 @@ complete_list:
   - field.storage.node.field_midias_legislacao
   - field.storage.node.field_midias_licitacoes
   - field.storage.node.field_midias_publicacao
-  - field.storage.node.field_pdfs
-  - field.storage.node.field_sites
   - field.storage.node.field_tags
   - field.storage.node.field_titulo_link_rapido
+  - field.storage.node.field_url_evento
   - field.storage.taxonomy_term.field_termo_relacionado
   - field.storage.user.user_picture
   - fontawesome.settings
@@ -245,7 +243,6 @@ complete_list:
   - image.style.eventos_thumbnail_350x180
   - language.content_settings.node.banner
   - language.content_settings.node.edital
-  - language.content_settings.node.eventos
   - language.content_settings.node.legislacao
   - language.content_settings.node.licitacao
   - language.content_settings.node.link_rapido
@@ -270,7 +267,6 @@ complete_list:
   - node.type.article
   - node.type.banner
   - node.type.edital
-  - node.type.eventos
   - node.type.legislacao
   - node.type.licitacao
   - node.type.link_rapido
@@ -294,8 +290,32 @@ complete_list:
   - taxonomy.vocabulary.tags
   - text_resize.settings
   - update.settings
-  - views.view.calendario_de_eventos
+  - views.view.eventos
   - views.view.links_rapidos
+  - block.block.bagov_base_views_block__carrousel_de_eventos
+  - core.base_field_override.node.eventos.title
+  - core.entity_form_display.node.eventos.default
+  - core.entity_view_display.node.eventos.default
+  - core.entity_view_display.node.eventos.teaser
+  - field.field.node.eventos.body
+  - field.field.node.eventos.comment
+  - field.field.node.eventos.field_categorias
+  - field.field.node.eventos.field_datas
+  - field.field.node.eventos.field_emails
+  - field.field.node.eventos.field_image
+  - field.field.node.eventos.field_imagem_do_banner
+  - field.field.node.eventos.field_pdfs
+  - field.field.node.eventos.field_sites
+  - field.field.node.eventos.field_tags
+  - field.field.node.eventos.webform
+  - field.storage.node.field_categorias
+  - field.storage.node.field_datas
+  - field.storage.node.field_emails
+  - field.storage.node.field_pdfs
+  - field.storage.node.field_sites
+  - language.content_settings.node.eventos
+  - node.type.eventos
+  - views.view.calendario_de_eventos
   - core.entity_form_display.node.webform.default
   - core.entity_view_display.node.webform.default
   - core.entity_view_display.node.webform.teaser
@@ -306,7 +326,6 @@ complete_list:
   - node.type.webform
   - views.view.contador
   - webform.webform.eventos
-  - views.view.eventos
   - block.block.bagov_base_views_block__carrousel_de_eventos_block_1
   - views.view.carrousel_de_eventos
 partial_list: {  }
