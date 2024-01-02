@@ -41,11 +41,14 @@ views_noticias_relacionadas:
     - core/drupal
     - core/jquery
 youtube_carrousel:
-  css:
-    theme:
-      assets/css/youtube-carrousel.css: {}
   js:
     assets/js/youtube-carrousel.js: {}
+    assets/slick/slick.min.js: {}
+  css:
+    theme:
+      assets/slick/slick.css: { }
+      assets/slick/slick-theme.css: { }
+      assets/css/youtube-carrousel.css: {}
   dependencies:
     - core/drupal
     - core/jquery
