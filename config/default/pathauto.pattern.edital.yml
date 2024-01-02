@@ -1,0 +1,22 @@
+uuid: b14bb3de-0fa9-4e0a-b0f7-751e7ebb908a
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: edital
+label: Edital
+type: 'canonical_entities:node'
+pattern: '/edital/[node:nid]/[node:title]'
+selection_criteria:
+  d5b769e1-f122-4e65-af43-2d913a386186:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: d5b769e1-f122-4e65-af43-2d913a386186
+    context_mapping:
+      node: node
+    bundles:
+      edital: edital
+selection_logic: and
+weight: -5
+relationships: {  }
