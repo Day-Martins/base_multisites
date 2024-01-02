@@ -72,7 +72,7 @@ views_eventos:
 views_publicacao:
   css:
     theme:
-      assets/css/publicacao.min.css: {}
+      assets/css/publicacao/publicacao.min.css: {}
       assets/css/utils/utils.min.css: {}
   js:
     assets/js/publicacao.js: {}
@@ -82,7 +82,7 @@ views_publicacao:
 views_links_rapidos:
   css:
     theme:
-      assets/css/links_rapidos.min.css: {}
+      assets/css/links_rapidos/links_rapidos.min.css: {}
       assets/css/utils/utils.min.css: {}
   js:
     assets/js/carrousel.js: {}
