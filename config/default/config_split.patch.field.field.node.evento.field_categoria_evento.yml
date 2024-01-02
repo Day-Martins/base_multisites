@@ -1,0 +1,9 @@
+adding:
+  dependencies:
+    config:
+      - taxonomy.vocabulary.categorias_de_eventos
+  settings:
+    handler_settings:
+      target_bundles:
+        categorias_de_eventos: categorias_de_eventos
+removing: {  }

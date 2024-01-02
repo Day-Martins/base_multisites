@@ -1,17 +1,17 @@
-uuid: 3c6cbe37-a3c3-43b2-9a46-a800c48bf50a
+uuid: 1365ef8d-a162-45f6-a41b-b4b3b737d14a
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.eventos
+    - node.type.evento
   module:
     - text
-id: node.eventos.body
+id: node.evento.body
 field_name: body
 entity_type: node
-bundle: eventos
-label: Body
+bundle: evento
+label: 'Descrição do Evento'
 description: ''
 required: false
 translatable: true

@@ -1,22 +1,22 @@
-uuid: 719cbda9-ed90-45e6-847e-c4aeaa3ab099
+uuid: 88047522-5794-40dd-9555-3d8e802df3c2
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - views.view.calendario_de_eventos
+    - views.view.eventos
   module:
     - system
     - views
   theme:
     - bagov_base
-id: bagov_base_views_block__carrousel_de_eventos
+id: bagov_base_views_block__eventos
 theme: bagov_base
 region: content
 weight: 0
 provider: null
-plugin: 'views_block:calendario_de_eventos-carrousel_de_eventos'
+plugin: 'views_block:eventos-block_1'
 settings:
-  id: 'views_block:calendario_de_eventos-carrousel_de_eventos'
+  id: 'views_block:eventos-block_1'
   label: ''
   label_display: visible
   provider: views

@@ -1,12 +1,12 @@
-uuid: 68235732-6206-4eab-9d03-5e97a99bf4cd
+uuid: 68464cd3-4dca-488e-bdcd-eac1fa2f7d99
 langcode: pt-br
 status: true
 dependencies:
   module:
     - datetime_range
     - node
-id: node.field_datas
-field_name: field_datas
+id: node.field_datas_evento
+field_name: field_datas_evento
 entity_type: node
 type: daterange
 settings:
