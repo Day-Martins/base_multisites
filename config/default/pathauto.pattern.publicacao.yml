@@ -1,0 +1,22 @@
+uuid: 097a95a2-0fb0-41ec-b493-b46a5bf60a29
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: publicacao
+label: Publicação
+type: 'canonical_entities:node'
+pattern: '/publicacao/[node:nid]/[node:title]'
+selection_criteria:
+  6e6f0597-e69b-4584-8aac-ea14326db273:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 6e6f0597-e69b-4584-8aac-ea14326db273
+    context_mapping:
+      node: node
+    bundles:
+      publicacao: publicacao
+selection_logic: and
+weight: -5
+relationships: {  }
