@@ -141,7 +141,8 @@
                             </div>
                             <div class="ms-3">
                                 <h5 class="card-title text-muted fw-bold">{{ media.label }}</h5>
-                                <p class="card-text">{{ media.description|default('Nenhuma Descrição Associada') }}</p>
+                                <p class="card-text">{{ media.field_data_de_documento.value|date('d/m/Y') }}</p>
+                                <p class="card-text">{{ media.field_descricao_do_documento.value|default('Nenhuma Descrição Associada') }}</p>
                                 <a href="{{ media.url }}" class="stretched-link" download="{{ media.field_media_document.filename }}"></a>
                             </div>
                         </div>
