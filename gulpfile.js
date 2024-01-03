@@ -32,9 +32,14 @@ gulp.task('sass', function (done) {
 
 // Watch files
 function watchFiles() {
-    gulp.watch('./web/themes/custom/bagov_base/assets/scss/**/*', sass);
-    gulp.watch('./web/modules/custom/bagov_base_blocks/assets/scss/**/*', sass);
+    gulp.watch([
+      './web/themes/custom/bagov_base/assets/scss/**/*',
+      './web/modules/custom/bagov_base_blocks/assets/scss/**/*'
+    ],
+    gulp.parallel('sass')
+    );
 }
+
 
 exports.watch = watchFiles;
 exports.default = watchFiles;

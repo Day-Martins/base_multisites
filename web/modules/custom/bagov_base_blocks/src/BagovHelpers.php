@@ -69,13 +69,51 @@ class BagovHelpers {
           'base hook' => 'view',
           'template' => 'template-teste',
       ],
-      'views_view_fields__carrousel_de_eventos' => [
+      'views_view_fields__eventos' => [
         'base hook' => 'views_view_fields',
         'template' => 'card-carrousel-eventos',
       ],
-      'views_view_unformatted__carrousel_de_eventos' => [
+      'views_view_unformatted__eventos' => [
           'base hook' => 'view',
           'template' => 'carrousel-eventos',
+      ],
+      'node__publicacao' => [
+          'preprocess functions' => [
+            'template_preprocess_node__publicacao'
+          ],
+          'file' => 'bagov_base_blocks.theme.inc',
+      ],
+      'node__edital' => [
+          'preprocess functions' => [
+            'template_preprocess_node__publicacao'
+          ],
+          'file' => 'bagov_base_blocks.theme.inc',
+          'base hook' => 'node',
+          'template' => 'node--publicacao',
+      ],
+      'node__licitacao' => [
+          'preprocess functions' => [
+            'template_preprocess_node__publicacao'
+          ],
+          'file' => 'bagov_base_blocks.theme.inc',
+          'base hook' => 'node',
+          'template' => 'node--publicacao',
+      ],
+      'node__legislacao' => [
+          'preprocess functions' => [
+            'template_preprocess_node__publicacao'
+          ],
+          'file' => 'bagov_base_blocks.theme.inc',
+          'base hook' => 'node',
+          'template' => 'node--publicacao',
+      ],
+      'views_view_unformatted__links_rapidos' => [
+          'base hook' => 'view',
+          'template' => 'carrousel-links-rapidos',
+      ],
+      'views_view_fields__links_rapidos' => [
+        'base hook' => 'views_view_fields',
+        'template' => 'card-links-rapidos',
       ],
       'views_view_unformatted__youtube_banner__block_1' => [
         'base hook' => 'view',

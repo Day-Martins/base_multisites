@@ -1,0 +1,48 @@
+uuid: e2565e10-2882-4d5b-8ecb-81a9b6b8fec6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.legislacao.body
+    - field.field.node.legislacao.field_categorias_legislacao
+    - field.field.node.legislacao.field_midias_legislacao
+    - node.type.legislacao
+  module:
+    - text
+    - user
+id: node.legislacao.default
+targetEntityType: node
+bundle: legislacao
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_categorias_legislacao:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_midias_legislacao:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

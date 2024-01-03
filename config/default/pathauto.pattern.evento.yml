@@ -1,0 +1,22 @@
+uuid: d07967ba-befa-46e5-b201-6ea1b2e495eb
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: evento
+label: Evento
+type: 'canonical_entities:node'
+pattern: '/evento/[node:nid]/[node:title]'
+selection_criteria:
+  ab253963-b3ae-4e23-8565-b64db987807f:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ab253963-b3ae-4e23-8565-b64db987807f
+    context_mapping:
+      node: node
+    bundles:
+      evento: evento
+selection_logic: and
+weight: -5
+relationships: {  }

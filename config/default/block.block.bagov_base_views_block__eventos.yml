@@ -1,0 +1,29 @@
+uuid: 88047522-5794-40dd-9555-3d8e802df3c2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.eventos
+  module:
+    - system
+    - views
+  theme:
+    - bagov_base
+id: bagov_base_views_block__eventos
+theme: bagov_base
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:eventos-block_1'
+settings:
+  id: 'views_block:eventos-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

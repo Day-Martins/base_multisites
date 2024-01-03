@@ -63,8 +63,29 @@ views_eventos:
   css:
     theme:
       assets/css/eventos/eventos.min.css: {}
+      assets/css/utils/utils.min.css: {}
   js:
-    assets/js/carrousel-eventos.js: {}
+    assets/js/carrousel.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+views_publicacao:
+  css:
+    theme:
+      assets/css/publicacao/publicacao.min.css: {}
+      assets/css/utils/utils.min.css: {}
+  js:
+    assets/js/publicacao.js: {}
+    assets/js/collapse.js: {}
+  dependencies:
+    - core/drupal
+views_links_rapidos:
+  css:
+    theme:
+      assets/css/links_rapidos/links_rapidos.min.css: {}
+      assets/css/utils/utils.min.css: {}
+  js:
+    assets/js/carrousel.js: {}
   dependencies:
     - core/drupal
     - core/jquery

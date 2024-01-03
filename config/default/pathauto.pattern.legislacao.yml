@@ -1,0 +1,22 @@
+uuid: e9b766c0-73bd-49f2-b2dc-71af8a47d0de
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: legislacao
+label: Legislacao
+type: 'canonical_entities:node'
+pattern: '/legislacao/[node:nid]/[node:title]'
+selection_criteria:
+  e824cf16-1c94-4d10-81e6-d682251f63d4:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e824cf16-1c94-4d10-81e6-d682251f63d4
+    context_mapping:
+      node: node
+    bundles:
+      legislacao: legislacao
+selection_logic: and
+weight: -5
+relationships: {  }

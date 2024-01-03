@@ -1,0 +1,48 @@
+uuid: 9cd838cb-d3ed-4cb2-8f72-9acd538a8ecf
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.edital.body
+    - field.field.node.edital.field_categorias_editais
+    - field.field.node.edital.field_midias_editais
+    - node.type.edital
+  module:
+    - text
+    - user
+id: node.edital.default
+targetEntityType: node
+bundle: edital
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_categorias_editais:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_midias_editais:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

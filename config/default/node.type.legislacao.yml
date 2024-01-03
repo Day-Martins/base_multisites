@@ -1,0 +1,17 @@
+uuid: c3579bd5-4157-4d91-9831-ab5d5d54670d
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Legislação
+type: legislacao
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -8,8 +8,8 @@ dependencies:
     - bagov_base
 id: bagov_base_breadcrumbs
 theme: bagov_base
-region: breadcrumb
-weight: 0
+region: desatived
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:

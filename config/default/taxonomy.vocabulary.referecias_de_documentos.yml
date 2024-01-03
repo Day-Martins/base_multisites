@@ -1,0 +1,8 @@
+uuid: 114faf1c-c868-40af-8f1a-25cc86676e2d
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Referecias de Documentos'
+vid: referecias_de_documentos
+description: ''
+weight: 0

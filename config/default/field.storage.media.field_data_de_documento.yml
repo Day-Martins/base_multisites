@@ -1,0 +1,20 @@
+uuid: 8d6ed9c0-e0ea-4234-952b-98e7b1878ed0
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - datetime
+    - media
+id: media.field_data_de_documento
+field_name: field_data_de_documento
+entity_type: media
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

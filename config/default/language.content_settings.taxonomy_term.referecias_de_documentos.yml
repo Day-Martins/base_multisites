@@ -1,0 +1,11 @@
+uuid: 2bff292b-5ab0-4085-bd99-3bade0ef103e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.referecias_de_documentos
+id: taxonomy_term.referecias_de_documentos
+target_entity_type_id: taxonomy_term
+target_bundle: referecias_de_documentos
+default_langcode: site_default
+language_alterable: false

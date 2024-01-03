@@ -1,0 +1,8 @@
+uuid: 0c800fd0-4519-4d14-971c-27f869384d32
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Categoria Licitação'
+vid: categoria_licitacao
+description: ''
+weight: 0

@@ -1,0 +1,27 @@
+uuid: 0bcb3751-1bd0-4658-ae8a-1030cc526ff3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.link_rapido.field_icone_link_rapido
+    - field.field.node.link_rapido.field_link
+    - field.field.node.link_rapido.field_titulo_link_rapido
+    - node.type.link_rapido
+  module:
+    - user
+id: node.link_rapido.teaser
+targetEntityType: node
+bundle: link_rapido
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_icone_link_rapido: true
+  field_link: true
+  field_titulo_link_rapido: true
+  langcode: true

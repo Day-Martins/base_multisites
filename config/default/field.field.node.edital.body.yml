@@ -1,0 +1,24 @@
+uuid: a966e1ac-363d-4d58-8c3a-4c7dc63a7c48
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.edital
+  module:
+    - text
+id: node.edital.body
+field_name: body
+entity_type: node
+bundle: edital
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary
