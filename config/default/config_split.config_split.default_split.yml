@@ -271,6 +271,11 @@ complete_list:
   - node.type.noticia
   - node.type.page
   - node.type.publicacao
+  - pathauto.pattern.evento
+  - pathauto.pattern.legislacao
+  - pathauto.pattern.licitacao
+  - pathauto.pattern.noticia
+  - pathauto.pattern.publicacao
   - pathauto.settings
   - system.maintenance
   - system.theme
