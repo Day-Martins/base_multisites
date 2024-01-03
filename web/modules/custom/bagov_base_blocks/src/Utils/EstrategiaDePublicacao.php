@@ -19,12 +19,13 @@ class Estrategias
 
   public function estrategia_de_publicacao($node)
   {
-    if ($node->hasField('field_midias_publicacoes')) {
-      $node->field_midias = $node->field_midias_publicacoes;
+
+    if ($node->hasField('field_midias_publicacao')) {
+      $node->field_midias = $node->field_midias_publicacao;
     }
 
-    if ($node->hasField('field_categorias_publicacoes')) {
-      $node->field_categorias = $node->field_categorias_publicacoes;
+    if ($node->hasField('field_categorias_publicacao')) {
+      $node->field_categorias = $node->field_categorias_publicacao;
     }
 
     return $node;
@@ -32,6 +33,7 @@ class Estrategias
 
   public function estrategia_de_licitacao($node)
   {
+
     if ($node->hasField('field_midias_licitacoes')) {
       $node->field_midias = $node->field_midias_licitacoes;
     }
