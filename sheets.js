@@ -6,6 +6,11 @@ const theme_bagov_base_dest = './web/themes/custom/bagov_base/assets/css/';
 const module_bagov_base_blocks_src = './web/modules/custom/bagov_base_blocks/assets/scss/';
 const module_bagov_base_blocks_dest = './web/modules/custom/bagov_base_blocks/assets/css/';
 
+//MODULE TEXT RESIZE
+const module_text_resize_src = './web/modules/custom/text_resize/assets/scss/';
+const module_text_resize_dest = './web/modules/custom/text_resize/assets/css/';
+
+
 const sheets = [
     // THEME BAGOV.BASE
     // NOTICIAS
@@ -64,6 +69,12 @@ const sheets = [
         scss_src: module_bagov_base_blocks_src + 'redes_sociais/redes-sociais.scss',
         css_name: 'redes-sociais',
         css_dest: module_bagov_base_blocks_dest + 'redes_sociais/'
+    },
+    // Text resize
+    {
+      scss_src: module_text_resize_src + 'text_resize/text_resize.scss',
+      css_name: 'text-resize',
+      css_dest: module_text_resize_dest + 'text_resize/'
     },
 ]
 module.exports = sheets;
