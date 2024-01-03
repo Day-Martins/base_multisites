@@ -24,9 +24,8 @@ services:
   database:
     type: mysql:8.0
     portforward: true
-    configuration:
-      properties:
-        max_allowed_packet: 77
+    config:
+      database: config/mysql.cnf
   pma:
     type: phpmyadmin
     hosts:
