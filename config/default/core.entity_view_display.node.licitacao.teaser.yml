@@ -1,0 +1,35 @@
+uuid: c536273f-86d7-44b8-9cfc-519467704093
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.licitacao.body
+    - field.field.node.licitacao.field_categorias_licitacoes
+    - field.field.node.licitacao.field_midias_licitacoes
+    - node.type.licitacao
+  module:
+    - text
+    - user
+id: node.licitacao.teaser
+targetEntityType: node
+bundle: licitacao
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_categorias_licitacoes: true
+  field_midias_licitacoes: true
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: d86ca3d6-2a77-41d6-923c-4d07c8259886
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_url_evento
+field_name: field_url_evento
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

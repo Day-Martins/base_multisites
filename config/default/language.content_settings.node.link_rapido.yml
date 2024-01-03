@@ -1,0 +1,11 @@
+uuid: 589089da-1c2e-42c4-8594-5bd08752b553
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.link_rapido
+id: node.link_rapido
+target_entity_type_id: node
+target_bundle: link_rapido
+default_langcode: site_default
+language_alterable: false

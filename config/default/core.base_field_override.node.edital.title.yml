@@ -1,0 +1,18 @@
+uuid: 698b1083-a105-4951-8bcf-12ef4fc1dbd6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.edital
+id: node.edital.title
+field_name: title
+entity_type: node
+bundle: edital
+label: Edital
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

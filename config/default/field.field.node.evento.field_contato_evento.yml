@@ -1,0 +1,19 @@
+uuid: c86fe496-5c89-450e-9758-e534dc95c8a0
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contato_evento
+    - node.type.evento
+id: node.evento.field_contato_evento
+field_name: field_contato_evento
+entity_type: node
+bundle: evento
+label: Contato
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: bb9c33cc-c846-4ed9-89e3-94039824976f
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: licitacao
+label: Licitacao
+type: 'canonical_entities:node'
+pattern: '/licitacao/[node:nid]/[node:title]'
+selection_criteria:
+  f1488df7-cf47-4c2e-b9b9-660ad1fc3105:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: f1488df7-cf47-4c2e-b9b9-660ad1fc3105
+    context_mapping:
+      node: node
+    bundles:
+      licitacao: licitacao
+selection_logic: and
+weight: -5
+relationships: {  }

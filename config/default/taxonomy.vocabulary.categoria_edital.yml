@@ -1,0 +1,8 @@
+uuid: c559c519-cea0-4a29-ba4f-34e0e8030f4e
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Categoria Edital'
+vid: categoria_edital
+description: ''
+weight: 0

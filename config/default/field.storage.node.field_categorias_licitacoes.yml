@@ -1,0 +1,20 @@
+uuid: 6bd8bf02-72d1-4e32-9681-392221568cdd
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_categorias_licitacoes
+field_name: field_categorias_licitacoes
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

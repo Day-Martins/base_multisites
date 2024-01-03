@@ -1,0 +1,20 @@
+uuid: 051912b9-57c7-4e19-9f86-e5ef24869baf
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_categoria_evento
+field_name: field_categoria_evento
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

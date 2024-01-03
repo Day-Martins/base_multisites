@@ -1,0 +1,21 @@
+uuid: 1b37b7c4-3be7-4c9e-8635-5d6c1084714d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_data_de_documento
+    - media.type.document
+  module:
+    - datetime
+id: media.document.field_data_de_documento
+field_name: field_data_de_documento
+entity_type: media
+bundle: document
+label: 'Datas de Documento'
+description: 'Data referente a abertura/fechamento do edital, ou qualquer arquivo semelhante ou associado.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -6,6 +6,9 @@
  */
 
 use Drupal\bagov_base_blocks\BagovHelpers;
+use Drupal\bagov_base_blocks\Utils\EstrategiaDePublicacao;
+use Drupal\bagov_base_blocks\Utils\PublicacaoUtils;
+
 
 /**
  * Prepares variables for constrast templates.
@@ -236,4 +239,56 @@ function template_preprocess_views_noticias_relacionadas(array &$vars)
             }
         }
     }
+}
+
+function template_preprocess_node__publicacao(array &$vars){
+
+  $node = $vars['elements']['#node'];
+  $vars['node'] = $node;
+
+  $node = EstrategiaDePublicacao::definirEstrategia($node);
+  // Verifique se o campo de mídia e o campo de taxonomia existem.
+
+  // verifica se existe e se não está vazio
+  $existem_midias = $node->field_midias && !$node->field_midias->isEmpty();
+
+  if (!$existem_midias) {
+    return;
+  }
+
+  $filesByTaxonomy = [];
+  $midiaItems = $node->field_midias->referencedEntities();
+
+  foreach ($midiaItems as $midia) {
+    // Verifique se a mídia tem o campo de referência de termo.
+    $has_categoria = $midia->hasField('field_referencial_de_documento');
+    $midia->tipo_arquivo = PublicacaoUtils::determine_midia_file_type($midia);
+    $midia->color = PublicacaoUtils::determine_cor_do_arquivo($midia->tipo_arquivo);
+    $midia->icon = PublicacaoUtils::determine_icon_do_arquivo($midia->tipo_arquivo);
+    $midia->url = PublicacaoUtils::determine_url_do_arquivo($midia->field_media_document->entity);
+
+    if ($has_categoria && !$midia->field_referencial_de_documento->isEmpty()) {
+        $term = $midia->field_referencial_de_documento->entity;
+        $termName = $term ? $term->getName() : "Sem referência";
+
+        if (!isset($filesByTaxonomy[$termName])) {
+            $filesByTaxonomy[$termName] = [];
+        }
+
+        $filesByTaxonomy[$termName][] = $midia;
+    } else {
+        // Se o campo de referência do documento não existir ou estiver vazio, adicione-o ao grupo "Sem referência".
+        $termName = "Sem referência";
+
+        if (!isset($filesByTaxonomy[$termName])) {
+            $filesByTaxonomy[$termName] = [];
+        }
+
+        $filesByTaxonomy[$termName][] = $midia;
+    }
+}
+
+  // Passar os dados agrupados para o template.
+  $vars['arquivos_por_referencial'] = $filesByTaxonomy;
+
 }

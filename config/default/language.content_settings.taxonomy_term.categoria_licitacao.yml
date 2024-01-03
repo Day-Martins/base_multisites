@@ -1,0 +1,11 @@
+uuid: 23ad6f07-16e6-4e19-8991-20707851ad77
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categoria_licitacao
+id: taxonomy_term.categoria_licitacao
+target_entity_type_id: taxonomy_term
+target_bundle: categoria_licitacao
+default_langcode: site_default
+language_alterable: false

@@ -34,11 +34,6 @@ module:
   views_argument_token: 0
   views_bootstrap: 0
   we_megamenu: 0
-  webform: 0
-  webform_node: 0
-  webform_options_limit: 0
-  webform_scheduled_email: 0
-  webform_share: 0
   pathauto: 1
 theme: {  }
 complete_list:
@@ -98,7 +93,6 @@ complete_list:
   - core.entity_form_display.node.noticia.default
   - core.entity_form_display.node.page.default
   - core.entity_form_display.node.publicacao.default
-  - core.entity_form_display.node.webform.default
   - core.entity_view_display.comment.comment.default
   - core.entity_view_display.media.audio.default
   - core.entity_view_display.media.audio.media_library
@@ -128,8 +122,6 @@ complete_list:
   - core.entity_view_display.node.page.teaser
   - core.entity_view_display.node.publicacao.default
   - core.entity_view_display.node.publicacao.teaser
-  - core.entity_view_display.node.webform.default
-  - core.entity_view_display.node.webform.teaser
   - core.extension
   - dblog.settings
   - field.field.block_content.basic.body
@@ -147,18 +139,6 @@ complete_list:
   - field.field.node.banner.body
   - field.field.node.banner.field_imagem_do_banner
   - field.field.node.banner.field_link_do_banner
-  - field.field.node.eventos.body
-  - field.field.node.eventos.comment
-  - field.field.node.eventos.field_categorias
-  - field.field.node.eventos.field_datas
-  - field.field.node.eventos.field_emails
-  - field.field.node.eventos.field_image
-  - field.field.node.eventos.field_imagem_do_banner
-  - field.field.node.eventos.field_pdfs
-  - field.field.node.eventos.field_sites
-  - field.field.node.eventos.field_tags
-  - field.field.node.eventos.field_webform_entity_limit_total
-  - field.field.node.eventos.webform
   - field.field.node.lista_migrada.body
   - field.field.node.lista_migrada.field_categorias_lista_migrada
   - field.field.node.midia.body
@@ -173,8 +153,6 @@ complete_list:
   - field.field.node.publicacao.field_categorias_publicacao
   - field.field.node.publicacao.field_midias_publicacao
   - field.field.taxonomy_term.categoria_de_noticia.field_termo_relacionado
-  - field.field.node.webform.body
-  - field.field.node.webform.webform
   - field.field.user.user.user_picture
   - field.settings
   - field.storage.block_content.body
@@ -203,7 +181,6 @@ complete_list:
   - field.storage.node.field_pdfs
   - field.storage.node.field_sites
   - field.storage.node.field_tags
-  - field.storage.node.field_webform_entity_limit_total
   - field.storage.taxonomy_term.field_termo_relacionado
   - field.storage.user.user_picture
   - fontawesome.settings
@@ -233,7 +210,6 @@ complete_list:
   - node.type.noticia
   - node.type.page
   - node.type.publicacao
-  - node.type.webform
   - pathauto.settings
   - system.maintenance
   - system.theme
@@ -247,7 +223,6 @@ complete_list:
   - update.settings
   - views.view.calendario_de_eventos
   - views.view.eventos
-  - webform.webform.eventos
   - block.block.bagov_base_views_block__carrousel_de_eventos_block_1
   - views.view.carrousel_de_eventos
 partial_list: {  }

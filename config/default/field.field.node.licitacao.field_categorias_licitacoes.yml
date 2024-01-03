@@ -1,0 +1,29 @@
+uuid: f4342253-f824-4e35-a6f7-0e0edde744b2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorias_licitacoes
+    - node.type.licitacao
+    - taxonomy.vocabulary.categoria_licitacao
+id: node.licitacao.field_categorias_licitacoes
+field_name: field_categorias_licitacoes
+entity_type: node
+bundle: licitacao
+label: Categorias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categoria_licitacao: categoria_licitacao
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 892e4b92-2215-4be0-b650-59221874ccfb
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_referencial_de_documento
+    - media.type.document
+    - taxonomy.vocabulary.referecias_de_documentos
+id: media.document.field_referencial_de_documento
+field_name: field_referencial_de_documento
+entity_type: media
+bundle: document
+label: 'Referencial de Documento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      referecias_de_documentos: referecias_de_documentos
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 5dcce629-eb79-4630-a18e-c2034548df93
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorias_legislacao
+    - node.type.legislacao
+    - taxonomy.vocabulary.categoria_legislacao
+id: node.legislacao.field_categorias_legislacao
+field_name: field_categorias_legislacao
+entity_type: node
+bundle: legislacao
+label: Categoria
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categoria_legislacao: categoria_legislacao
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

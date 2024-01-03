@@ -1,0 +1,29 @@
+uuid: ab629848-f9f5-4fe0-bdf3-faf31e9c8bb3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria_evento
+    - node.type.evento
+    - taxonomy.vocabulary.categorias_de_eventos
+id: node.evento.field_categoria_evento
+field_name: field_categoria_evento
+entity_type: node
+bundle: evento
+label: Categoria
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categorias_de_eventos: categorias_de_eventos
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

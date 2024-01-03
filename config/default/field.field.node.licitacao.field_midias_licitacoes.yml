@@ -1,0 +1,31 @@
+uuid: 50cf2751-2453-46c1-a8c7-8129ddfacb91
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_midias_licitacoes
+    - media.type.document
+    - media.type.image
+    - node.type.licitacao
+id: node.licitacao.field_midias_licitacoes
+field_name: field_midias_licitacoes
+entity_type: node
+bundle: licitacao
+label: Mídias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: document
+field_type: entity_reference

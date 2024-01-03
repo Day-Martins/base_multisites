@@ -1,0 +1,17 @@
+uuid: e7f7c078-d92c-4505-9092-e5af3be1989d
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Licitação
+type: licitacao
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

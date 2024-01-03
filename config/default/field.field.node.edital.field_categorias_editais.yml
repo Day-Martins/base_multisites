@@ -1,0 +1,29 @@
+uuid: c4c63bb3-1b2e-40a2-9335-21e991ada02e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorias_editais
+    - node.type.edital
+    - taxonomy.vocabulary.categoria_edital
+id: node.edital.field_categorias_editais
+field_name: field_categorias_editais
+entity_type: node
+bundle: edital
+label: Categorias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categoria_edital: categoria_edital
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

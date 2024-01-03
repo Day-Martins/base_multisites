@@ -1,0 +1,19 @@
+uuid: e1d8a7a7-8c7a-4e57-a341-ee0f19155298
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_endereco_evento
+    - node.type.evento
+id: node.evento.field_endereco_evento
+field_name: field_endereco_evento
+entity_type: node
+bundle: evento
+label: Endereço
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

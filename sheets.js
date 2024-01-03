@@ -76,5 +76,23 @@ const sheets = [
       css_name: 'text-resize',
       css_dest: module_text_resize_dest + 'text_resize/'
     },
+     // Utilitários
+     {
+      scss_src: module_bagov_base_blocks_src + 'utils/*.scss',
+      css_name: 'utils',
+      css_dest: module_bagov_base_blocks_dest + 'utils/'
+    },
+     // Links Rápidos
+     {
+      scss_src: module_bagov_base_blocks_src + 'links_rapidos/*.scss',
+      css_name: 'links_rapidos',
+      css_dest: module_bagov_base_blocks_dest + 'links_rapidos/'
+    },
+    // Publicação, Editais, Licitações e Legislação
+    {
+      scss_src: module_bagov_base_blocks_src + 'publicacao/*.scss',
+      css_name: 'publicacao',
+      css_dest: module_bagov_base_blocks_dest + 'publicacao/'
+    },
 ]
 module.exports = sheets;

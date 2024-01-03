@@ -1,0 +1,8 @@
+uuid: 3703dda4-5423-4d1a-912e-35bc2cd70c44
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Categoria Legislação'
+vid: categoria_legislacao
+description: ''
+weight: 0

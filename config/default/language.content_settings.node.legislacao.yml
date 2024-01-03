@@ -1,0 +1,11 @@
+uuid: cfebbf04-d3a6-41f3-8ded-1c62b8c72c60
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.legislacao
+id: node.legislacao
+target_entity_type_id: node
+target_bundle: legislacao
+default_langcode: site_default
+language_alterable: false

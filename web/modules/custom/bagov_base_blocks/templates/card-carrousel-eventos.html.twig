@@ -31,8 +31,9 @@
 #}
 {{ attach_library('bagov_base_blocks/views_eventos') }}
 
+
 <div class="position-relative text-white border-0 custom-card rounded-4">
-	{{ fields.field_imagem_do_banner.content }}
+	{{ fields.field_imagem_de_destaque_evento.content }}
 
 	<section class="
 			            card-title position-absolute w-100 text-white d-flex
@@ -41,9 +42,9 @@
 			        ">
 
 		<h5 class="capitalize fw-bold fs-4">{{
-      fields.field_datas_1.content
+      fields.field_datas_evento_1.content
      }}</h5>
-		<h3 class="text-white fs-1" ><strong>{{ fields.field_datas.content }}</strong></h3>
+		<h3 class="text-white fs-1" ><strong>{{ fields.field_datas_evento.content }}</strong></h3>
 
 	</section>
 	<div class="visually-hidden">
