@@ -37,10 +37,10 @@ function template_preprocess_contrast_block(array &$variables)
 function template_preprocess_acesso_informacao_block(array &$variables)
 {
     $variables['content'] = [
-        'output' => t('<div class="top-link-info">
-            <a href="https://www.comunicacao.ba.gov.br/lei-de-acesso-a-informacao" target="_blank">
-                <img src="/modules/custom/bagov_base_blocks/assets/images/acesso-informacao.png" title="Icone acesso informação" title="Acesso informação"/>
-            <span class="text-uppercase"> Acesso à informação</span></a></div>'),
+        'output' => t('<div class="top-link-info acesso-informacao">
+            <a class="acesso-informacao__item" href="https://www.comunicacao.ba.gov.br/lei-de-acesso-a-informacao" target="_blank">
+                <img class="acesso-informacao__item_image" src="/modules/custom/bagov_base_blocks/assets/images/acesso-informacao.png" title="Icone acesso informação" title="Acesso informação"/>
+            <span class="acesso-informacao__item_description text-uppercase"> Acesso à informação</span></a></div>'),
     ];
 
     \Drupal::service('renderer')->render($variables);
