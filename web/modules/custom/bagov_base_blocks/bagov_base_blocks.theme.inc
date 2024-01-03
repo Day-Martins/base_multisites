@@ -37,7 +37,10 @@ function template_preprocess_contrast_block(array &$variables)
 function template_preprocess_acesso_informacao_block(array &$variables)
 {
     $variables['content'] = [
-        'output' => t('<div class="top-link-info"><a href="https://www.comunicacao.ba.gov.br/lei-de-acesso-a-informacao" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="block-icon-text"> ACESSO À INFORMAÇÃO</span></a></div>'),
+        'output' => t('<div class="top-link-info">
+            <a href="https://www.comunicacao.ba.gov.br/lei-de-acesso-a-informacao" target="_blank">
+                <img src="/modules/custom/bagov_base_blocks/assets/images/acesso-informacao.png" title="Icone acesso informação" title="Acesso informação"/>
+            <span class="text-uppercase"> Acesso à informação</span></a></div>'),
     ];
 
     \Drupal::service('renderer')->render($variables);
@@ -46,7 +49,7 @@ function template_preprocess_acesso_informacao_block(array &$variables)
 /**
  * Prepares variables for state logo access templates.
  *
- * Default template: logo-estado-block.html.twig.
+* Default template: logo-estado-block.html.twig.
  *
  * @param array $variables
  *   An associative array containing:
