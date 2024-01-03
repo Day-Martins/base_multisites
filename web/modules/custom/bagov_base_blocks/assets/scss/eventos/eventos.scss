@@ -1,38 +1,54 @@
 #block-bagov-base-views-block-eventos {
   margin-bottom: 1rem;
+
+  h2 {
+    font-weight: bolder;
+    font-size: 2rem;
+    white-space: normal;
+    text-transform: capitalize;
+    color: #36b0b4;
+    width: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .custom-card {
+    margin-inline: 1rem;
+    /* Define a altura fixa do card */
+  }
+
+  .custom-card img {
+    width: 100%;
+    object-fit: fill;
+    /* Garante que a imagem preencha todo o card */
+    border-radius: 12px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .custom-card:hover {
+    opacity: 0.8;
+  }
+
+
+
+  .custom-card .card-title {
+    background-color: #36b0b4;
+    /* Mudar para cor primária do template */
+    height: 120px;
+
+    h5 {
+      font-variant: small-caps;
+      text-transform: lowercase;
+    }
+
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
 }
 
-#block-bagov-base-views-block-eventos h2 {
-  font-weight: bolder;
-  font-size: 2rem;
-  white-space: normal;
-  text-transform: capitalize;
-  color: #36b0b4;
-  width: 6rem;
-  margin-bottom: 4rem;
-}
-
-.custom-card {
-  margin-inline: 1rem;
-  /* Define a altura fixa do card */
-}
-
-.custom-card img {
-  width: 100%;
-  object-fit: fill;
-  /* Garante que a imagem preencha todo o card */
-  border-radius: 12px;
-}
-
-.custom-card:hover {
-  opacity: 0.8;
-}
-
-.custom-card .card-title {
-  background-color: #36b0b4;
-  /* Mudar para cor primária do template */
-  height: 120px;
-}
 
 .more-link a {
   display: inline-block;
