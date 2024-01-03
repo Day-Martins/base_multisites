@@ -1,7 +1,14 @@
-.text-resize-icon {
+.text-resize__icon {
   cursor: pointer;
   padding: 5px;
 }
-.text-resize-icon:hover {
+.text-resize__icon:hover {
   opacity: .7;
+}
+
+@media(max-width: 930px){
+  .text-resize__label,
+  .text-resize__icon{
+    font-size: 10px;
+  }
 }
