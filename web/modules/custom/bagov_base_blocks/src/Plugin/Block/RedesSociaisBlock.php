@@ -100,7 +100,7 @@ class RedesSociaisBlock extends BlockBase
             '#list_type' => 'ul',
             '#items' => $list_social_network,
             '#wrapper_attributes' => ['class' => $block_attributes],
-            '#attributes' => ['class' => 'list-unstyled'],
+            '#attributes' => ['class' => 'list-unstyled m-0 d-none d-md-flex'],
             '#attached' => [
                 'library' => ['bagov_base_blocks/redes_sociais'],
             ],

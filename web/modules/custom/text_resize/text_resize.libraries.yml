@@ -4,7 +4,7 @@ text_resize.resize:
       minified: true
   css:
     theme:
-      css/text_resize.css: {}
+      assets/css/text_resize/text-resize.min.css: {}
   dependencies:
     - core/once
     - core/drupal
