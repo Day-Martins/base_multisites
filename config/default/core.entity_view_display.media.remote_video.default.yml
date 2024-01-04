@@ -3,9 +3,11 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.media.remote_video.field_imagem_do_video_remoto
     - field.field.media.remote_video.field_media_oembed_video
     - media.type.remote_video
   module:
+    - image
     - media
 _core:
   default_config_hash: ZdPcl2hPxl5pgv3pI-07R7h51OjeUeKJTy-ab1NfM34
@@ -14,6 +16,17 @@ targetEntityType: media
 bundle: remote_video
 mode: default
 content:
+  field_imagem_do_video_remoto:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_media_oembed_video:
     type: oembed
     label: hidden

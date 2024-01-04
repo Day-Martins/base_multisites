@@ -149,6 +149,7 @@ complete_list:
   - field.field.media.document.field_descricao_do_documento
   - field.field.media.document.field_media_document
   - field.field.media.image.field_media_image
+  - field.field.media.remote_video.field_imagem_do_video_remoto
   - field.field.media.remote_video.field_media_oembed_video
   - field.field.media.video.field_media_video_file
   - field.field.node.article.body
@@ -198,6 +199,7 @@ complete_list:
   - field.storage.comment.comment_body
   - field.storage.media.field_data_de_documento
   - field.storage.media.field_descricao_do_documento
+  - field.storage.media.field_imagem_do_video_remoto
   - field.storage.media.field_media_audio_file
   - field.storage.media.field_media_document
   - field.storage.media.field_media_image
@@ -242,6 +244,7 @@ complete_list:
   - image.style.noticias_home_secundarias_560_350_
   - image.style.noticias_relacionadas_desktop_300_300_
   - image.style.noticias_relacionadas_mobile_full_750_250_
+  - image.style.youtube_thumbnail
   - language.content_settings.node.banner
   - language.content_settings.node.edital
   - language.content_settings.node.evento

@@ -90,3 +90,11 @@ views_links_rapidos:
   dependencies:
     - core/drupal
     - core/jquery
+youtube_player:
+  css:
+    theme:
+      assets/css/youtube-player/youtube_player.min.css: {}
+  js:
+    assets/js/youtube-player.js: {}
+  dependencies:
+    - bagov_base_blocks/slick
