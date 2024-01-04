@@ -142,6 +142,15 @@ margin-bottom: 0;
 list-style: none;
 }
 
+.creative-commons {
+  font-size: 10px;
+}
+
+.creative-commons a:first-child {
+  display: block;
+  width: 80px;
+}
+
 .footer-menu--item a {
 color: var(--bs-white);
 text-decoration: none;

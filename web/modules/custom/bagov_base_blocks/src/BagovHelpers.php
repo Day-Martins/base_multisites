@@ -29,7 +29,7 @@ class BagovHelpers {
       'logo_estado_block' => [
           'render element' => 'content',
           'variables' => [
-              'img' => '/sites/default/files/images/logo-governo-rodape.png',
+              'img' => '/modules/custom/bagov_base_blocks/assets/images/logo-governo-rodape.png',
           ],
           'file' => 'bagov_base_blocks.theme.inc',
       ],
@@ -43,7 +43,7 @@ class BagovHelpers {
       'creative_commons_block' => [
           'render element' => 'content',
           'variables' => [
-              'img' => '/sites/default/files/images/creative-commons-nd.png',
+              'img' => '/modules/custom/bagov_base_blocks/assets/images/creative-commons-nd.png',
           ],
           'file' => 'bagov_base_blocks.theme.inc',
       ],
