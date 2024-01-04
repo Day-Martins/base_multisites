@@ -50,7 +50,7 @@ youtube_carrousel:
     theme:
       assets/slick/slick.css: { }
       assets/slick/slick-theme.css: { }
-      assets/css/youtube-carrousel.css: {}
+      assets/css/youtube/youtube-carousel.min.css: {}
   dependencies:
     - core/drupal
     - core/jquery
