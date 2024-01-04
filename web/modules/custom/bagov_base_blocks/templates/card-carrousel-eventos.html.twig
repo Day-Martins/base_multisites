@@ -31,7 +31,6 @@
 #}
 {{ attach_library('bagov_base_blocks/views_eventos') }}
 
-
 <div class="position-relative text-white border-0 custom-card rounded-4">
 	{{ fields.field_imagem_de_destaque_evento.content }}
 
@@ -48,6 +47,9 @@
 
 	</section>
 	<div class="visually-hidden">
-		<h6>{{ node.fields.title.content }}</h6>
+		<h6>{{ fields.title.content }}</h6>
 	</div>
+
+  {{ fields.view_node.content }}
+
 </div>
