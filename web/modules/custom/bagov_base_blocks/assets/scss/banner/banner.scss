@@ -1,0 +1,210 @@
+@import "./../variables";
+
+[class*=block-views-blockbanner-banner-] {
+  margin-bottom: 30px;
+
+  a {
+    text-decoration: none !important;
+    color: $ba-gov00;
+  }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: 0 !important;
+  }
+}
+
+[class*=block-views-blockbanner-banner-carrossel] {
+
+  center {
+    &.box-sem-imagem {
+      padding: 100px;
+      font-size: 100px;
+      border-radius: 10px;
+      border: 5px solid #bbb;
+      background-color: #ddd;
+      color: #bbb;
+    }
+  }
+
+  button {
+    z-index: 10;
+  
+    &.slick-arrow {
+      opacity: 0.6;
+  
+      &:before {
+        font-family:'FontAwesome' !important;
+        color: $white;
+      }   
+    }
+  
+    &.slick-prev {
+      left: 1%;
+  
+      &:before {
+        content: '\f053';
+      }
+    }
+  
+    &.slick-next {
+      right: 1%;
+  
+      &:before {
+        content: '\f054';
+      }
+    }
+  }
+
+  .views-arrows-banner-carrossel {
+    position: relative;
+    margin: 0 48%;
+
+    &.banner-type-imagem {
+      top: -15px;
+    }
+
+    button {
+      &.slick-arrow {
+        &:before {
+          font-size: 22px;
+          color: $ba-gov00;
+        }
+      }  
+    }
+  }
+
+  .card-slide {
+    background-color: #f5f5f5;
+    border: 0;
+    border-radius: 10px;
+    margin: 15px;
+    min-height: 210px;
+
+    .card-slide-body {
+      text-align: center;
+      padding: 20px;
+
+      .card-slide-image {
+        .fontawesome-icon {
+          &:first-child {
+            font-size: 3rem;
+            padding: 15px 0;
+            color: $ba-gov00;            
+          }
+        }    
+      }
+  
+      h5 {
+        &.card-slide-title {
+          font-weight: 600 !important;
+          font-size: 1rem;
+          color: $ba-gov00-dark !important;
+          width: min-content;
+          margin: 0 auto;
+        }  
+      }      
+    }
+  }  
+}
+
+.banner-carrossel-bagov {
+
+  .slick-slide {
+
+    .slick-title  {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        h4 {
+        &.slick-field-title {
+          position: absolute;
+          bottom: 5px;
+          width: 94%;
+          border-radius: 4px;
+          background-color: rgb(68 68 68 / 60%);
+          color: $white;
+          text-align: center;
+          padding: 5px;
+          margin: 0 auto;
+          font-weight: 400;
+          font-size: 90%;
+        }
+      }  
+    }
+  }
+
+  ul.slick-dots {
+    bottom: 11% !important;
+
+    li {
+      margin: 0 2px !important;
+      height: 14px;
+      width: 14px;
+
+      button {
+        &:before {
+          content: '' !important;
+          height: 14px;
+          width: 14px;
+          border: 2px solid $white;
+          background-color: transparent;
+          border-radius: 50%;
+        }
+      }
+
+      &.slick-active {
+        button {
+          &:before {
+            background-color: $white !important;
+          }
+        }
+      }
+    }    
+  }
+}
+
+
+.block-views-blockbanner-banner-fixo-quadruplo {
+  .views-view-responsive-grid--horizontal {
+    .views-view-responsive-grid__item {
+      border: 2px solid $ba-gov00;
+      border-radius: 10px;
+      padding: 30px 60px;
+    }
+  }
+}
+
+@media (max-width: $tablet-ht - 1) {
+  [class*=block-views-blockbanner-banner-] {
+    margin-bottom: 10px !important;
+
+    .card-slide {
+      min-width: 200px;
+    }
+  }
+
+  .block-views-blockbanner-banner-fixo-duplo {
+    margin-bottom: 10px;
+    
+    .views-view-responsive-grid--horizontal {
+      --views-responsive-grid--layout-gap: 10px !important;
+    }
+  }
+
+  .block-views-blockbanner-banner-fixo-quadruplo {
+    .views-view-responsive-grid--horizontal {
+     --views-responsive-grid--layout-gap: 10px !important;
+
+      .views-view-responsive-grid__item {
+        border-width: 1px;
+        border-radius: 10px;
+        padding: 10px 20px;
+      }
+    }
+  } 
+
+  .views-arrows-banner-carrossel {
+    margin: 0 42% !important; 
+  }
+}

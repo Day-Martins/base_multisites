@@ -1,0 +1,23 @@
+uuid: f629d5fc-935e-409e-be1c-9acb918f87df
+langcode: pt-br
+status: true
+dependencies: {  }
+name: banner_fixo_quadruplo_200x115
+label: 'Banner Fixo Quadruplo (200x115)'
+effects:
+  f37d3420-dab4-4eef-a9be-46bc8cfb1a43:
+    uuid: f37d3420-dab4-4eef-a9be-46bc8cfb1a43
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 115
+      upscale: true
+  397b340f-9f14-4493-92a4-f2c234f26379:
+    uuid: 397b340f-9f14-4493-92a4-f2c234f26379
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 200
+      height: 115
+      anchor: center-center

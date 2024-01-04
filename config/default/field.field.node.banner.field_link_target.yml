@@ -1,0 +1,21 @@
+uuid: 948c2b66-d18d-466d-a5e9-62c46910c8e9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_target
+    - node.type.banner
+  module:
+    - options
+id: node.banner.field_link_target
+field_name: field_link_target
+entity_type: node
+bundle: banner
+label: Target
+description: 'Selecione ação desejada ao clicar no link. Se abrirá na mesma página  ou se abrirá em uma nova página.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

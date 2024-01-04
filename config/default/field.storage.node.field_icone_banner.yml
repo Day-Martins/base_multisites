@@ -1,0 +1,19 @@
+uuid: 6b7e90cd-10a4-4b23-9b25-c41e5c25d950
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - fontawesome
+    - node
+id: node.field_icone_banner
+field_name: field_icone_banner
+entity_type: node
+type: fontawesome_icon
+settings: {  }
+module: fontawesome
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

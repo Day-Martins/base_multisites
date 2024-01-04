@@ -1,0 +1,22 @@
+uuid: 2ec2714d-ec17-4669-850f-de6f6ba92e49
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_peso_conteudo
+    - node.type.banner
+  module:
+    - weight
+id: node.banner.field_peso_conteudo
+field_name: field_peso_conteudo
+entity_type: node
+bundle: banner
+label: 'Peso do Banner'
+description: 'O campo de peso pode ser usado para fornecer classificação personalizada. Os banners com menor peso irão flutuar para o topo das listas, enquanto os itens mais pesados ​​irão descer.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  range: '20'
+field_type: weight

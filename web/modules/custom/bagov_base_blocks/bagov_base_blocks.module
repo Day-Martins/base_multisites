@@ -54,3 +54,35 @@ function bagov_base_blocks_theme_suggestions_region_alter(array &$suggestions, a
         $suggestions[] = 'region__content__' . $node->bundle();
     }
 }
+
+/**
+ * Implements hook_entity_field_storage_info_alter().
+ */
+function bagov_base_blocks_entity_field_storage_info_alter(&$fields, \Drupal\Core\Entity\EntityTypeInterface $entity_type) {
+
+    // --- Opções do campo "Região do Banner"
+    $options_regiao_banner = [
+                'banner_top_1400x310' => t('Banner Superior (1400x310)'),
+                'banner_middle_1400x310' => t('Banner Centro (1400x310)'),
+                'banner_bottom_1400x310' => t('Banner Inferior (1400x310)'),
+                'banner_fixed_duplex 700x420' => t('Banner Fixo Duplo (700x420)'),
+                'banner_fixed_quadruple_200x115' => t('Banner Fixo Quádruplo (200x115)'),
+                'banner_card_icons' => t('Carrossel Card de Ícones')
+            ];
+  
+    // --- Opções do campo "Target do Link"
+    $options_link_target = ['_self' => t('Abrir na Mesma Página'),
+            '_blank' => t('Abrir em Nova Página'),
+            ];
+  
+    if($entity_type->id() == 'node') {
+  
+      if(isset($fields['field_regiao_banner'])) {
+        $fields['field_regiao_banner']->setSetting('allowed_values', $options_regiao_banner);
+      }
+  
+      if(isset($fields['field_link_target'])) {
+        $fields['field_link_target']->setSetting('allowed_values', $options_link_target);
+      }
+    }
+  }

@@ -1,0 +1,24 @@
+uuid: 30cf1abc-52e3-4da9-bede-6bb51206c233
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.banner
+  module:
+    - views
+  theme:
+    - bagov_base
+id: bagov_base_views_block__banner_banner_carrossel_card_icones
+theme: bagov_base
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:banner-banner_carrossel_card_icones'
+settings:
+  id: 'views_block:banner-banner_carrossel_card_icones'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

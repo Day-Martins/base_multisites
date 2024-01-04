@@ -1,0 +1,23 @@
+uuid: 445e673e-83c7-40b6-aea0-4449b0257f86
+langcode: pt-br
+status: true
+dependencies: {  }
+name: banner_700x500
+label: 'Banner Mobile (700x500)'
+effects:
+  470a92d9-aa0f-4fb7-ae34-224c467af033:
+    uuid: 470a92d9-aa0f-4fb7-ae34-224c467af033
+    id: image_scale
+    weight: 1
+    data:
+      width: 700
+      height: 500
+      upscale: true
+  b38a0dc0-4bc6-40f9-bcc1-75b2c07b41e2:
+    uuid: b38a0dc0-4bc6-40f9-bcc1-75b2c07b41e2
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 700
+      height: 500
+      anchor: center-center

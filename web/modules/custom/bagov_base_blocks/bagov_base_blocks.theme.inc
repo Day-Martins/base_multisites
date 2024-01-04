@@ -352,3 +352,51 @@ function bagov_base_blocks_preprocess_views_view_unformatted__videos_do_youtube_
 
  
 }
+
+/**
+ * Prepares variables for views carousel template.
+ *
+ * Default template: views-banner-carrossel.html.twig.
+ *
+ * @param array $vars
+ *   An associative array containing:
+ *   - view: A ViewExecutable object.
+ *   - rows: The raw row data.
+ */
+function template_preprocess_views_banner_carrossel(array &$vars) {
+    $view = $vars['view'];
+    $vars['#attached']['library'][] = 'bagov_base_blocks/views_banner_carrossel';
+    $vars['#attached']['library'][] = 'bagov_base_blocks/slick';
+
+    $vars['use_caption'] = $view->style_plugin->options['use_caption'];
+    $vars['view_title'] = $view->getTitle();
+
+    $vars['attributes']['id'] = BagovHelpers::getUniqueId($view);
+    $vars['attributes']['type'] = $view->style_plugin->options['type_banner'];
+    $vars['attributes']['data-autoplay'] = $view->style_plugin->options['autoplay'];
+    $vars['attributes']['data-speed'] = $view->style_plugin->options['autoplay_speed'];
+    $vars['attributes']['data-fade'] = $view->style_plugin->options['fade'];
+    $vars['attributes']['data-append-arrows'] = $view->style_plugin->options['append_arrows'];
+    $vars['attributes']['data-dots'] = $view->style_plugin->options['dots'];
+    $vars['attributes']['data-slides-show'] = $view->style_plugin->options['slides_show'];
+    $vars['attributes']['data-slides-scroll'] = $view->style_plugin->options['slides_scroll'];
+    $vars['attributes']['data-rows'] = $view->style_plugin->options['rows'];
+
+    // rows.
+    $image = $view->style_plugin->options['image'];
+    $image_mobile = $view->style_plugin->options['image_mobile'];
+    $image_icone = $view->style_plugin->options['image_icone'];
+    $title = $view->style_plugin->options['title'];
+    $link = $view->style_plugin->options['link'];
+    $target = $view->style_plugin->options['target'];
+    
+    foreach ($vars['rows'] as $id => $row) {
+        $vars['rows'][$id] = [];
+        $vars['rows'][$id]['image'] = $view->style_plugin->getField($id, $image);
+        $vars['rows'][$id]['image_mobile'] = $view->style_plugin->getField($id, $image_mobile);
+        $vars['rows'][$id]['image_icone'] = $view->style_plugin->getField($id, $image_icone);
+        $vars['rows'][$id]['title'] = $view->style_plugin->getField($id, $title);
+        $vars['rows'][$id]['link'] = $view->style_plugin->getField($id, $link);
+        $vars['rows'][$id]['target'] = $view->style_plugin->getField($id, $target);
+    }
+}

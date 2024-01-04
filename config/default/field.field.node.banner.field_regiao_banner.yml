@@ -1,0 +1,21 @@
+uuid: 2ee5386d-06df-4887-88a9-eb7c55e61c41
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_regiao_banner
+    - node.type.banner
+  module:
+    - options
+id: node.banner.field_regiao_banner
+field_name: field_regiao_banner
+entity_type: node
+bundle: banner
+label: 'Região do Banner'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

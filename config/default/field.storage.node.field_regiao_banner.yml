@@ -1,0 +1,45 @@
+uuid: b0674745-fe9c-43bc-91f9-1ce385919b8d
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_regiao_banner
+field_name: field_regiao_banner
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: banner_top_1140x250
+      label: 'Banner Superior (1140x250)'
+    -
+      value: banner_middle_1140x250
+      label: 'Banner Centro (1140x250)'
+    -
+      value: banner_bottom_1140x250
+      label: 'Banner Inferior (1140x250)'
+    -
+      value: banner_fixed_600x360
+      label: 'Banner Fixo (600x360)'
+    -
+      value: banner_fixed_240x170
+      label: 'Banner Fixo (240x170)'
+    -
+      value: banner_partner_390x120
+      label: 'Parceiros (390x120)'
+    -
+      value: banner_company_240x90
+      label: 'Empresas Vinculadas (240x90)'
+    -
+      value: banner_project_240x90
+      label: 'Programas e Projetos (240x90)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

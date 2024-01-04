@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* Estilo padrão para o ícone fechado */
+.open {
+  display: none;
+}
+
+/* Estilo quando o conteúdo está aberto */
+.collapse.show .open {
+  display: inline;
+}
+
+/* Estilo quando o conteúdo está fechado */
+.collapse:not(.show) .closed {
+  display: inline;
+}
+
+/* Esconder o ícone fechado quando o conteúdo está aberto */
+.collapse.show .closed {
+  display: none;
+}/*# sourceMappingURL=collapse.css.map */
