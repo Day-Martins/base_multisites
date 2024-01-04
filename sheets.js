@@ -105,11 +105,17 @@ const sheets = [
 			css_name: 'youtube-carousel',
 			css_dest: module_bagov_base_blocks_dest + 'youtube/'
 		},
-		//Youtube Player
+    // Youtube Player
     {
-			scss_src: module_bagov_base_blocks_src + 'youtube-player/*.scss',
-			css_name: 'youtube_player',
-			css_dest: module_bagov_base_blocks_dest + 'youtube-player/'
-		},
+        scss_src: module_bagov_base_blocks_src + 'youtube-player/*.scss',
+        css_name: 'youtube_player',
+        css_dest: module_bagov_base_blocks_dest + 'youtube-player/'
+    },
+    // Banner
+    {
+        scss_src: module_bagov_base_blocks_src + 'banner/*.scss',
+        css_name: 'banner',
+        css_dest: module_bagov_base_blocks_dest + 'banner/'
+    },    
 ]
 module.exports = sheets;

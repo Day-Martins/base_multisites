@@ -41,6 +41,7 @@
         "drupal/views_argument_token": "^2.0",
         "drupal/views_bootstrap": "^4.4",
         "drupal/we_megamenu": "^1.16",
+        "drupal/weight": "^3.4",
         "drush/drush": "^12.4"
     },
     "conflict": {

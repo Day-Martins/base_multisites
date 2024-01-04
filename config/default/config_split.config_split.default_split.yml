@@ -21,6 +21,7 @@ module:
   datetime_range: 0
   fontawesome: 0
   fullcalendar_view: 0
+  gin_toolbar: 0
   layout_builder: 0
   layout_discovery: 0
   media: 0
@@ -34,9 +35,16 @@ module:
   views_argument_token: 0
   views_bootstrap: 0
   we_megamenu: 0
+  weight: 0
   pathauto: 1
 theme: {  }
 complete_list:
+  - block.block.bagov_base_views_block__banner_banner_carrossel_card_icones
+  - block.block.bagov_base_views_block__banner_banner_carrossel_centro
+  - block.block.bagov_base_views_block__banner_banner_carrossel_inferior
+  - block.block.bagov_base_views_block__banner_banner_carrossel_superior
+  - block.block.bagov_base_views_block__banner_banner_fixo_duplo
+  - block.block.bagov_base_views_block__banner_banner_fixo_quadruplo
   - block.block.bagov_base_views_block__eventos
   - block.block.bagov_base_views_block__links_rapidos
   - block.block.bagov_base_views_block__noticias_noticias_home
@@ -157,8 +165,13 @@ complete_list:
   - field.field.node.article.field_image
   - field.field.node.article.field_tags
   - field.field.node.banner.body
+  - field.field.node.banner.field_icone_banner
+  - field.field.node.banner.field_imagem_banner_mobile
   - field.field.node.banner.field_imagem_do_banner
   - field.field.node.banner.field_link_do_banner
+  - field.field.node.banner.field_link_target
+  - field.field.node.banner.field_peso_conteudo
+  - field.field.node.banner.field_regiao_banner
   - field.field.node.edital.body
   - field.field.node.edital.field_categorias_editais
   - field.field.node.edital.field_midias_editais
@@ -221,17 +234,22 @@ complete_list:
   - field.storage.node.field_email_evento
   - field.storage.node.field_endereco_evento
   - field.storage.node.field_fonte_noticia
+  - field.storage.node.field_icone_banner
   - field.storage.node.field_icone_link_rapido
   - field.storage.node.field_image
+  - field.storage.node.field_imagem_banner_mobile
   - field.storage.node.field_imagem_destaque_noticia
   - field.storage.node.field_imagem_de_destaque_evento
   - field.storage.node.field_imagem_do_banner
   - field.storage.node.field_link
   - field.storage.node.field_link_do_banner
+  - field.storage.node.field_link_target
   - field.storage.node.field_midias_editais
   - field.storage.node.field_midias_legislacao
   - field.storage.node.field_midias_licitacoes
   - field.storage.node.field_midias_publicacao
+  - field.storage.node.field_peso_conteudo
+  - field.storage.node.field_regiao_banner
   - field.storage.node.field_tags
   - field.storage.node.field_titulo_link_rapido
   - field.storage.node.field_url_evento
@@ -239,6 +257,11 @@ complete_list:
   - field.storage.user.user_picture
   - fontawesome.settings
   - gin.settings
+  - image.style.banner_1400x310
+  - image.style.banner_700x500
+  - image.style.banner_fixo_700x420
+  - image.style.banner_fixo_mobile_350x210
+  - image.style.banner_fixo_quadruplo_200x115
   - image.style.eventos_thumbnail_350x180
   - image.style.noticias_home_principal_1140_350_
   - image.style.noticias_home_secundarias_560_350_
@@ -301,6 +324,7 @@ complete_list:
   - taxonomy.vocabulary.tags
   - text_resize.settings
   - update.settings
+  - views.view.banner
   - views.view.eventos
   - views.view.links_rapidos
   - block.block.bagov_base_views_block__carrousel_de_eventos

@@ -98,3 +98,13 @@ youtube_player:
     assets/js/youtube-player.js: {}
   dependencies:
     - bagov_base_blocks/slick
+views_banner_carrossel:
+  css:
+    theme:
+      assets/css/banner/banner.min.css: {}
+  js:
+    assets/js/banner.js: {}
+
+  dependencies:
+    - core/drupal
+    - core/jquery

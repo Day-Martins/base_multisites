@@ -1,0 +1,24 @@
+uuid: ed54715b-c462-444c-910c-094d212ce433
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.banner
+  module:
+    - views
+  theme:
+    - bagov_base
+id: bagov_base_views_block__banner_banner_carrossel_inferior
+theme: bagov_base
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:banner-banner_carrossel_inferior'
+settings:
+  id: 'views_block:banner-banner_carrossel_inferior'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

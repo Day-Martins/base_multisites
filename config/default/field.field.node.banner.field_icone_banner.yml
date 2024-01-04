@@ -1,0 +1,21 @@
+uuid: 64be76eb-91e0-442b-995b-1b01bf3f9a49
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icone_banner
+    - node.type.banner
+  module:
+    - fontawesome
+id: node.banner.field_icone_banner
+field_name: field_icone_banner
+entity_type: node
+bundle: banner
+label: 'Icone do Banner'
+description: 'Selecione ícone o banner.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

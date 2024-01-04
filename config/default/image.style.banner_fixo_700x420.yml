@@ -1,0 +1,23 @@
+uuid: 669a2a57-d4c9-4fa9-9a11-102f239e1927
+langcode: pt-br
+status: true
+dependencies: {  }
+name: banner_fixo_700x420
+label: 'Banner Fixo Desktop (700x420)'
+effects:
+  3f23ac9f-47d9-4efd-8f0c-a08e06f77b59:
+    uuid: 3f23ac9f-47d9-4efd-8f0c-a08e06f77b59
+    id: image_scale
+    weight: 1
+    data:
+      width: 700
+      height: 420
+      upscale: true
+  5b99e27c-fbc8-4bf4-b4a9-454b8c99b67e:
+    uuid: 5b99e27c-fbc8-4bf4-b4a9-454b8c99b67e
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 700
+      height: 420
+      anchor: center-center

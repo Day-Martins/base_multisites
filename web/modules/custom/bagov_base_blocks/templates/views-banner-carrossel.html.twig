@@ -1,0 +1,67 @@
+
+{% set classes = [ 'banner-carrossel-bagov','slider','slick-slider' ] %}
+{% set type = attributes.type ? attributes.type : 'imagem' %}
+
+<div{{ attributes.addClass(classes) }}>
+
+  {% for row in rows %}
+
+    <div class="slick-slide">
+
+      <a href="{{ row.link }}" target="{{ row.target }}" class="slick-field-link">
+
+        {% if type == 'imagem' %}
+
+          {% set image_mobile = row.image_mobile is empty ? row.image : row.image_mobile %}
+
+          {% if image_mobile is empty %}
+
+            <center class="box-sem-imagem">
+              <i class="fa-regular fa-image"></i>
+            </center>
+
+          {% else %}
+
+            <img src="{{ row.image }}" class="img-fluid slick-field-image d-none d-sm-block">
+            <img src="{{ image_mobile }}" class="slick-field-image-mobile d-block d-sm-none"> 
+            
+          {% endif %}
+
+          {%  if use_caption %}
+            {% if row.title %}
+              <div class="slick-title">
+                <h4 class="slick-field-title d-none d-sm-block">{{ row.title }}</h4>
+              </div>
+            {% endif %}
+          {% endif %}
+
+        {% endif %}  
+
+        {% if type == 'icone' %}
+
+          <div class="card-slide">
+            <div class="card-slide-body">
+              <div class="card-slide-image">
+                {% if row.image_icone is empty %}
+                  <div class="fontawesome-icon">
+                    <i class="fa-solid fa-font-awesome"></i>
+                  </div>
+                {% else %}
+                  {{ row.image_icone }}
+                {% endif %}
+              </div>
+              <h5 class="card-slide-title text-uppercase">{{ row.title }}</h5>
+            </div>
+          </div>
+
+        {% endif %}
+
+      </a>
+
+    </div>
+
+  {% endfor %}
+  
+</div>
+
+<div class="{{ attributes.id }}-append-arrows views-arrows-banner-carrossel type-banner-{{ type }}"></div>

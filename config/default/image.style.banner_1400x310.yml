@@ -1,0 +1,23 @@
+uuid: 43ce0c00-5b7b-4ce3-a869-3fca80a82333
+langcode: pt-br
+status: true
+dependencies: {  }
+name: banner_1400x310
+label: 'Banner Desktop (1400x310)'
+effects:
+  c649a702-4e33-474d-b2fd-a31118416791:
+    uuid: c649a702-4e33-474d-b2fd-a31118416791
+    id: image_scale
+    weight: 1
+    data:
+      width: 1400
+      height: 310
+      upscale: true
+  b57757c8-40d1-42cd-8077-aea3898272d4:
+    uuid: b57757c8-40d1-42cd-8077-aea3898272d4
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1400
+      height: 310
+      anchor: center-center

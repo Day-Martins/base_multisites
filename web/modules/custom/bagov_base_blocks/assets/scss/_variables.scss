@@ -1,4 +1,23 @@
 // ====================
+// TYPOGRAPHY
+// ---
+$font-light     : 'Poppins', sans-serif;
+$font-body      : 'Poppins', sans-serif;
+$font-semibold  : 'Poppins', sans-serif;
+$font-bold      : 'Poppins', sans-serif;
+
+$font-weight-light:		300;			
+$font-weight-body:		400;
+$font-weight-semibold:	500;
+$font-weight-bold:		700;
+
+$white      : #fff;
+$ba-gov00   : #25b7bc; 
+$ba-gov00-light : lighten($ba-gov00, 10%) !default;
+$ba-gov00-icon  : darken($ba-gov00, 10%) !default;
+$ba-gov00-dark  : darken($ba-gov00, 10%) !default;
+
+// ====================
 // Devices
 // ---
 $desktop:               1200px;
