@@ -35,7 +35,7 @@ body[class*=main-we-mega-menu-bagov] .region-we-mega-menu-bagov a.navbar-toggle 
 }
 
 body[class*=user-logged-in] .region-we-mega-menu-bagov a.navbar-toggle {
-  margin-top: 23%;
+  margin-top: 24%;
 }
 
 body[data-we-megamenu-bagov=default] span.btn-close {
@@ -108,6 +108,7 @@ body[data-we-megamenu-bagov=bagov00] .nav-main-region-full {
 body[data-we-megamenu-bagov=bagov00] .region-we-mega-menu-bagov a.navbar-toggle {
   color: #1d8e91;
   border-color: #3bd3d9;
+  border: none;
 }
 
 @media (min-width: 992px) {
