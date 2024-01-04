@@ -235,6 +235,8 @@ complete_list:
   - fontawesome.settings
   - gin.settings
   - image.style.eventos_thumbnail_350x180
+  - image.style.noticias_home_principal_1140_350_
+  - image.style.noticias_home_secundarias_560_350_
   - language.content_settings.node.banner
   - language.content_settings.node.edital
   - language.content_settings.node.evento
