@@ -1,0 +1,21 @@
+uuid: 28b7e53f-f413-4295-b52e-e0f84b2b69cf
+langcode: pt-br
+status: true
+dependencies: {  }
+name: noticias_home_principal_1140_350_
+label: 'Noticias Home Principal (1140×350)'
+effects:
+  426a2952-16fa-4363-bc0a-666db426742f:
+    uuid: 426a2952-16fa-4363-bc0a-666db426742f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1140
+      height: 350
+      anchor: center-center
+  b418fcb9-ac90-412e-99fb-93a7fda8d19e:
+    uuid: b418fcb9-ac90-412e-99fb-93a7fda8d19e
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

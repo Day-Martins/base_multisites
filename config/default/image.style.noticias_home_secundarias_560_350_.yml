@@ -1,0 +1,21 @@
+uuid: bb4f9748-d672-4a55-97b7-323c09609b83
+langcode: pt-br
+status: true
+dependencies: {  }
+name: noticias_home_secundarias_560_350_
+label: 'Noticias Home Secundarias (560×350)'
+effects:
+  7252bb7e-12bd-46d8-99e7-74e8a916649e:
+    uuid: 7252bb7e-12bd-46d8-99e7-74e8a916649e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 350
+      anchor: center-center
+  e4ec0592-6c98-49e3-98b1-24c71334fb88:
+    uuid: e4ec0592-6c98-49e3-98b1-24c71334fb88
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

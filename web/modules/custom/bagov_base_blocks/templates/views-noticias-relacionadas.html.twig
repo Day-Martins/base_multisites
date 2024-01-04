@@ -7,10 +7,15 @@
         </div>
         {% endif %}
         {% for row in rows %}
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-lg-4">
             <div class="noticias-relacionadas-container">
                 <div class="noticias-relacionadas-wrapper">
-                    {{ row . image }}
+                    <div class="noticias-wrapper d-none d-lg-block">
+							{{ row.image_full }}
+						</div>
+						<div class="noticias-wrapper d-block d-lg-none">
+							{{ row.image_small }}
+						</div>
                     {% if row.title or row.description %}
                     {%  if use_caption %}
                     <div class="noticias-relacionadas-caption">

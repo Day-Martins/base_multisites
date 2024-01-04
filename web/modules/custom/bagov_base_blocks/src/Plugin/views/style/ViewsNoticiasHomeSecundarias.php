@@ -6,20 +6,20 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\views\Plugin\views\style\StylePluginBase;
 
 /**
- * Style plugin to render each item as a row in a Notícias Relacionadas.
+ * Style plugin to render each item as a row in a Notícias Home.
  *
  * @ingroup views_style_plugins
  *
  * @ViewsStyle(
- *   id = "views_noticias_relacionadas",
- *   title = @Translation("Notícias Relacionadas"),
- *   help = @Translation("Displays rows in Notícias."),
- *   theme = "views_noticias_relacionadas",
+ *   id = "views_noticias_home_secundarias",
+ *   title = @Translation("Notícias Home Secundarias"),
+ *   help = @Translation("Displays rows in Notícias Home."),
+ *   theme = "views_noticias_home_secundarias",
  *   theme_file = "../bagov_base_blocks.theme.inc",
  *   display_types = {"normal"}
  * )
  */
-class ViewsNoticiasRelacionadas extends StylePluginBase {
+class ViewsNoticiasHomeSecundarias extends StylePluginBase {
   /**
    * Does the style plugin for itself support to add fields to it's output.
    *
@@ -55,35 +55,35 @@ class ViewsNoticiasRelacionadas extends StylePluginBase {
 
     $form['use_caption'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Add captions to your slides for add title and description over the image.'),
+      '#title' => $this->t('Habilitar a legenda da imagem.'),
       '#description' => $this->t('<a href=":docs">See Bootstrap documentation</a>', [':docs' => 'https://getbootstrap.com/docs/4.0/components/carousel/#with-captions']),
       '#default_value' => $this->options['use_caption'],
     ];
 
     $form['image_full'] = [
       '#type' => 'select',
-      '#title' => $this->t('Imagem Mobile'),
+      '#title' => $this->t('Imagem Grande'),
       '#options' => $fields,
       '#default_value' => $this->options['image_full'],
     ];
 
     $form['image_small'] = [
       '#type' => 'select',
-      '#title' => $this->t('Imagem Desktop'),
+      '#title' => $this->t('Imagem Pequena'),
       '#options' => $fields,
       '#default_value' => $this->options['image_small'],
     ];
 
     $form['title'] = [
       '#type' => 'select',
-      '#title' => $this->t('Title'),
+      '#title' => $this->t('Legenda da imagem'),
       '#options' => $fields,
       '#default_value' => $this->options['title'],
     ];
 
     $form['description'] = [
       '#type' => 'select',
-      '#title' => $this->t('Description'),
+      '#title' => $this->t('Descrição da imagem'),
       '#options' => $fields,
       '#default_value' => $this->options['description'],
     ];

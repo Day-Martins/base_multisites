@@ -39,6 +39,7 @@ theme: {  }
 complete_list:
   - block.block.bagov_base_views_block__eventos
   - block.block.bagov_base_views_block__links_rapidos
+  - block.block.bagov_base_views_block__noticias_noticias_home
   - block.block.bootstrap5_account_menu
   - block.block.bootstrap5_branding
   - block.block.bootstrap5_breadcrumbs
@@ -101,6 +102,7 @@ complete_list:
   - core.entity_form_display.node.noticia.default
   - core.entity_form_display.node.page.default
   - core.entity_form_display.node.publicacao.default
+  - core.entity_form_display.taxonomy_term.categoria_de_noticia.default
   - core.entity_view_display.comment.comment.default
   - core.entity_view_display.media.audio.default
   - core.entity_view_display.media.audio.media_library
@@ -138,6 +140,7 @@ complete_list:
   - core.entity_view_display.node.page.teaser
   - core.entity_view_display.node.publicacao.default
   - core.entity_view_display.node.publicacao.teaser
+  - core.entity_view_display.taxonomy_term.categoria_de_noticia.default
   - core.extension
   - dblog.settings
   - field.field.block_content.basic.body
@@ -235,6 +238,10 @@ complete_list:
   - fontawesome.settings
   - gin.settings
   - image.style.eventos_thumbnail_350x180
+  - image.style.noticias_home_principal_1140_350_
+  - image.style.noticias_home_secundarias_560_350_
+  - image.style.noticias_relacionadas_desktop_300_300_
+  - image.style.noticias_relacionadas_mobile_full_750_250_
   - language.content_settings.node.banner
   - language.content_settings.node.edital
   - language.content_settings.node.evento

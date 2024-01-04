@@ -1,0 +1,36 @@
+<div
+	id="{{ id }}" class="noticias-home-principal">
+	{# Noticia corpo. #}
+	<div class="row gy-4">
+		{% for row in rows %}
+			{% set col_classes = 'col-xs-12' %}
+			<div class="{{ col_classes | join(' ') }}">
+				<div class="noticias-container">
+					<div class="noticias-wrapper">
+						<div class="noticias-wrapper d-none d-md-block">
+							{{ row.image_full }}
+						</div>
+						<div class="noticias-wrapper d-block d-md-none">
+							{{ row.image_small }}
+						</div>
+						{% if row.title or row.description %}
+							{%  if use_caption %}
+								<div class="noticias-caption">
+								{% endif %}
+								{% if row.title %}
+									<h3>{{ row.title }}</h3>
+								{% endif %}
+								{% if row.description %}
+									<p>{{ row.description }}</p>
+								{% endif %}
+								{%  if use_caption %}
+								</div>
+							{% endif %}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<br>

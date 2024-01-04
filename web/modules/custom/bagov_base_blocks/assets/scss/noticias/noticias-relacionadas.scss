@@ -1,3 +1,6 @@
+// Core variables and mixins
+@import "./../variables";
+
 .noticias-relacionadas-titulo {
     margin: 30px 0 20px;
     color: var(--turquesa);
@@ -39,6 +42,10 @@
     text-align: left;
 }
 
+.noticias-relacionadas-caption h3 {
+    font-size: 24px;
+}
+
 .noticias-relacionadas-caption h3 a {
     color: var(--bs-white);
     text-decoration: none;
@@ -59,4 +66,10 @@
 .noticias-relacionadas .noticias-relacionadas-footer a:hover {
     text-decoration: none;
     opacity: .7;
+}
+
+@media (max-width: $tablet-ht) {
+    .noticias-relacionadas-wrapper {
+        height: 250px;
+    }
 }
