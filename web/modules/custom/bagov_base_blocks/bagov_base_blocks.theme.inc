@@ -334,3 +334,21 @@ function template_preprocess_node__publicacao(array &$vars){
   $vars['arquivos_por_referencial'] = $filesByTaxonomy;
 
 }
+
+
+function bagov_base_blocks_preprocess_views_view_unformatted__videos_do_youtube__player_home(array &$vars)
+{
+   
+    $view = $vars['view'];
+    $linhas = [];
+    foreach ($vars['rows'] as $key => $row) {        
+       $linhas[$key] = [
+            'imagem_youtube'=> $view->style_plugin->getField($key,'field_imagem_do_video_remoto'),
+            'url_youtube'=> $view->style_plugin->getField($key,'field_media_oembed_video'),
+       ];
+    }
+
+    $vars['linhas'] = $linhas;
+
+ 
+}

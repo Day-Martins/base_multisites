@@ -119,6 +119,10 @@ class BagovHelpers {
         'base hook' => 'view',
         'template' => 'template-youtube-banner',
       ],
+      'views_view_unformatted__videos_do_youtube__player_home' => [
+        'base hook' => 'view',
+        'template' => 'youtube-player',
+      ],
   ];
 
     return $hooks;

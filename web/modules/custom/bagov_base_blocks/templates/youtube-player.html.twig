@@ -1,0 +1,25 @@
+
+{# {{ attach_library('bagov_base_blocks/slick') }} #}
+{{ attach_library('bagov_base_blocks/youtube_player') }}
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<div class="youtube-caroussel-wrap row">
+    <div class="yt-player">
+    {% for linha in linhas %}
+        {%
+        set row_classes = [
+            default_row_class ? 'views-row',
+        ]
+        %}
+        <div{{ row.attributes.addClass(row_classes) }}>      
+            <div class="row youtube video-player">{{- linha.url_youtube -}}</div>
+            <div class="youtube img-dot hidden dot-{{ loop.index }}">{{- linha.imagem_youtube -}}</div>
+        </div>
+    {% endfor %}  
+    </div>    
+</div>
+<div class="wrapper-dots">
+    <div class="img-dots-container"></div>
+</div>
