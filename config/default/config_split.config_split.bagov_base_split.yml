@@ -17,23 +17,24 @@ theme: {  }
 complete_list:
   - bagov_base.settings
   - bagov_base_blocks.settings
-  - block.block.bagov_base_account_menu
-  - block.block.bagov_base_acessoainformacao
-  - block.block.bagov_base_botaodeconstrasteba.gov
   - block.block.bagov_base_breadcrumbs
-  - block.block.bagov_base_creativecommonsinfo
   - block.block.bagov_base_definicaodemarcadosite
   - block.block.bagov_base_endereco
-  - block.block.bagov_base_logodoestado
   - block.block.bagov_base_navegacaoprincipal
-  - block.block.bagov_base_redessociaisba.gov
   - block.block.bagov_base_rodape
-  - block.block.bagov_base_search_form_wide
-  - block.block.bagov_base_selectsecretaria
   - block.block.bagov_base_textresize
   - block.block.bagov_base_views_block__noticias_noticias_home
   - pathauto.pattern.noticia
   - simple_block.simple_block.endereco
   - views.view.noticias
+  - views.view.videos_do_youtube
+  - block.block.bagov_base_account_menu
+  - block.block.bagov_base_acessoainformacao
+  - block.block.bagov_base_botaodeconstrasteba.gov
+  - block.block.bagov_base_creativecommonsinfo
+  - block.block.bagov_base_logodoestado
+  - block.block.bagov_base_redessociaisba.gov
+  - block.block.bagov_base_search_form_wide
+  - block.block.bagov_base_selectsecretaria
   - block.block.bagov_base_main_menu
 partial_list: {  }
