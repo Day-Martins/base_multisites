@@ -55,7 +55,7 @@ class ViewsNoticiasHomePrincipal extends StylePluginBase {
 
     $form['use_caption'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Habilitar a leganda da imagem.'),
+      '#title' => $this->t('Habilitar a legenda da imagem.'),
       '#description' => $this->t('<a href=":docs">See Bootstrap documentation</a>', [':docs' => 'https://getbootstrap.com/docs/4.0/components/carousel/#with-captions']),
       '#default_value' => $this->options['use_caption'],
     ];

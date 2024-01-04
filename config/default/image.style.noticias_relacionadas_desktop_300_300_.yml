@@ -1,0 +1,21 @@
+uuid: a3552b85-0a58-4d37-acda-a56d4953591a
+langcode: pt-br
+status: true
+dependencies: {  }
+name: noticias_relacionadas_desktop_300_300_
+label: 'Noticias Relacionadas Desktop (300×300)'
+effects:
+  b1588da9-637e-42ba-9144-301aad3448aa:
+    uuid: b1588da9-637e-42ba-9144-301aad3448aa
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      anchor: center-center
+  a09d1ed5-5d15-4822-8a58-e42af3b1a0f9:
+    uuid: a09d1ed5-5d15-4822-8a58-e42af3b1a0f9
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

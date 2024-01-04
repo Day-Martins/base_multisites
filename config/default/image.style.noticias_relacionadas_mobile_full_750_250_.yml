@@ -1,0 +1,21 @@
+uuid: 3b1c6c73-c140-4ffc-8754-bc019becb56b
+langcode: pt-br
+status: true
+dependencies: {  }
+name: noticias_relacionadas_mobile_full_750_250_
+label: 'Noticias Relacionadas Mobile Full (750×250)'
+effects:
+  9c993929-f5ee-4cf7-b126-e20f89ccce91:
+    uuid: 9c993929-f5ee-4cf7-b126-e20f89ccce91
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 250
+      anchor: center-center
+  d89ebf69-b2c6-4531-93be-72397267a092:
+    uuid: d89ebf69-b2c6-4531-93be-72397267a092
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

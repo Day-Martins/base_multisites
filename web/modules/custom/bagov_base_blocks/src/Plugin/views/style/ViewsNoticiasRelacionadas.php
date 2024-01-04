@@ -60,11 +60,18 @@ class ViewsNoticiasRelacionadas extends StylePluginBase {
       '#default_value' => $this->options['use_caption'],
     ];
 
-    $form['image'] = [
+    $form['image_full'] = [
       '#type' => 'select',
-      '#title' => $this->t('Image'),
+      '#title' => $this->t('Imagem Mobile'),
       '#options' => $fields,
-      '#default_value' => $this->options['image'],
+      '#default_value' => $this->options['image_full'],
+    ];
+
+    $form['image_small'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Imagem Desktop'),
+      '#options' => $fields,
+      '#default_value' => $this->options['image_small'],
     ];
 
     $form['title'] = [
