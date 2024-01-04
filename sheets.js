@@ -10,9 +10,16 @@ const module_bagov_base_blocks_dest = './web/modules/custom/bagov_base_blocks/as
 const module_text_resize_src = './web/modules/custom/text_resize/assets/scss/';
 const module_text_resize_dest = './web/modules/custom/text_resize/assets/css/';
 
+const bs_theme_src = "web/themes/custom/bagov_base/scss"
+const bs_theme_dest = "web/themes/custom/bagov_base/css"
 
 const sheets = [
     // THEME BAGOV.BASE
+    {
+      scss_src: bs_theme_src + '/style.scss',
+      css_name: 'style',
+      css_dest: bs_theme_dest
+    },
     // NOTICIAS
     {
         scss_src: theme_bagov_base_src + 'noticias/noticia.scss',

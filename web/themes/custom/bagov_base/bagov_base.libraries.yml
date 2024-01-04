@@ -1,8 +1,7 @@
 global-styling:
   css:
     theme:
-      css/style.css: {}
-      css/style_custom.css: {}      
+      css/style.min.css: {}
 global-scripts:
   js:
     assets/js/custom_script.js: {}
