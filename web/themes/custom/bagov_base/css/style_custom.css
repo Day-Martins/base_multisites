@@ -151,6 +151,15 @@ div[class*="region-footer-"] a {
     content: "|";
 }
 
+.nav-logo-link__image {
+  max-width: 140px;
+  position: relative;
+}
+
+.nav-logo-link__sitename {
+  color: #25b7bc;
+}
+
 .navbar-brand a.site-title,
 .navbar-brand a.site-title:hover {
     color: var(--turquesa);
