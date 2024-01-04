@@ -15,6 +15,7 @@ const bs_theme_dest = "web/themes/custom/bagov_base/css"
 
 const sheets = [
     // THEME BAGOV.BASE
+    // B5
     {
       scss_src: bs_theme_src + '/style.scss',
       css_name: 'style',
