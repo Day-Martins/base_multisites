@@ -100,10 +100,16 @@ const sheets = [
       css_dest: module_bagov_base_blocks_dest + 'publicacao/'
     },
      // Youtube
-     {
-        scss_src: module_bagov_base_blocks_src + 'youtube/*.scss',
-        css_name: 'youtube-carousel',
-        css_dest: module_bagov_base_blocks_dest + 'youtube/'
-      },
+		{
+			scss_src: module_bagov_base_blocks_src + 'youtube/*.scss',
+			css_name: 'youtube-carousel',
+			css_dest: module_bagov_base_blocks_dest + 'youtube/'
+		},
+		//Youtube Player
+    {
+			scss_src: module_bagov_base_blocks_src + 'youtube-player/*.scss',
+			css_name: 'youtube_player',
+			css_dest: module_bagov_base_blocks_dest + 'youtube-player/'
+		},
 ]
 module.exports = sheets;

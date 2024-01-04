@@ -93,7 +93,7 @@ views_links_rapidos:
 youtube_player:
   css:
     theme:
-      assets/css/youtube-player/youtube-player.css: {}
+      assets/css/youtube-player/youtube_player.min.css: {}
   js:
     assets/js/youtube-player.js: {}
   dependencies:
