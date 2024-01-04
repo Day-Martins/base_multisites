@@ -60,6 +60,11 @@ const sheets = [
         css_dest: module_bagov_base_blocks_dest + 'noticias/'
     },
     {
+        scss_src: module_bagov_base_blocks_src + 'noticias/noticias-home-secundarias.scss',
+        css_name: 'noticias-home-secundarias',
+        css_dest: module_bagov_base_blocks_dest + 'noticias/'
+    },
+    {
         scss_src: module_bagov_base_blocks_src + 'noticias/noticias-relacionadas.scss',
         css_name: 'noticias-relacionadas',
         css_dest: module_bagov_base_blocks_dest + 'noticias/'

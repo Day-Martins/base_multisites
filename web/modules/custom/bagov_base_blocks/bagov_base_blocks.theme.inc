@@ -126,7 +126,7 @@ function template_preprocess_creative_commons_block(array &$variables)
  *   - view: A ViewExecutable object.
  *   - rows: The raw row data.
  */
-function template_preprocess_views_noticias_home(array &$vars)
+function template_preprocess_views_noticias_home_principal(array &$vars)
 {
     $view = $vars['view'];
     $vars['#attached']['library'][] = 'bagov_base_blocks/views_noticias_home';
@@ -135,17 +135,56 @@ function template_preprocess_views_noticias_home(array &$vars)
     $vars['use_caption'] = $view->style_plugin->options['use_caption'];
 
     // rows.
-    $image = $view->style_plugin->options['image'];
+    $image_full = $view->style_plugin->options['image_full'];
+    $image_small = $view->style_plugin->options['image_small'];
     $title = $view->style_plugin->options['title'];
     $description = $view->style_plugin->options['description'];
     $fieldLabels = $view->display_handler->getFieldLabels(true);
 
     foreach ($vars['rows'] as $id => $row) {
         $vars['rows'][$id] = [];
-        if ($id === array_key_first($vars['rows'])) {
-            $vars['rows'][$id]['noticia_principal'] = true;
+        $vars['rows'][$id]['image_full'] = $view->style_plugin->getField($id, $image_full);
+        $vars['rows'][$id]['image_small'] = $view->style_plugin->getField($id, $image_small);
+        $vars['rows'][$id]['title'] = $view->style_plugin->getField($id, $title);
+        $vars['rows'][$id]['description'] = $view->style_plugin->getField($id, $description);
+        // Add any additional fields to result.
+        foreach (array_keys($fieldLabels) as $label) {
+            if (!in_array($label, [$image, $title, $description])) {
+                $vars['rows'][$id][$label] = $view->style_plugin->getField($id, $label);
+            }
         }
-        $vars['rows'][$id]['image'] = $view->style_plugin->getField($id, $image);
+    }
+}
+
+/**
+ * Prepares variables for views carousel template.
+ *
+ * Default template: views-noticias-home.html.twig.
+ *
+ * @param array $vars
+ *   An associative array containing:
+ *   - view: A ViewExecutable object.
+ *   - rows: The raw row data.
+ */
+function template_preprocess_views_noticias_home_secundarias(array &$vars)
+{
+    $view = $vars['view'];
+    $vars['#attached']['library'][] = 'bagov_base_blocks/views_noticias_home';
+    $vars['id'] = BagovHelpers::getUniqueId($view);
+
+    $vars['use_caption'] = $view->style_plugin->options['use_caption'];
+
+    // rows.
+    $image_full = $view->style_plugin->options['image_full'];
+    $image_small = $view->style_plugin->options['image_small'];
+    $title = $view->style_plugin->options['title'];
+    $description = $view->style_plugin->options['description'];
+    $fieldLabels = $view->display_handler->getFieldLabels(true);
+
+    foreach ($vars['rows'] as $id => $row) {
+        $vars['rows'][$id] = [];
+        $vars['rows'][$id]['image_full'] = $view->style_plugin->getField($id, $image_full);
+        $vars['rows'][$id]['image_small'] = $view->style_plugin->getField($id, $image_small);
         $vars['rows'][$id]['title'] = $view->style_plugin->getField($id, $title);
         $vars['rows'][$id]['description'] = $view->style_plugin->getField($id, $description);
         // Add any additional fields to result.

@@ -24,6 +24,7 @@ views_noticias_home:
   css:
     theme:
       assets/css/noticias/noticias-home.min.css: {}
+      assets/css/noticias/noticias-home-secundarias.min.css: {}
   dependencies:
     - core/drupal
     - core/jquery
