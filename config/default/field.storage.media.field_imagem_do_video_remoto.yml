@@ -1,0 +1,30 @@
+uuid: b90077bb-1fbc-4329-a7fa-c397e85279e0
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - media
+id: media.field_imagem_do_video_remoto
+field_name: field_imagem_do_video_remoto
+entity_type: media
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

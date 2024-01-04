@@ -3,9 +3,12 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.media.remote_video.field_imagem_do_video_remoto
     - field.field.media.remote_video.field_media_oembed_video
+    - image.style.thumbnail
     - media.type.remote_video
   module:
+    - image
     - media
     - path
 _core:
@@ -17,9 +20,17 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_imagem_do_video_remoto:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_media_oembed_video:
     type: oembed_textfield
@@ -38,20 +49,20 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 100
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
