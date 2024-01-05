@@ -9,7 +9,6 @@ dependencies:
     - field.storage.node.field_link_do_banner
     - field.storage.node.field_link_target
     - image.style.banner_fixo_700x420
-    - image.style.banner_fixo_mobile_350x210
     - image.style.banner_fixo_quadruplo_200x115
     - node.type.banner
   module:
@@ -1614,72 +1613,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_imagem_banner_mobile:
-          id: field_imagem_banner_mobile
-          table: node__field_imagem_banner_mobile
-          field: field_imagem_banner_mobile
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: "{% if  field_imagem_banner_mobile  is not empty %}\r\n   <a href=\"{{ field_link_do_banner }}\" class=\"d-block d-sm-none\" target=\"{{ field_link_target }}\">\r\n      {{ field_imagem_banner_mobile }}\r\n   </a>\r\n{% endif %}\r\n"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_link: ''
-            image_style: banner_fixo_mobile_350x210
-            image_loading:
-              attribute: lazy
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: true
         field_imagem_do_banner:
           id: field_imagem_do_banner
           table: node__field_imagem_do_banner
@@ -1689,10 +1622,10 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
-            text: "{% set classe = field_imagem_banner_mobile  is not empty ? 'd-none d-sm-block' : 'd-block' %}\r\n<a href=\"{{ field_link_do_banner }}\" class=\"{{ classe }}\" target=\"{{ field_link_target }}\">\r\n   {{ field_imagem_do_banner }}\r\n</a>"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -1746,6 +1679,167 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_imagem_banner_mobile:
+          id: field_imagem_banner_mobile
+          table: node__field_imagem_banner_mobile
+          field: field_imagem_banner_mobile
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image_url
+          settings:
+            image_style: banner_fixo_mobile_350x210
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Imagem banner desktop customizada'
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_imagem_do_banner }}'
+            make_link: true
+            path: '{{ field_link_do_banner }} '
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: 'd-none d-sm-block'
+            prefix: ''
+            suffix: ''
+            target: '{{ field_link_target }}'
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Imagem banner mobile customizada'
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if  field_imagem_banner_mobile  is empty or  field_imagem_banner_mobile  is null %}\r\n   {{ field_imagem_do_banner }}\r\n{% else %}\r\n  {{ field_imagem_banner_mobile }}\r\n{% endif %}"
+            make_link: true
+            path: '{{ field_link_do_banner }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: 'd-block d-sm-none'
+            prefix: ''
+            suffix: ''
+            target: '{{ field_link_target }}'
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
       pager:
         type: some
         options:
@@ -2038,72 +2132,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_imagem_banner_mobile:
-          id: field_imagem_banner_mobile
-          table: node__field_imagem_banner_mobile
-          field: field_imagem_banner_mobile
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: "{% if  field_imagem_banner_mobile  is not empty %}\r\n   <a href=\"{{ field_link_do_banner }}\" class=\"d-block d-sm-none\" target=\"{{ field_link_target }}\">\r\n      {{ field_imagem_banner_mobile }}\r\n   </a>\r\n{% endif %}"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: true
-          empty_zero: true
-          hide_alter_empty: false
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_link: ''
-            image_style: banner_fixo_quadruplo_200x115
-            image_loading:
-              attribute: lazy
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_imagem_do_banner:
           id: field_imagem_do_banner
           table: node__field_imagem_do_banner
@@ -2113,10 +2141,10 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
-            text: "{% set classe = field_imagem_banner_mobile  is not empty ? 'd-none d-sm-block' : 'd-block' %}\r\n<a href=\"{{ field_link_do_banner }}\" class=\"{{ classe }}\" target=\"{{ field_link_target }}\">\r\n   {{ field_imagem_do_banner }}\r\n</a>"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -2170,6 +2198,170 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_imagem_banner_mobile:
+          id: field_imagem_banner_mobile
+          table: node__field_imagem_banner_mobile
+          field: field_imagem_banner_mobile
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: true
+          hide_alter_empty: false
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_link: ''
+            image_style: banner_fixo_quadruplo_200x115
+            image_loading:
+              attribute: lazy
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Imagem banner desktop customizada'
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_imagem_do_banner }} '
+            make_link: true
+            path: '{{ field_link_do_banner }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: 'd-none d-sm-block'
+            prefix: ''
+            suffix: ''
+            target: '{{ field_link_target }}'
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Imagem banner mobile customizado'
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if  field_imagem_banner_mobile  is empty or  field_imagem_banner_mobile  is null %}\r\n   {{ field_imagem_do_banner }}\r\n{% else %}\r\n  {{ field_imagem_banner_mobile }}\r\n{% endif %}"
+            make_link: true
+            path: '{{ field_link_do_banner }} '
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: 'd-block d-sm-none'
+            prefix: ''
+            suffix: ''
+            target: '{{ field_link_target }}'
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: 'd-block d-sm-none'
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
       pager:
         type: some
         options:

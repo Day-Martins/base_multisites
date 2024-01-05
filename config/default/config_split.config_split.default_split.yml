@@ -13,6 +13,7 @@ folder: ../config/default
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  bagov_base_blocks: 0
   bootstrap_layouts: 0
   calendar_view: 0
   config_filter: 0
@@ -35,10 +36,24 @@ module:
   views_argument_token: 0
   views_bootstrap: 0
   we_megamenu: 0
+  we_megamenu_bagov: 0
   weight: 0
   pathauto: 1
 theme: {  }
 complete_list:
+  - bagov_base.settings
+  - bagov_base_blocks.settings
+  - block.block.bagov_base_ba.govacessoainformacao
+  - block.block.bagov_base_ba.govbotaodeconstraste
+  - block.block.bagov_base_ba.govcreativecommonsinfo
+  - block.block.bagov_base_ba.govredessociais
+  - block.block.bagov_base_ba.govselectsecretarias
+  - block.block.bagov_base_breadcrumbs
+  - block.block.bagov_base_definicaodemarcadosite
+  - block.block.bagov_base_endereco
+  - block.block.bagov_base_navegacaoprincipal
+  - block.block.bagov_base_rodape
+  - block.block.bagov_base_textresize
   - block.block.bagov_base_views_block__banner_banner_carrossel_card_icones
   - block.block.bagov_base_views_block__banner_banner_carrossel_centro
   - block.block.bagov_base_views_block__banner_banner_carrossel_inferior
@@ -48,6 +63,7 @@ complete_list:
   - block.block.bagov_base_views_block__eventos
   - block.block.bagov_base_views_block__links_rapidos
   - block.block.bagov_base_views_block__noticias_noticias_home
+  - block.block.bagov_base_views_block__videos_do_youtube_player_home
   - block.block.bootstrap5_account_menu
   - block.block.bootstrap5_branding
   - block.block.bootstrap5_breadcrumbs
@@ -80,7 +96,6 @@ complete_list:
   - bootstrap5.settings
   - claro.settings
   - config_ignore.settings
-  - config_split.config_split.bagov_base_split
   - config_split.config_split.bagov_development_split
   - config_split.config_split.default_split
   - core.base_field_override.node.edital.promote
@@ -154,8 +169,10 @@ complete_list:
   - field.field.block_content.basic.body
   - field.field.comment.comment.comment_body
   - field.field.media.audio.field_media_audio_file
+  - field.field.media.document.field_data_de_documento
   - field.field.media.document.field_descricao_do_documento
   - field.field.media.document.field_media_document
+  - field.field.media.document.field_referencial_de_documento
   - field.field.media.image.field_media_image
   - field.field.media.remote_video.field_imagem_do_video_remoto
   - field.field.media.remote_video.field_media_oembed_video
@@ -304,12 +321,14 @@ complete_list:
   - node.type.noticia
   - node.type.page
   - node.type.publicacao
+  - pathauto.pattern.edital
   - pathauto.pattern.evento
   - pathauto.pattern.legislacao
   - pathauto.pattern.licitacao
   - pathauto.pattern.noticia
   - pathauto.pattern.publicacao
   - pathauto.settings
+  - simple_block.simple_block.endereco
   - system.maintenance
   - system.theme
   - system.theme.global
@@ -327,20 +346,4 @@ complete_list:
   - views.view.banner
   - views.view.eventos
   - views.view.links_rapidos
-  - block.block.bagov_base_views_block__carrousel_de_eventos
-  - core.base_field_override.node.eventos.title
-  - core.entity_form_display.node.eventos.default
-  - core.entity_view_display.node.eventos.default
-  - core.entity_view_display.node.eventos.teaser
-  - field.storage.node.field_categorias
-  - field.storage.node.field_datas
-  - field.storage.node.field_emails
-  - field.storage.node.field_pdfs
-  - field.storage.node.field_sites
-  - language.content_settings.node.eventos
-  - node.type.eventos
-  - views.view.calendario_de_eventos
-  - views.view.contador
-  - block.block.bagov_base_views_block__carrousel_de_eventos_block_1
-  - views.view.carrousel_de_eventos
 partial_list: {  }

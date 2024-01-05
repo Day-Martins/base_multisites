@@ -1,3 +1,4 @@
+#VERSÃO 05-01-2024 12:43 Gabriel Carneiro
 uuid: 87e5abb5-e2f3-470d-b724-27599a39cdaa
 langcode: pt-br
 status: true
@@ -13,6 +14,7 @@ folder: ../config/default
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  bagov_base_blocks: 0
   bootstrap_layouts: 0
   calendar_view: 0
   config_filter: 0
@@ -21,6 +23,7 @@ module:
   datetime_range: 0
   fontawesome: 0
   fullcalendar_view: 0
+  gin_toolbar: 0
   layout_builder: 0
   layout_discovery: 0
   media: 0
@@ -34,10 +37,34 @@ module:
   views_argument_token: 0
   views_bootstrap: 0
   we_megamenu: 0
+  we_megamenu_bagov: 0
+  weight: 0
   pathauto: 1
 theme: {  }
 complete_list:
-  - block.block.bagov_base_views_block__carrousel_de_eventos
+  - bagov_base.settings
+  - bagov_base_blocks.settings
+  - block.block.bagov_base_ba.govacessoainformacao
+  - block.block.bagov_base_ba.govbotaodeconstraste
+  - block.block.bagov_base_ba.govcreativecommonsinfo
+  - block.block.bagov_base_ba.govredessociais
+  - block.block.bagov_base_ba.govselectsecretarias
+  - block.block.bagov_base_breadcrumbs
+  - block.block.bagov_base_definicaodemarcadosite
+  - block.block.bagov_base_endereco
+  - block.block.bagov_base_navegacaoprincipal
+  - block.block.bagov_base_rodape
+  - block.block.bagov_base_textresize
+  - block.block.bagov_base_views_block__banner_banner_carrossel_card_icones
+  - block.block.bagov_base_views_block__banner_banner_carrossel_centro
+  - block.block.bagov_base_views_block__banner_banner_carrossel_inferior
+  - block.block.bagov_base_views_block__banner_banner_carrossel_superior
+  - block.block.bagov_base_views_block__banner_banner_fixo_duplo
+  - block.block.bagov_base_views_block__banner_banner_fixo_quadruplo
+  - block.block.bagov_base_views_block__eventos
+  - block.block.bagov_base_views_block__links_rapidos
+  - block.block.bagov_base_views_block__noticias_noticias_home
+  - block.block.bagov_base_views_block__videos_do_youtube_player_home
   - block.block.bootstrap5_account_menu
   - block.block.bootstrap5_branding
   - block.block.bootstrap5_breadcrumbs
@@ -70,10 +97,12 @@ complete_list:
   - bootstrap5.settings
   - claro.settings
   - config_ignore.settings
-  - config_split.config_split.bagov_base_split
   - config_split.config_split.bagov_development_split
   - config_split.config_split.default_split
-  - core.base_field_override.node.eventos.title
+  - core.base_field_override.node.edital.promote
+  - core.base_field_override.node.edital.title
+  - core.base_field_override.node.link_rapido.promote
+  - core.base_field_override.node.page.promote
   - core.entity_form_display.comment.comment.default
   - core.entity_form_display.media.audio.default
   - core.entity_form_display.media.audio.media_library
@@ -87,12 +116,17 @@ complete_list:
   - core.entity_form_display.media.video.media_library
   - core.entity_form_display.node.article.default
   - core.entity_form_display.node.banner.default
-  - core.entity_form_display.node.eventos.default
+  - core.entity_form_display.node.edital.default
+  - core.entity_form_display.node.evento.default
+  - core.entity_form_display.node.legislacao.default
+  - core.entity_form_display.node.licitacao.default
+  - core.entity_form_display.node.link_rapido.default
   - core.entity_form_display.node.lista_migrada.default
   - core.entity_form_display.node.midia.default
   - core.entity_form_display.node.noticia.default
   - core.entity_form_display.node.page.default
   - core.entity_form_display.node.publicacao.default
+  - core.entity_form_display.taxonomy_term.categoria_de_noticia.default
   - core.entity_view_display.comment.comment.default
   - core.entity_view_display.media.audio.default
   - core.entity_view_display.media.audio.media_library
@@ -110,8 +144,16 @@ complete_list:
   - core.entity_view_display.node.article.teaser
   - core.entity_view_display.node.banner.default
   - core.entity_view_display.node.banner.teaser
-  - core.entity_view_display.node.eventos.default
-  - core.entity_view_display.node.eventos.teaser
+  - core.entity_view_display.node.edital.default
+  - core.entity_view_display.node.edital.teaser
+  - core.entity_view_display.node.evento.default
+  - core.entity_view_display.node.evento.teaser
+  - core.entity_view_display.node.legislacao.default
+  - core.entity_view_display.node.legislacao.teaser
+  - core.entity_view_display.node.licitacao.default
+  - core.entity_view_display.node.licitacao.teaser
+  - core.entity_view_display.node.link_rapido.default
+  - core.entity_view_display.node.link_rapido.teaser
   - core.entity_view_display.node.lista_migrada.default
   - core.entity_view_display.node.lista_migrada.teaser
   - core.entity_view_display.node.midia.default
@@ -122,14 +164,18 @@ complete_list:
   - core.entity_view_display.node.page.teaser
   - core.entity_view_display.node.publicacao.default
   - core.entity_view_display.node.publicacao.teaser
+  - core.entity_view_display.taxonomy_term.categoria_de_noticia.default
   - core.extension
   - dblog.settings
   - field.field.block_content.basic.body
   - field.field.comment.comment.comment_body
   - field.field.media.audio.field_media_audio_file
+  - field.field.media.document.field_data_de_documento
   - field.field.media.document.field_descricao_do_documento
   - field.field.media.document.field_media_document
+  - field.field.media.document.field_referencial_de_documento
   - field.field.media.image.field_media_image
+  - field.field.media.remote_video.field_imagem_do_video_remoto
   - field.field.media.remote_video.field_media_oembed_video
   - field.field.media.video.field_media_video_file
   - field.field.node.article.body
@@ -137,8 +183,33 @@ complete_list:
   - field.field.node.article.field_image
   - field.field.node.article.field_tags
   - field.field.node.banner.body
+  - field.field.node.banner.field_icone_banner
+  - field.field.node.banner.field_imagem_banner_mobile
   - field.field.node.banner.field_imagem_do_banner
   - field.field.node.banner.field_link_do_banner
+  - field.field.node.banner.field_link_target
+  - field.field.node.banner.field_peso_conteudo
+  - field.field.node.banner.field_regiao_banner
+  - field.field.node.edital.body
+  - field.field.node.edital.field_categorias_editais
+  - field.field.node.edital.field_midias_editais
+  - field.field.node.evento.body
+  - field.field.node.evento.field_categoria_evento
+  - field.field.node.evento.field_contato_evento
+  - field.field.node.evento.field_datas_evento
+  - field.field.node.evento.field_email_evento
+  - field.field.node.evento.field_endereco_evento
+  - field.field.node.evento.field_imagem_de_destaque_evento
+  - field.field.node.evento.field_url_evento
+  - field.field.node.legislacao.body
+  - field.field.node.legislacao.field_categorias_legislacao
+  - field.field.node.legislacao.field_midias_legislacao
+  - field.field.node.licitacao.body
+  - field.field.node.licitacao.field_categorias_licitacoes
+  - field.field.node.licitacao.field_midias_licitacoes
+  - field.field.node.link_rapido.field_icone_link_rapido
+  - field.field.node.link_rapido.field_link
+  - field.field.node.link_rapido.field_titulo_link_rapido
   - field.field.node.lista_migrada.body
   - field.field.node.lista_migrada.field_categorias_lista_migrada
   - field.field.node.midia.body
@@ -157,37 +228,70 @@ complete_list:
   - field.settings
   - field.storage.block_content.body
   - field.storage.comment.comment_body
+  - field.storage.media.field_data_de_documento
   - field.storage.media.field_descricao_do_documento
+  - field.storage.media.field_imagem_do_video_remoto
   - field.storage.media.field_media_audio_file
   - field.storage.media.field_media_document
   - field.storage.media.field_media_image
   - field.storage.media.field_media_oembed_video
   - field.storage.media.field_media_video_file
+  - field.storage.media.field_referencial_de_documento
   - field.storage.node.body
   - field.storage.node.comment
   - field.storage.node.field_anexo_noticia
-  - field.storage.node.field_categorias
+  - field.storage.node.field_categorias_editais
+  - field.storage.node.field_categorias_legislacao
+  - field.storage.node.field_categorias_licitacoes
   - field.storage.node.field_categorias_lista_migrada
   - field.storage.node.field_categorias_noticia
   - field.storage.node.field_categorias_publicacao
-  - field.storage.node.field_datas
-  - field.storage.node.field_emails
+  - field.storage.node.field_categoria_evento
+  - field.storage.node.field_contato_evento
+  - field.storage.node.field_datas_evento
+  - field.storage.node.field_email_evento
+  - field.storage.node.field_endereco_evento
   - field.storage.node.field_fonte_noticia
+  - field.storage.node.field_icone_banner
+  - field.storage.node.field_icone_link_rapido
   - field.storage.node.field_image
+  - field.storage.node.field_imagem_banner_mobile
   - field.storage.node.field_imagem_destaque_noticia
+  - field.storage.node.field_imagem_de_destaque_evento
   - field.storage.node.field_imagem_do_banner
+  - field.storage.node.field_link
   - field.storage.node.field_link_do_banner
+  - field.storage.node.field_link_target
+  - field.storage.node.field_midias_editais
+  - field.storage.node.field_midias_legislacao
+  - field.storage.node.field_midias_licitacoes
   - field.storage.node.field_midias_publicacao
-  - field.storage.node.field_pdfs
-  - field.storage.node.field_sites
+  - field.storage.node.field_peso_conteudo
+  - field.storage.node.field_regiao_banner
   - field.storage.node.field_tags
+  - field.storage.node.field_titulo_link_rapido
+  - field.storage.node.field_url_evento
   - field.storage.taxonomy_term.field_termo_relacionado
   - field.storage.user.user_picture
   - fontawesome.settings
   - gin.settings
+  - image.style.banner_1400x310
+  - image.style.banner_700x500
+  - image.style.banner_fixo_700x420
+  - image.style.banner_fixo_mobile_350x210
+  - image.style.banner_fixo_quadruplo_200x115
   - image.style.eventos_thumbnail_350x180
+  - image.style.noticias_home_principal_1140_350_
+  - image.style.noticias_home_secundarias_560_350_
+  - image.style.noticias_relacionadas_desktop_300_300_
+  - image.style.noticias_relacionadas_mobile_full_750_250_
+  - image.style.youtube_thumbnail
   - language.content_settings.node.banner
-  - language.content_settings.node.eventos
+  - language.content_settings.node.edital
+  - language.content_settings.node.evento
+  - language.content_settings.node.legislacao
+  - language.content_settings.node.licitacao
+  - language.content_settings.node.link_rapido
   - language.content_settings.node.lista_migrada
   - language.content_settings.node.midia
   - language.content_settings.node.noticia
@@ -195,8 +299,12 @@ complete_list:
   - language.content_settings.path_alias.path_alias
   - language.content_settings.taxonomy_term.categorias_de_eventos
   - language.content_settings.taxonomy_term.categoria_de_noticia
+  - language.content_settings.taxonomy_term.categoria_edital
+  - language.content_settings.taxonomy_term.categoria_legislacao
+  - language.content_settings.taxonomy_term.categoria_licitacao
   - language.content_settings.taxonomy_term.categoria_lista_migrada
   - language.content_settings.taxonomy_term.categoria_publicacao
+  - language.content_settings.taxonomy_term.referecias_de_documentos
   - media.settings
   - media.type.audio
   - media.type.document
@@ -204,25 +312,39 @@ complete_list:
   - media.type.remote_video
   - node.type.article
   - node.type.banner
-  - node.type.eventos
+  - node.type.edital
+  - node.type.evento
+  - node.type.legislacao
+  - node.type.licitacao
+  - node.type.link_rapido
   - node.type.lista_migrada
   - node.type.midia
   - node.type.noticia
   - node.type.page
   - node.type.publicacao
+  - pathauto.pattern.edital
+  - pathauto.pattern.evento
+  - pathauto.pattern.legislacao
+  - pathauto.pattern.licitacao
+  - pathauto.pattern.noticia
+  - pathauto.pattern.publicacao
   - pathauto.settings
+  - simple_block.simple_block.endereco
   - system.maintenance
   - system.theme
   - system.theme.global
   - taxonomy.vocabulary.categorias_de_eventos
   - taxonomy.vocabulary.categoria_de_noticia
+  - taxonomy.vocabulary.categoria_edital
+  - taxonomy.vocabulary.categoria_legislacao
+  - taxonomy.vocabulary.categoria_licitacao
   - taxonomy.vocabulary.categoria_lista_migrada
   - taxonomy.vocabulary.categoria_publicacao
+  - taxonomy.vocabulary.referecias_de_documentos
   - taxonomy.vocabulary.tags
   - text_resize.settings
   - update.settings
-  - views.view.calendario_de_eventos
+  - views.view.banner
   - views.view.eventos
-  - block.block.bagov_base_views_block__carrousel_de_eventos_block_1
-  - views.view.carrousel_de_eventos
+  - views.view.links_rapidos
 partial_list: {  }
