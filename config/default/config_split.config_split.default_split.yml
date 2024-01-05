@@ -207,8 +207,10 @@ complete_list:
   - field.field.node.licitacao.field_categorias_licitacoes
   - field.field.node.licitacao.field_midias_licitacoes
   - field.field.node.link_rapido.field_icone_link_rapido
-  - field.field.node.link_rapido.field_link
+  - field.field.node.link_rapido.field_regiao
+  - field.field.node.link_rapido.field_target_link
   - field.field.node.link_rapido.field_titulo_link_rapido
+  - field.field.node.link_rapido.field_url
   - field.field.node.lista_migrada.body
   - field.field.node.lista_migrada.field_categorias_lista_migrada
   - field.field.node.midia.body
@@ -258,7 +260,6 @@ complete_list:
   - field.storage.node.field_imagem_destaque_noticia
   - field.storage.node.field_imagem_de_destaque_evento
   - field.storage.node.field_imagem_do_banner
-  - field.storage.node.field_link
   - field.storage.node.field_link_do_banner
   - field.storage.node.field_link_target
   - field.storage.node.field_midias_editais
@@ -266,9 +267,12 @@ complete_list:
   - field.storage.node.field_midias_licitacoes
   - field.storage.node.field_midias_publicacao
   - field.storage.node.field_peso_conteudo
+  - field.storage.node.field_regiao
   - field.storage.node.field_regiao_banner
   - field.storage.node.field_tags
+  - field.storage.node.field_target_link
   - field.storage.node.field_titulo_link_rapido
+  - field.storage.node.field_url
   - field.storage.node.field_url_evento
   - field.storage.taxonomy_term.field_termo_relacionado
   - field.storage.user.user_picture

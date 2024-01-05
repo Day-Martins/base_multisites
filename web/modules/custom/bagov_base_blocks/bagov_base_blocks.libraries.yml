@@ -104,7 +104,10 @@ views_banner_carrossel:
       assets/css/banner/banner.min.css: {}
   js:
     assets/js/banner.js: {}
-
   dependencies:
     - core/drupal
     - core/jquery
+
+select_secretarias_footer:
+  js:
+    assets/js/onChangeSelectFooter.js: {}

@@ -1,0 +1,23 @@
+uuid: 98d3d55f-8e98-45b4-a64d-c752fca846d3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_regiao
+    - node.type.link_rapido
+  module:
+    - options
+id: node.link_rapido.field_regiao
+field_name: field_regiao
+entity_type: node
+bundle: link_rapido
+label: Região
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: banner_card_icons
+default_value_callback: ''
+settings: {  }
+field_type: list_string
