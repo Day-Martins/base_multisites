@@ -46,6 +46,7 @@ complete_list:
   - block.block.bagov_base_ba.govacessoainformacao
   - block.block.bagov_base_ba.govbotaodeconstraste
   - block.block.bagov_base_ba.govcreativecommonsinfo
+  - block.block.bagov_base_ba.govlogodoestado
   - block.block.bagov_base_ba.govredessociais
   - block.block.bagov_base_ba.govselectsecretarias
   - block.block.bagov_base_breadcrumbs
@@ -284,10 +285,10 @@ complete_list:
   - image.style.banner_fixo_mobile_350x210
   - image.style.banner_fixo_quadruplo_200x115
   - image.style.eventos_thumbnail_350x180
+  - image.style.noticias_desktop_300_300_
   - image.style.noticias_home_principal_1140_350_
   - image.style.noticias_home_secundarias_560_350_
-  - image.style.noticias_relacionadas_desktop_300_300_
-  - image.style.noticias_relacionadas_mobile_full_750_250_
+  - image.style.noticias_mobile_full_750_250_
   - image.style.youtube_thumbnail
   - language.content_settings.node.banner
   - language.content_settings.node.edital

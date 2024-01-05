@@ -134,6 +134,7 @@ function template_preprocess_views_noticias_home_principal(array &$vars)
     $vars['id'] = BagovHelpers::getUniqueId($view);
 
     $vars['use_caption'] = $view->style_plugin->options['use_caption'];
+    $vars['view_title'] = $view->getTitle();
 
     // rows.
     $image_full = $view->style_plugin->options['image_full'];
@@ -218,16 +219,16 @@ function template_preprocess_views_noticias(array &$vars)
 
     // rows.
     $image = $view->style_plugin->options['image'];
+    $image_full = $view->style_plugin->options['image_full'];
+    $image_small = $view->style_plugin->options['image_small'];
     $title = $view->style_plugin->options['title'];
     $description = $view->style_plugin->options['description'];
     $fieldLabels = $view->display_handler->getFieldLabels(true);
 
     foreach ($vars['rows'] as $id => $row) {
         $vars['rows'][$id] = [];
-        if ($id === array_key_first($vars['rows'])) {
-            $vars['rows'][$id]['noticia_principal'] = true;
-        }
-        $vars['rows'][$id]['image'] = $view->style_plugin->getField($id, $image);
+        $vars['rows'][$id]['image_full'] = $view->style_plugin->getField($id, $image_full);
+        $vars['rows'][$id]['image_small'] = $view->style_plugin->getField($id, $image_small);
         $vars['rows'][$id]['title'] = $view->style_plugin->getField($id, $title);
         $vars['rows'][$id]['description'] = $view->style_plugin->getField($id, $description);
         // Add any additional fields to result.
@@ -268,9 +269,6 @@ function template_preprocess_views_noticias_relacionadas(array &$vars)
 
     foreach ($vars['rows'] as $id => $row) {
         $vars['rows'][$id] = [];
-        if ($id === array_key_first($vars['rows'])) {
-            $vars['rows'][$id]['noticia_principal'] = true;
-        }
         $vars['rows'][$id]['image_full'] = $view->style_plugin->getField($id, $image_full);
         $vars['rows'][$id]['image_small'] = $view->style_plugin->getField($id, $image_small);
         $vars['rows'][$id]['title'] = $view->style_plugin->getField($id, $title);

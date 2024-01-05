@@ -1,9 +1,9 @@
-uuid: 3b1c6c73-c140-4ffc-8754-bc019becb56b
+uuid: 12ed2ace-33b1-45ba-91ba-aa383737d101
 langcode: pt-br
 status: true
 dependencies: {  }
-name: noticias_relacionadas_mobile_full_750_250_
-label: 'Noticias Relacionadas Mobile Full (750×250)'
+name: noticias_mobile_full_750_250_
+label: 'Noticias Mobile Full (750×250)'
 effects:
   9c993929-f5ee-4cf7-b126-e20f89ccce91:
     uuid: 9c993929-f5ee-4cf7-b126-e20f89ccce91
