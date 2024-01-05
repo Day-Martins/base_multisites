@@ -10,7 +10,12 @@
         <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="noticias-container">
                 <div class="noticias-wrapper">
-                    {{ row . image }}
+                    <div class="noticias-img d-block d-md-block d-lg-none">
+                        {{ row.image_full }}
+                    </div>
+                    <div class="noticias-img d-none d-md-none d-lg-block">
+                        {{ row.image_small }}
+                    </div>
                     {% if row.title or row.description %}
                     {%  if use_caption %}
                     <div class="noticias-caption">

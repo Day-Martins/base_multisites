@@ -1,0 +1,20 @@
+uuid: bfadd1e8-4c5a-4ea6-b7a3-a1e12f75ddf1
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - bagov_base_blocks
+  theme:
+    - bagov_base
+id: bagov_base_ba.govlogodoestado
+theme: bagov_base
+region: footer_left
+weight: 0
+provider: null
+plugin: logo_estado_block
+settings:
+  id: logo_estado_block
+  label: 'Ba.Gov - Logo do Estado'
+  label_display: '0'
+  provider: bagov_base_blocks
+visibility: {  }
