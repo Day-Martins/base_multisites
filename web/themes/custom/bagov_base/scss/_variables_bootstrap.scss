@@ -1,5 +1,17 @@
 // Bootstrap variables (overrides).
+@import '../../../../themes/contrib/bootstrap5/dist/bootstrap/5.2.3/scss/_functions.scss';
+@import '../../../../themes/contrib/bootstrap5/dist/bootstrap/5.2.3/scss/_variables.scss';
+
 $form-text-margin-top: 0;
 $legend-font-size: 1rem;
 $table-cell-padding-x: .75rem;
 $primary: #36b0b4;
+$orange: #f07d00;
+
+// Extend the default theme colors map
+// Make sure this is after your custom variables but before you import Bootstrap
+$theme-colors: map-merge(
+  $theme-colors, (
+  "orange": $orange,
+  "primary": $primary,
+));
