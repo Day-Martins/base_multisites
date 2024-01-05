@@ -21,19 +21,24 @@
 {% if title %}
 	<h3>{{ title }}</h3>
 {% endif %}
-<div id="carrousel-links-rapidos" class="gap-4">
-	{% for row in rows %}
+
+<div class="bg-orange block-bagov-base-views-block-links-rapidos">
+	<h2>{{ view.title|default('Links Rápidos')}}</h2>
+	<div  id="carrousel-links-rapidos">
+  {% for row in rows %}
 		{%
     set row_classes = [
       default_row_class ? 'views-row',
+      'w-100',
     ]
   %}
 		<div{{row.attributes.addClass(row_classes)}}>
 			{{- row.content -}}
 		</div>
 	{% endfor %}
-</div>
+  </div>
 <div class="custom-arrows-links-rapidos position-relative mt-5" />
+</div>
 
 
 
