@@ -78,7 +78,8 @@ function template_preprocess_logo_estado_block(array &$variables)
  */
 function template_preprocess_select_secretaria_block(array &$variables)
 {
-    $select = "<select class='form-control'>";
+    $variables['#attached']['library'][] = 'bagov_base_blocks/select_secretarias_footer';
+    $select = "<select class='form-control' data-js='select-secretaria'>";
     $select .= "<option value='' class='first-option'>&gt; Escolher o site de uma secretaria...</option>";
     foreach ($variables['options'] as $option) {
         $select .= "<option value='{$option->value}'>{$option->label}</option>";
@@ -338,10 +339,10 @@ function template_preprocess_node__publicacao(array &$vars){
 
 function bagov_base_blocks_preprocess_views_view_unformatted__videos_do_youtube__player_home(array &$vars)
 {
-   
+
     $view = $vars['view'];
     $linhas = [];
-    foreach ($vars['rows'] as $key => $row) {        
+    foreach ($vars['rows'] as $key => $row) {
        $linhas[$key] = [
             'imagem_youtube'=> $view->style_plugin->getField($key,'field_imagem_do_video_remoto'),
             'url_youtube'=> $view->style_plugin->getField($key,'field_media_oembed_video'),
@@ -350,7 +351,7 @@ function bagov_base_blocks_preprocess_views_view_unformatted__videos_do_youtube_
 
     $vars['linhas'] = $linhas;
 
- 
+
 }
 
 /**
@@ -389,7 +390,7 @@ function template_preprocess_views_banner_carrossel(array &$vars) {
     $title = $view->style_plugin->options['title'];
     $link = $view->style_plugin->options['link'];
     $target = $view->style_plugin->options['target'];
-    
+
     foreach ($vars['rows'] as $id => $row) {
         $vars['rows'][$id] = [];
         $vars['rows'][$id]['image'] = $view->style_plugin->getField($id, $image);
