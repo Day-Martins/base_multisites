@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.link_rapido.field_icone_link_rapido
-    - field.field.node.link_rapido.field_link
+    - field.field.node.link_rapido.field_regiao
+    - field.field.node.link_rapido.field_target_link
     - field.field.node.link_rapido.field_titulo_link_rapido
+    - field.field.node.link_rapido.field_url
     - node.type.link_rapido
   module:
     - fontawesome
@@ -28,13 +30,17 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_link:
-    type: link_default
-    weight: 122
+  field_regiao:
+    type: options_select
+    weight: 126
     region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
+    settings: {  }
+    third_party_settings: {  }
+  field_target_link:
+    type: options_select
+    weight: 124
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_titulo_link_rapido:
     type: string_textfield
@@ -43,6 +49,14 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_url:
+    type: link_default
+    weight: 125
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   langcode:
     type: language_select

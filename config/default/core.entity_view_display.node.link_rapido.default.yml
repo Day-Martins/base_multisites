@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.link_rapido.field_icone_link_rapido
-    - field.field.node.link_rapido.field_link
+    - field.field.node.link_rapido.field_regiao
+    - field.field.node.link_rapido.field_target_link
     - field.field.node.link_rapido.field_titulo_link_rapido
+    - field.field.node.link_rapido.field_url
     - node.type.link_rapido
   module:
     - fontawesome
     - link
+    - options
     - user
 id: node.link_rapido.default
 targetEntityType: node
@@ -24,7 +27,29 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
-  field_link:
+  field_regiao:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_target_link:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_titulo_link_rapido:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_url:
     type: link
     label: above
     settings:
@@ -34,15 +59,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 102
-    region: content
-  field_titulo_link_rapido:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 103
+    weight: 105
     region: content
   links:
     settings: {  }

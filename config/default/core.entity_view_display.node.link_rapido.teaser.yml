@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.link_rapido.field_icone_link_rapido
-    - field.field.node.link_rapido.field_link
+    - field.field.node.link_rapido.field_regiao
+    - field.field.node.link_rapido.field_target_link
     - field.field.node.link_rapido.field_titulo_link_rapido
+    - field.field.node.link_rapido.field_url
     - node.type.link_rapido
   module:
     - user
@@ -22,6 +24,8 @@ content:
     region: content
 hidden:
   field_icone_link_rapido: true
-  field_link: true
+  field_regiao: true
+  field_target_link: true
   field_titulo_link_rapido: true
+  field_url: true
   langcode: true
