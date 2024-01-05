@@ -1,19 +1,19 @@
-uuid: 6ea98bd3-892e-4dc3-9278-d1924dd2d7ea
+uuid: 3c928ec0-ccec-4a3d-af89-adec0954b913
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.storage.node.field_link
+    - field.storage.node.field_url
     - node.type.link_rapido
   module:
     - link
-id: node.link_rapido.field_link
-field_name: field_link
+id: node.link_rapido.field_url
+field_name: field_url
 entity_type: node
 bundle: link_rapido
-label: Link
-description: 'Redireciona a página externa da aplicação'
-required: true
+label: URL
+description: ''
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

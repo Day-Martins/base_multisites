@@ -1,0 +1,27 @@
+uuid: 5e2f78c8-67c2-4439-bc34-09a22c51b4d9
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_target_link
+field_name: field_target_link
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _self
+      label: 'Abrir na Mesma Página'
+    -
+      value: _blank
+      label: 'Abrir em Nova Página'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
