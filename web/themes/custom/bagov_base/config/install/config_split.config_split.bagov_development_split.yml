@@ -1,6 +1,7 @@
+#VERSÃO 05-01-2024 12:43 Gabriel Carneiro
 uuid: 9540bfa4-b821-48b2-96cf-993eee08a1f1
 langcode: pt-br
-status: true
+status: false
 dependencies: {  }
 id: bagov_development_split
 label: 'Bagov Development Split'
@@ -9,7 +10,7 @@ weight: 0
 stackable: false
 no_patching: true
 storage: folder
-folder: ../config/envs/dev
+folder: ../config/dev
 module:
   devel: 0
 theme: {  }
@@ -18,3 +19,4 @@ complete_list:
   - devel.toolbar.settings
   - system.menu.devel
 partial_list: {  }
+
