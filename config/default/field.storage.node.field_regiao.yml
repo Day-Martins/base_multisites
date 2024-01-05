@@ -1,0 +1,24 @@
+uuid: 22436f81-1bc1-4a40-90d9-10d366cc0f07
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_regiao
+field_name: field_regiao
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: banner_card_icons
+      label: 'Links Rápidos'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
