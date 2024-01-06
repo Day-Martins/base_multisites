@@ -102,8 +102,12 @@ complete_list:
   - config_split.config_split.default_split
   - core.base_field_override.node.edital.promote
   - core.base_field_override.node.edital.title
+  - core.base_field_override.node.legislacao.promote
+  - core.base_field_override.node.licitacao.promote
   - core.base_field_override.node.link_rapido.promote
+  - core.base_field_override.node.noticia.promote
   - core.base_field_override.node.page.promote
+  - core.base_field_override.node.publicacao.promote
   - core.entity_form_display.comment.comment.default
   - core.entity_form_display.media.audio.default
   - core.entity_form_display.media.audio.media_library
