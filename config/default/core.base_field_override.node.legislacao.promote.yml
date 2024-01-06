@@ -1,0 +1,22 @@
+uuid: ca60241e-0c08-46bd-8531-a838e60faa8f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.legislacao
+id: node.legislacao.promote
+field_name: promote
+entity_type: node
+bundle: legislacao
+label: 'Promovido para a página inicial'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean
