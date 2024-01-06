@@ -1,8 +1,5 @@
 <?php
 
-use Drupal\file\Entity\File;
-use Drupal\core\Url;
-use Drupal\image\Entity\ImageStyle;
 use Drupal\views\Views;
 
 /**
@@ -22,60 +19,4 @@ function bagov_base_preprocess_page__noticias(array &$vars)
     $vars['#attached']['library'][] = 'bagov_base/noticias';
     $view = Views::getView('noticias');
     $vars['page']['content'] = $view->render('page_noticias');  
-}
-
- /**
- * Prepares variables for region content noticia.
- *
- * Default template: region--content--noticia.html.twig.
- *
- * @param array $vars
- *   An associative array containing:
- *   - node: A Node object.
- */
-function bagov_base_preprocess_region__content__noticia(array &$vars)
-{
-    $vars['#attached']['library'][] = 'bagov_base/noticias';
-    if (($node = \Drupal::routeMatch()->getParameter('node')) && $node instanceof \Drupal\node\NodeInterface) {
-        $vars['noticia']['titulo'] = $node->title->value;
-        $vars['noticia']['corpo'] = $node->body->value;
-        $vars['noticia']['criado_em'] = $node->created->value;
-
-        //Pega todos os arquivos anexados
-        $referenced_entities = $node->get('field_anexo_noticia')->referencedEntities();
-
-        if (!empty($referenced_entities)) {
-            //Percorre os arquivos anexados
-            foreach ($referenced_entities as $id => $entity) {
-                //Verifica qual o tipo de anexo e define o id do arquivo
-                if ($entity->field_media_image) {
-                    $fid = $entity->field_media_image->target_id;
-                } elseif ($entity->field_media_document) {
-                    $fid = $entity->field_media_document->target_id;
-                } elseif ($entity->field_media_video_file) {
-                    $fid = $entity->field_media_video_file->target_id;
-                } elseif ($entity->field_media_remote_video) {
-                    $fid = $entity->field_media_remote_video->target_id;
-                } elseif ($entity->field_media_audio_file) {
-                    $fid = $entity->field_media_audio_file->target_id;
-                }
-
-                //Carrega o arquivo e gera a URL através da URI
-                $file = File::load($fid);
-                $file_uri = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
-                $url = Url::fromUri($file_uri)->toString();
-                //Salva a URL para download nas variáveis
-                $vars['noticia']['anexos'][$id]['url'] = $url;
-
-                //Carrega o thumbnail do arquivo e salva a url nas variáveis
-                $thumbnail = $file = File::load($entity->thumbnail->target_id);
-                $file_thumbnail_uri = \Drupal::service('file_url_generator')->generateAbsoluteString($thumbnail->getFileUri());
-                $thumbnail_url = Url::fromUri($file_thumbnail_uri)->toString();
-                $image_uri = $file->getFileUri();
-                $style = ImageStyle::load('thumbnail');
-                $thumbnail_url = $style->buildUrl($image_uri);
-                $vars['noticia']['anexos'][$id]['thumbnail'] = $thumbnail_url;
-            }
-        }
-    }
 }

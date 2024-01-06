@@ -55,6 +55,7 @@ complete_list:
   - block.block.bagov_base_navegacaoprincipal
   - block.block.bagov_base_rodape
   - block.block.bagov_base_textresize
+  - block.block.bagov_base_titulodapagina
   - block.block.bagov_base_views_block__banner_banner_carrossel_card_icones
   - block.block.bagov_base_views_block__banner_banner_carrossel_centro
   - block.block.bagov_base_views_block__banner_banner_carrossel_inferior

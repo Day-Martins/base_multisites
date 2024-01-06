@@ -8,9 +8,3 @@ global-scripts:
 darkmode:
     js:
       assets/js/libraries/darkmode/darkmode-js.min.js: {}
-noticias:
-  css:
-    theme:
-      assets/css/noticias/noticia.min.css: {}
-      assets/css/noticias/noticia-anexos.min.css: {}
-      assets/css/noticias/noticia-paginacao.min.css: {}

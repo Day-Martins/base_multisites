@@ -47,6 +47,12 @@ class BagovHelpers {
           ],
           'file' => 'bagov_base_blocks.theme.inc',
       ],
+      'node__noticia' => [
+          'preprocess functions' => [
+            'template_preprocess_node__noticia'
+          ],
+          'file' => 'bagov_base_blocks.theme.inc',
+      ],
       'views_noticias' => [
           'preprocess functions' => [
             'template_preprocess_views_noticias'

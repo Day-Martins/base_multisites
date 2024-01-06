@@ -12,7 +12,7 @@ dependencies:
 id: bagov_base_views_block__links_rapidos
 theme: bagov_base
 region: content
-weight: -1
+weight: -3
 provider: null
 plugin: 'views_block:links_rapidos-block'
 settings:

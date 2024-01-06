@@ -8,7 +8,9 @@
 use Drupal\bagov_base_blocks\BagovHelpers;
 use Drupal\bagov_base_blocks\Utils\EstrategiaDePublicacao;
 use Drupal\bagov_base_blocks\Utils\PublicacaoUtils;
-
+use Drupal\file\Entity\File;
+use Drupal\core\Url;
+use Drupal\image\Entity\ImageStyle;
 
 /**
  * Prepares variables for constrast templates.
@@ -52,7 +54,7 @@ function template_preprocess_acesso_informacao_block(array &$variables)
 /**
  * Prepares variables for state logo access templates.
  *
-* Default template: logo-estado-block.html.twig.
+ * Default template: logo-estado-block.html.twig.
  *
  * @param array $variables
  *   An associative array containing:
@@ -282,74 +284,116 @@ function template_preprocess_views_noticias_relacionadas(array &$vars)
     }
 }
 
-function template_preprocess_node__publicacao(array &$vars){
+function template_preprocess_node__noticia(array &$vars)
+{
+    $vars['#attached']['library'][] = 'bagov_base_blocks/noticia';
+    if (($node = \Drupal::routeMatch()->getParameter('node')) && $node instanceof \Drupal\node\NodeInterface) {
+        $vars['noticia']['titulo'] = $node->title->value;
+        $vars['noticia']['corpo'] = $node->body->value;
+        $vars['noticia']['criado_em'] = $node->created->value;
 
-  $node = $vars['elements']['#node'];
-  $vars['node'] = $node;
+        //Pega todos os arquivos anexados
+        $referenced_entities = $node->get('field_anexo_noticia')->referencedEntities();
 
-  $node = EstrategiaDePublicacao::definirEstrategia($node);
-  // Verifique se o campo de mídia e o campo de taxonomia existem.
+        if (!empty($referenced_entities)) {
+            //Percorre os arquivos anexados
+            foreach ($referenced_entities as $id => $entity) {
+                //Verifica qual o tipo de anexo e define o id do arquivo
+                if ($entity->field_media_image) {
+                    $fid = $entity->field_media_image->target_id;
+                } elseif ($entity->field_media_document) {
+                    $fid = $entity->field_media_document->target_id;
+                } elseif ($entity->field_media_video_file) {
+                    $fid = $entity->field_media_video_file->target_id;
+                } elseif ($entity->field_media_remote_video) {
+                    $fid = $entity->field_media_remote_video->target_id;
+                } elseif ($entity->field_media_audio_file) {
+                    $fid = $entity->field_media_audio_file->target_id;
+                }
 
-  // verifica se existe e se não está vazio
-  $existem_midias = $node->field_midias && !$node->field_midias->isEmpty();
+                //Carrega o arquivo e gera a URL através da URI
+                $file = File::load($fid);
+                $file_uri = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
+                $url = Url::fromUri($file_uri)->toString();
+                //Salva a URL para download nas variáveis
+                $vars['noticia']['anexos'][$id]['url'] = $url;
 
-  if (!$existem_midias) {
-    return;
-  }
-
-  $filesByTaxonomy = [];
-  $midiaItems = $node->field_midias->referencedEntities();
-
-  foreach ($midiaItems as $midia) {
-    // Verifique se a mídia tem o campo de referência de termo.
-    $has_categoria = $midia->hasField('field_referencial_de_documento');
-    $midia->tipo_arquivo = PublicacaoUtils::determine_midia_file_type($midia);
-    $midia->color = PublicacaoUtils::determine_cor_do_arquivo($midia->tipo_arquivo);
-    $midia->icon = PublicacaoUtils::determine_icon_do_arquivo($midia->tipo_arquivo);
-    $midia->url = PublicacaoUtils::determine_url_do_arquivo($midia->field_media_document->entity);
-
-    if ($has_categoria && !$midia->field_referencial_de_documento->isEmpty()) {
-        $term = $midia->field_referencial_de_documento->entity;
-        $termName = $term ? $term->getName() : "Sem referência";
-
-        if (!isset($filesByTaxonomy[$termName])) {
-            $filesByTaxonomy[$termName] = [];
+                //Carrega o thumbnail do arquivo e salva a url nas variáveis
+                $thumbnail = $file = File::load($entity->thumbnail->target_id);
+                $file_thumbnail_uri = \Drupal::service('file_url_generator')->generateAbsoluteString($thumbnail->getFileUri());
+                $thumbnail_url = Url::fromUri($file_thumbnail_uri)->toString();
+                $image_uri = $file->getFileUri();
+                $style = ImageStyle::load('thumbnail');
+                $thumbnail_url = $style->buildUrl($image_uri);
+                $vars['noticia']['anexos'][$id]['thumbnail'] = $thumbnail_url;
+            }
         }
-
-        $filesByTaxonomy[$termName][] = $midia;
-    } else {
-        // Se o campo de referência do documento não existir ou estiver vazio, adicione-o ao grupo "Sem referência".
-        $termName = "Sem referência";
-
-        if (!isset($filesByTaxonomy[$termName])) {
-            $filesByTaxonomy[$termName] = [];
-        }
-
-        $filesByTaxonomy[$termName][] = $midia;
     }
 }
 
-  // Passar os dados agrupados para o template.
-  $vars['arquivos_por_referencial'] = $filesByTaxonomy;
+function template_preprocess_node__publicacao(array &$vars)
+{
+    $node = $vars['elements']['#node'];
+    $vars['node'] = $node;
 
+    $node = EstrategiaDePublicacao::definirEstrategia($node);
+    // Verifique se o campo de mídia e o campo de taxonomia existem.
+
+    // verifica se existe e se não está vazio
+    $existem_midias = $node->field_midias && !$node->field_midias->isEmpty();
+
+    if (!$existem_midias) {
+        return;
+    }
+
+    $filesByTaxonomy = [];
+    $midiaItems = $node->field_midias->referencedEntities();
+
+    foreach ($midiaItems as $midia) {
+        // Verifique se a mídia tem o campo de referência de termo.
+        $has_categoria = $midia->hasField('field_referencial_de_documento');
+        $midia->tipo_arquivo = PublicacaoUtils::determine_midia_file_type($midia);
+        $midia->color = PublicacaoUtils::determine_cor_do_arquivo($midia->tipo_arquivo);
+        $midia->icon = PublicacaoUtils::determine_icon_do_arquivo($midia->tipo_arquivo);
+        $midia->url = PublicacaoUtils::determine_url_do_arquivo($midia->field_media_document->entity);
+
+        if ($has_categoria && !$midia->field_referencial_de_documento->isEmpty()) {
+            $term = $midia->field_referencial_de_documento->entity;
+            $termName = $term ? $term->getName() : 'Sem referência';
+
+            if (!isset($filesByTaxonomy[$termName])) {
+                $filesByTaxonomy[$termName] = [];
+            }
+
+            $filesByTaxonomy[$termName][] = $midia;
+        } else {
+            // Se o campo de referência do documento não existir ou estiver vazio, adicione-o ao grupo "Sem referência".
+            $termName = 'Sem referência';
+
+            if (!isset($filesByTaxonomy[$termName])) {
+                $filesByTaxonomy[$termName] = [];
+            }
+
+            $filesByTaxonomy[$termName][] = $midia;
+        }
+    }
+
+    // Passar os dados agrupados para o template.
+    $vars['arquivos_por_referencial'] = $filesByTaxonomy;
 }
-
 
 function bagov_base_blocks_preprocess_views_view_unformatted__videos_do_youtube__player_home(array &$vars)
 {
-
     $view = $vars['view'];
     $linhas = [];
     foreach ($vars['rows'] as $key => $row) {
-       $linhas[$key] = [
-            'imagem_youtube'=> $view->style_plugin->getField($key,'field_imagem_do_video_remoto'),
-            'url_youtube'=> $view->style_plugin->getField($key,'field_media_oembed_video'),
-       ];
+        $linhas[$key] = [
+            'imagem_youtube' => $view->style_plugin->getField($key, 'field_imagem_do_video_remoto'),
+            'url_youtube' => $view->style_plugin->getField($key, 'field_media_oembed_video'),
+        ];
     }
 
     $vars['linhas'] = $linhas;
-
-
 }
 
 /**
@@ -362,7 +406,8 @@ function bagov_base_blocks_preprocess_views_view_unformatted__videos_do_youtube_
  *   - view: A ViewExecutable object.
  *   - rows: The raw row data.
  */
-function template_preprocess_views_banner_carrossel(array &$vars) {
+function template_preprocess_views_banner_carrossel(array &$vars)
+{
     $view = $vars['view'];
     $vars['#attached']['library'][] = 'bagov_base_blocks/views_banner_carrossel';
     $vars['#attached']['library'][] = 'bagov_base_blocks/slick';
