@@ -12,7 +12,7 @@ dependencies:
 id: bagov_base_views_block__eventos
 theme: bagov_base
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: 'views_block:eventos-block_1'
 settings:

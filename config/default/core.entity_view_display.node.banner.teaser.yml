@@ -30,6 +30,10 @@ content:
     weight: 100
     region: content
 hidden:
+  field_icone_banner: true
+  field_imagem_banner_mobile: true
   field_imagem_do_banner: true
   field_link_do_banner: true
+  field_link_target: true
+  field_regiao_banner: true
   langcode: true

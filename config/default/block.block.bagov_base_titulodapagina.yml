@@ -1,0 +1,24 @@
+uuid: 077c563b-241f-4d41-9823-b3e4d95d398a
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bagov_base
+id: bagov_base_titulodapagina
+theme: bagov_base
+region: content
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título da página'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

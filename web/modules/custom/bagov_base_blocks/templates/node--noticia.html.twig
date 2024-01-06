@@ -1,11 +1,5 @@
 <div class="container noticia">
 	<div class="row">
-		{% if page.breadcrumb %}
-			{{ page . breadcrumb }}
-		{% endif %}
-		<h1 class="noticia-titulo">
-			{{ noticia . titulo }}
-		</h1>
 		<span class="noticia-data">
 			{{ (noticia . criado_em) | date('d/m/Y') }}
 		</span>

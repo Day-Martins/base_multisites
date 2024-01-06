@@ -77,7 +77,10 @@ text-decoration: none;
 opacity: .7;
 }
 
-
+.block-page-title-block h1 .field--name-title{
+margin: 0 0 20px;
+color: var(--turquesa);
+}
 
 .block-icon-text {
 position: relative;
@@ -143,12 +146,12 @@ list-style: none;
 }
 
 .creative-commons {
-  font-size: 10px;
+font-size: 10px;
 }
 
 .creative-commons a:first-child {
-  display: block;
-  width: 80px;
+display: block;
+width: 80px;
 }
 
 .footer-menu--item a {

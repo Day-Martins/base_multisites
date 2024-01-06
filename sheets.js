@@ -21,22 +21,6 @@ const sheets = [
       css_name: 'style',
       css_dest: bs_theme_dest
     },
-    // NOTICIAS
-    {
-        scss_src: theme_bagov_base_src + 'noticias/noticia.scss',
-        css_name: 'noticia',
-        css_dest: theme_bagov_base_dest + 'noticias/'
-    },
-    {
-        scss_src: theme_bagov_base_src + 'noticias/noticia-paginacao.scss',
-        css_name: 'noticia-paginacao',
-        css_dest: theme_bagov_base_dest + 'noticias/'
-    },
-    {
-        scss_src: theme_bagov_base_src + 'noticias/noticia-anexos.scss',
-        css_name: 'noticia-anexos',
-        css_dest: theme_bagov_base_dest + 'noticias/'
-    },
     // MODULE BAGOV.BASE BLOCKS
     // CONTRASTE
     {
@@ -75,6 +59,21 @@ const sheets = [
     {
         scss_src: module_bagov_base_blocks_src + 'noticias/noticias-relacionadas.scss',
         css_name: 'noticias-relacionadas',
+        css_dest: module_bagov_base_blocks_dest + 'noticias/'
+    },
+    {
+        scss_src: module_bagov_base_blocks_src + 'noticias/noticia.scss',
+        css_name: 'noticia',
+        css_dest: module_bagov_base_blocks_dest + 'noticias/'
+    },
+    {
+        scss_src: module_bagov_base_blocks_src + 'noticias/noticia-paginacao.scss',
+        css_name: 'noticia-paginacao',
+        css_dest: module_bagov_base_blocks_dest + 'noticias/'
+    },
+    {
+        scss_src: module_bagov_base_blocks_src + 'noticias/noticia-anexos.scss',
+        css_name: 'noticia-anexos',
         css_dest: module_bagov_base_blocks_dest + 'noticias/'
     },
     // REDES SOCIAIS
