@@ -2,6 +2,7 @@ jQuery(document).ready(function ($) {
     $('.yt-player').slick({
         dots: true,
         fade: true,
+        arrows:false,
         cssEase: 'linear',
         appendDots: $('.img-dots-container'),
         dotsClass: 'slick-dots row',

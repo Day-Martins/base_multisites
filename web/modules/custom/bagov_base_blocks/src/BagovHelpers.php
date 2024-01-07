@@ -127,6 +127,10 @@ class BagovHelpers {
       ],
       'views_view_unformatted__videos_do_youtube__player_home' => [
         'base hook' => 'view',
+        'preprocess functions' => [
+          'template_preprocess__videos_do_youtube__player_home'
+        ],
+        'file' => 'bagov_base_blocks.theme.inc',
         'template' => 'youtube-player',
       ],
   ];

@@ -10,7 +10,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
-
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_theme().
@@ -86,3 +86,28 @@ function bagov_base_blocks_entity_field_storage_info_alter(&$fields, \Drupal\Cor
       }
     }
   }
+
+function bagov_base_blocks_form_block_form_alter(&$form, FormStateInterface $form_state, $form_id){
+
+  if($form_id == 'block_form'){
+
+    if($form["id"]["#default_value"] == "bagov_base_views_block__videos_do_youtube_player_home"){
+     
+      $config = getYoutubeBlockConfig(); 
+
+      $input = &$form_state->getUserInput()['mais_videos'];
+      $url = isset($input) ? $input : $config->get('url');
+      $config->set('url', $url)->save();
+      $form['mais_videos'] = [        
+          '#type' => 'textfield',
+          '#default_value' => $url,
+          '#title' => t('Endereço do do youtube'),
+          '#description' => t('Endereço completo da página do youtube da secretaria, por exemplo: <a href="https://www.youtube.com/@governodabahia">https://www.youtube.com/@governodabahia</a>'),            
+      ];
+    }
+  }
+}
+
+function getYoutubeBlockConfig(){
+  return \Drupal::service('config.factory')->getEditable('bagovblocks.youtube');
+}
