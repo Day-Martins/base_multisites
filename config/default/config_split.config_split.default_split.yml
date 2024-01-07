@@ -41,6 +41,7 @@ module:
   pathauto: 1
 theme: {  }
 complete_list:
+  - bagovblocks.youtube
   - bagov_base.settings
   - bagov_base_blocks.settings
   - block.block.bagov_base_ba.govacessoainformacao
