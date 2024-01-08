@@ -382,7 +382,17 @@ function template_preprocess_node__publicacao(array &$vars)
     $vars['arquivos_por_referencial'] = $filesByTaxonomy;
 }
 
-function bagov_base_blocks_preprocess_views_view_unformatted__videos_do_youtube__player_home(array &$vars)
+/**
+ * Prepares variables for youtube player template.
+ *
+ * Default template: youtube-player.html.twig.
+ *
+ * @param array $vars
+ *   An associative array containing:
+ *   - view: A ViewExecutable object.
+ *   - rows: The raw row data.
+ */
+function template_preprocess__videos_do_youtube__player_home(array &$vars)
 {
     $view = $vars['view'];
     $linhas = [];
@@ -393,6 +403,7 @@ function bagov_base_blocks_preprocess_views_view_unformatted__videos_do_youtube_
         ];
     }
 
+    $vars['mais_videos_youtube_url'] = \Drupal::service('config.factory')->getEditable('bagovblocks.youtube')->get('url');
     $vars['linhas'] = $linhas;
 }
 
