@@ -732,7 +732,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ view_node }}\" class=\"stretched-link\" target=\"_blank\"></a>\r\n"
+            text: "<a href=\"{{ view_node }}\" class=\"stretched-link\" target=\"_self\"></a>\r\n"
             make_link: false
             path: ''
             absolute: false
