@@ -133,6 +133,10 @@ class BagovHelpers {
         'file' => 'bagov_base_blocks.theme.inc',
         'template' => 'youtube-player',
       ],
+      'node__evento' => [
+        'base hook' => 'node',
+        'template' => 'node--evento',
+      ],
   ];
 
     return $hooks;
